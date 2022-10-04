@@ -1,8 +1,7 @@
 import Title from "../components/Title";
 import Card from "../components/Card";
 import CustomIcon from "../components/CustomIcon";
-import Projects from "../assets/Projects.json";
-import Communities from "../assets/Communities.json";
+import { COMMUNITIES, PROJECTS } from "../assets/constants";
 
 interface Community {
 	name: string,
@@ -50,7 +49,7 @@ export default function Home() {
 					<Title>Projetos</Title>
 					<div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
 						{
-							Projects.map((project: Project) => {
+							PROJECTS.map((project: Project) => {
 								return (
 									<Card
 										title={project.name}
@@ -68,7 +67,7 @@ export default function Home() {
 					<Title>Comunidades</Title>
 					<div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
 						{
-							Communities.map((community: Community) => {
+							COMMUNITIES.map((community: Community) => {
 								return (
 									<Card
 										title={community.name}
@@ -86,7 +85,7 @@ export default function Home() {
 					<div>
 						<ul className="flex flex-col justify-start gap-1">
 							<li className="flex gap-1"><CustomIcon name="email"/>Email</li>
-							<li className="flex gap-1"><CustomIcon name="github"/>Github</li>
+							<li className="flex gap-1"><CustomIcon name="github"/>GitHub</li>
 							<li className="flex gap-1"><CustomIcon name="twitter"/>Twitter</li>
 						</ul>
 					</div>

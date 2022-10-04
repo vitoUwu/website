@@ -11,7 +11,7 @@ import {
 	mdiGithub,
 	mdiTwitter
 } from '@mdi/js'
-import Icon from '@mdi/react'
+import { Icon } from '@mdi/react'
 
 type IconNames = "nodejs"|"python"|"javascript"|"typescript"|"react"|"vuejs"|"discord"|"prisma"|"mongodb"|"tailwind"|"email"|"github"|"twitter"
 
