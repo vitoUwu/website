@@ -1,11 +1,12 @@
 import { AnchorHTMLAttributes } from "react"
 
-interface ButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
-	label: string
-}
-
-export default function Button({ label, href, target }: ButtonProps) {
+export default function Button({ children, href, target, onClick }: AnchorHTMLAttributes<HTMLAnchorElement>) {
 	return (
-		<a href={href} target={target} className="border-[1px] border-solid border-zinc-300 px-4 py-1 rounded shadow-lg hover:bg-zinc-200 hover:-translate-y-1 hover:shadow-xl transition ease-in-out duration-300">{label}</a>
+		<a
+			onClick={onClick}
+			href={href}
+			target={target}
+			className="cursor-pointer flex max-h-min max-w-min border-[1px] border-solid dark:border-zinc-800 border-zinc-300 px-4 py-1 rounded shadow-lg dark:hover:bg-zinc-800 hover:bg-zinc-200 hover:-translate-y-1 hover:shadow-xl transition ease-in-out duration-300"
+		>{children}</a>
 	)
 }
