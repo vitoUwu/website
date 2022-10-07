@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 @layer base {
-	html {
-	  	-webkit-tap-highlight-color: transparent;
-	  	-ms-overflow-style: none;
-	  	scrollbar-width: none;
-	}
-
-	html::-webkit-scrollbar {
-		display: none;
-	}
+  html {
+    -webkit-tap-highlight-color: transparent;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
+}
