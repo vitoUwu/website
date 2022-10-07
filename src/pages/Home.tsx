@@ -16,7 +16,7 @@ interface Community {
 
 interface Project {
 	name: string;
-	detail?: string;
+	detail: string;
 	description: string;
 	url?: string;
 	repositoryUrl?: string;
