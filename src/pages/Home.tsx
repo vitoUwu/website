@@ -32,6 +32,10 @@ export default function Home() {
 		document.documentElement.classList[theme === "dark" ? "add" : "remove"]("dark");
 	}, [theme]);
 
+	function handleToggleTheme() {
+		setTheme((theme) => (theme === "dark" ? "light" : "dark"));
+	}
+
 	return (
 		<div className="transition-colors p-4 md:p-10 select-none dark:bg-zinc-900">
 			<header className="flex justify-between">
@@ -40,7 +44,7 @@ export default function Home() {
 					Vitoo.
 				</h1>
 				<div className="flex justify-end items-start">
-					<Button onClick={() => setTheme((theme) => (theme === "dark" ? "light" : "dark"))}>
+					<Button onClick={handleToggleTheme}>
 						<Icon path={mdiWeatherSunny} size={1} className="text-zinc-400 dark:block hidden" />
 						<Icon path={mdiWeatherNight} size={1} className="text-zinc-400 block dark:hidden" />
 					</Button>
@@ -100,10 +104,10 @@ export default function Home() {
 				<section>
 					<Title>Projetos</Title>
 					<div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
-						{PROJECTS.map((project: Project, index: number) => {
+						{PROJECTS.map((project: Project) => {
 							return (
 								<Card
-									key={index}
+									key={`${project.name}-${project.detail}`}
 									title={project.name}
 									description={project.description}
 									detail={project.detail}
@@ -117,8 +121,16 @@ export default function Home() {
 				<section>
 					<Title>Comunidades</Title>
 					<div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
-						{COMMUNITIES.map((community: Community, index: number) => {
-							return <Card key={index} title={community.name} description={community.description} detail={community.detail} url={community.url} />;
+						{COMMUNITIES.map((community: Community) => {
+							return (
+								<Card
+									key={`${community.name}-${community.detail}`}
+									title={community.name}
+									description={community.description}
+									detail={community.detail}
+									url={community.url}
+								/>
+							);
 						})}
 					</div>
 				</section>
