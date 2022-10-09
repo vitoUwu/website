@@ -1,6 +1,6 @@
 import Title from "../components/Title";
 import Card from "../components/Card";
-import CustomIcon from "../components/CustomIcon";
+import CustomIcon, { IconNames } from "../components/CustomIcon";
 import { COMMUNITIES, PROJECTS } from "../assets/constants";
 import Button from "../components/Button";
 import { Icon } from "@mdi/react";
@@ -20,6 +20,7 @@ interface Project {
 	description: string;
 	url?: string;
 	repositoryUrl?: string;
+	technologies?: string[];
 }
 
 type Themes = "dark" | "light";
@@ -56,7 +57,7 @@ export default function Home() {
 					de aprender a desenvolver Back-Ends e APIs. Gerencio algumas comunidades pelo Discord e também desenvolvo aplicações para facilitar a
 					administração dessas comunidades.
 				</h1>
-				<section>
+				<section id='skills'>
 					<Title>skills</Title>
 					<ul className="flex flex-wrap justify-center">
 						<li className="flex gap-1 py-1 px-2">
@@ -101,7 +102,7 @@ export default function Home() {
 						</li>
 					</ul>
 				</section>
-				<section>
+				<section id='projects'>
 					<Title>Projetos</Title>
 					<div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
 						{PROJECTS.map((project: Project) => {
@@ -113,12 +114,13 @@ export default function Home() {
 									detail={project.detail}
 									url={project.url}
 									repositoryUrl={project.repositoryUrl}
+									technologies={project.technologies}
 								/>
 							);
 						})}
 					</div>
 				</section>
-				<section>
+				<section id='communities'>
 					<Title>Comunidades</Title>
 					<div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
 						{COMMUNITIES.map((community: Community) => {
@@ -134,25 +136,37 @@ export default function Home() {
 						})}
 					</div>
 				</section>
-				<section>
+				<footer>
 					<Title>Contato</Title>
 					<div>
 						<ul className="flex flex-col justify-start gap-1">
-							<li className="flex gap-1">
-								<CustomIcon name="email" />
-								Email
+							<li className="cursor-pointer w-fit">
+								<a href="mailto:victorhugomeurerdelgrandi@gmail.com" target={'_blank'} className="flex gap-1">
+									<CustomIcon name="email" />
+									<p>Email</p>
+								</a>
 							</li>
-							<li className="flex gap-1">
-								<CustomIcon name="github" />
-								GitHub
+							<li className="cursor-pointer w-fit">
+								<a href="https://github.com/vitoUwu" target={'_blank'} className="flex gap-1">
+									<CustomIcon name="github" />
+									<p>GitHub</p>
+								</a>
 							</li>
-							<li className="flex gap-1">
-								<CustomIcon name="twitter" />
-								Twitter
+							<li className="cursor-pointer w-fit">
+								<a href="https://twitter.com/eovitoo_" target={'_blank'} className="flex gap-1">
+									<CustomIcon name="twitter" />
+									<p>Twitter</p>
+								</a>
+							</li>
+							<li className="cursor-pointer w-fit">
+								<a href="https://www.linkedin.com/in/vitoo/" target={'_blank'} className="flex gap-1">
+									<CustomIcon name="linkedin" />
+									<p>LinkedIn</p>
+								</a>
 							</li>
 						</ul>
 					</div>
-				</section>
+				</footer>
 			</div>
 		</div>
 	);

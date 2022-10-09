@@ -9,11 +9,12 @@ import {
 	mdiTailwind,
 	mdiEmail,
 	mdiGithub,
-	mdiTwitter
+	mdiTwitter,
+	mdiLinkedin
 } from '@mdi/js'
 import { Icon } from '@mdi/react'
 
-type IconNames = "nodejs"|"python"|"javascript"|"typescript"|"react"|"vuejs"|"discord"|"prisma"|"mongodb"|"tailwind"|"email"|"github"|"twitter"
+export type IconNames = "linkedin"|"nodejs"|"python"|"javascript"|"typescript"|"react"|"vuejs"|"discord"|"prisma"|"mongodb"|"tailwind"|"email"|"github"|"twitter"
 
 interface IconProps {
 	name: IconNames
@@ -41,6 +42,8 @@ export default function CustomIcon({ name }: IconProps) {
 			return ( <Icon path={mdiReact} size={1}/> )
 		case "vuejs":
 			return ( <Icon path={mdiVuejs} size={1}/> )
+		case "linkedin":
+			return ( <Icon path={mdiLinkedin} size={1}/> )
 		case "discord":
 			return (
 				<svg height="24" viewBox="-10.63 -.07077792 823.87 610.06955549" width="24" xmlns="http://www.w3.org/2000/svg">
