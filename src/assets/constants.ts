@@ -41,6 +41,7 @@ export const PROJECTS = [
     description:
       "UnoSlash é um bot desenvolvido para as comunidades do Discord. Feito com Discord.js e Node.js, o UnoSlash serve para jogar o jogo de cartas Uno dentro do próprio Discord.",
     repositoryUrl: "https://github.com/vitoUwu/UnoSlash",
+    technologies: ["nodejs", "discord"],
   },
   {
     name: "UnoSlash",
@@ -48,12 +49,14 @@ export const PROJECTS = [
     description: "Site feito especialmente para o meu bot UnoSlash",
     url: "https://unoslash.vercel.app",
     repositoryUrl: "https://github.com/vitoUwu/uno-slash-website",
+    technologies: ["nodejs", "vuejs", "tailwind"],
   },
   {
     name: "YottaBot",
     detail: "Website",
     description: "Site desenvolvido para um bot de Discord",
     url: "https://yottabot.vercel.app",
+    technologies: ["nodejs", "vuejs", "tailwind"],
   },
   {
     name: "Discord ID Formatter",
@@ -62,5 +65,6 @@ export const PROJECTS = [
       "Um site simples feito para ajudar as comunidades do Discord formatando os logs gerados por bots, facilitando a identificação e punição por IDs",
     url: "https://vitouwu.github.io/discord-id-formatter/",
     repositoryUrl: "https://github.com/vitoUwu/discord-id-formatter",
+    technologies: ["nodejs", "vuejs", "tailwind"],
   },
 ];
