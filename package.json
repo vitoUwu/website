@@ -1,7 +1,23 @@
 {
   "name": "portfolio",
-  "private": true,
-  "version": "0.0.0",
+  "description": "My portfolio created with react and tailwind",
+  "author": "vitoUwu",
+  "keywords": [
+    "react",
+    "tailwind",
+    "portfolio",
+    "typescript"
+  ],
+  "version": "1.0.0",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vitoUwu/portfolio/issues"
+  },
+  "homepage": "https://github.com/vitoUwu/portfolio#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitoUwu/portfolio.git"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
