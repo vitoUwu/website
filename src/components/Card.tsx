@@ -17,14 +17,28 @@ export default function Card({ title, detail, description, url, repositoryUrl, c
 			<div>
 				<div className="flex gap-2 items-end">
 					<h1 className="text-xl font-bold">{title}</h1>
-					{ detail && <p className="text-sm dark:text-zinc-600 text-zinc-400">{detail}</p> }
+					{ detail && <p className="text-sm dark:text-zinc-500 text-zinc-500">{detail}</p> }
 				</div>
 				<p>{description}</p>
 			</div>
 			<div className="flex items-end gap-2">
-				{ url ? <Button target={"_blank"} href={url}>Link</Button> : null }
-				{ repositoryUrl ? <Button target={"_blank"} href={repositoryUrl}>Repositório</Button> : null }
-				{ technologies ? <CardTechnologies className="ml-auto" technologies={technologies} /> : null }
+				{ url && 
+					<Button asChild>
+						<a target={"_blank"} href={url}>
+							Link
+						</a>
+					</Button>
+				}
+				{ repositoryUrl &&
+					<Button asChild>
+						<a target={"_blank"} href={repositoryUrl}>
+							Repositório
+						</a>
+					</Button>
+				}
+				{ technologies &&
+					<CardTechnologies className="ml-auto" technologies={technologies} />
+				}
 			</div>
 		</div>
 	)
