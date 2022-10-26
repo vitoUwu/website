@@ -67,4 +67,12 @@ export const PROJECTS = [
     repositoryUrl: "https://github.com/vitoUwu/discord-id-formatter",
     technologies: ["nodejs", "vuejs", "tailwind"],
   },
+  {
+    name: "What To Watch?",
+    detail: "Website",
+    description:
+      "What to Watch é um site onde você (pessoa indecisa) pode encontrar sugestões de filmes para assistir.",
+    url: "https://whatowatch.vercel.app",
+    technologies: ["nodejs", "react", "tailwind"],
+  }
 ];
