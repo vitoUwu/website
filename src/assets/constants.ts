@@ -74,5 +74,5 @@ export const PROJECTS = [
       "What to Watch é um site onde você (pessoa indecisa) pode encontrar sugestões de filmes para assistir.",
     url: "https://whatowatch.vercel.app",
     technologies: ["nodejs", "react", "tailwind"],
-  }
+  },
 ];
