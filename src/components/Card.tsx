@@ -16,8 +16,9 @@ export default function Card({ title, detail, description, url, repoUrl, classNa
 		<div className={`transition-colors dark:bg-zinc-900 bg-zinc-100 w-full shadow-xl border-[1px] dark:border-zinc-800 border-zinc-300 flex flex-col justify-between rounded py-4 px-6 ${className}`}>
 			<div>
 				<div className="flex gap-2 items-end">
-					<h1 className="text-xl font-bold">{title}</h1>
-					{ detail && <p className="text-sm dark:text-zinc-500 text-zinc-500">{detail}</p> }
+					<h1 className="text-xl font-bold inline-block">
+						{title} { detail && <span className="font-normal text-sm dark:text-zinc-500 text-zinc-500">{detail}</span> }
+					</h1>
 				</div>
 				<p>{description}</p>
 			</div>

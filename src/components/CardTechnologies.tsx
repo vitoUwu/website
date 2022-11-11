@@ -8,7 +8,7 @@ interface CardTechnologiesProps {
 
 export default function CardTechnologies({ technologies, className }: CardTechnologiesProps) {
 	return (
-		<div className={`flex gap-1 ${className}`}>
+		<div className={`flex flex-wrap justify-end gap-1 ${className}`}>
 			{
 				technologies.map(technology => {
 					return (

@@ -89,6 +89,37 @@ export const PROJECTS = [
     url: "https://whatowatch.vercel.app",
     repoUrl: "https://github.com/vitoUwu/what-to-watch",
     technologies: ["nodejs", "react", "tailwind"],
+  },
+  {
+    name: "Copa NLW",
+    detail: "Front End | Back End | Mobile",
+    description:
+      "Copa NLW é um projeto desenvolvido no evento da Rocketseat, onde usamos Next.js, React Native e Typescript. O projeto consiste em uma aplicação de Bolão, onde podemos dar palpites sobre os placares dos jogos da Copa de 2022 no Qatar.",
+    repoUrl: "https://github.com/vitoUwu/copa-nlw",
+    technologies: ["nodejs", "react", "typescript", "nextjs", "prisma", "tailwind"],
+  },
+  {
+    name: "E-Sports NLW",
+    detail: "Front End | Back End | Mobile",
+    description:
+      "Projeto desenvolvido no evento da Rocketseat onde usamos React, React Native e o Typescript para desenvolver API REST, aplicação web e aplicação mobile.",
+    repoUrl: "https://github.com/vitoUwu/esports-nlw",
+    technologies: ["nodejs", "react", "typescript", "prisma", "tailwind"],
+  },
+  {
+    name: "Ignite Lab Design System",
+    detail: "Front End & Storybook",
+    description:
+      "Um projeto desenvolvido no evento da Rocketseat, onde o objetivo era aprender Design System, funcionalidades do Figma e do Storybook.",
+    repoUrl: "https://github.com/vitoUwu/copa-nlw",
+    technologies: ["nodejs", "react", "typescript", "tailwind"],
+  },
+  {
+    name: "Apurações 2022",
+    description:
+      "Projeto feito para acompanhar as apurações das eleições brasileiras de 2022.",
+    repoUrl: "https://github.com/vitoUwu/copa-nlw",
+    technologies: ["nodejs"],
   }
 ];
 
