@@ -43,7 +43,7 @@ export const COMMUNITIES = [
     name: "Elite Penguin Force",
     detail: "Admin & Dev",
     description:
-      'O servidor reúne administradores, moderadores e desenvolvedores de grandes servidores brasileiros, juntos, formamos uma comunidade onde compartilhamos experiências de administração, ferramentas, metodologias, serviços e muito mais.',
+      "O servidor reúne administradores, moderadores e desenvolvedores de grandes servidores brasileiros, juntos, formamos uma comunidade onde compartilhamos experiências de administração, ferramentas, metodologias, serviços e muito mais.",
     url: "https://discord.gg/epf",
   },
 ];
@@ -89,7 +89,7 @@ export const PROJECTS = [
     url: "https://whatowatch.vercel.app",
     repoUrl: "https://github.com/vitoUwu/what-to-watch",
     technologies: ["nodejs", "react", "tailwind"],
-  }
+  },
 ];
 
 export const CONTRIBUITIONS = [
@@ -97,8 +97,8 @@ export const CONTRIBUITIONS = [
     name: "Agent",
     detail: "Discord Bot",
     description:
-      "Agent é um bot privado, desenvolvido com Nodejs e Discord.js, com o propósito de automatizar tarefas dentro de um servidor de Discord chamado \"Elite Penguin Force\".",
+      'Agent é um bot privado, desenvolvido com Nodejs e Discord.js, com o propósito de automatizar tarefas dentro de um servidor de Discord chamado "Elite Penguin Force".',
     repoUrl: "https://github.com/ElitePenguinForce/agent",
     technologies: ["nodejs", "discord"],
-  }
-]
+  },
+];
