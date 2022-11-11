@@ -43,7 +43,7 @@ export const COMMUNITIES = [
     name: "Elite Penguin Force",
     detail: "Admin & Dev",
     description:
-      'O servidor reúne administradores, moderadores e desenvolvedores de grandes servidores brasileiros, juntos, formamos uma comunidade onde compartilhamos experiências de administração, ferramentas, metodologias, serviços e muito mais.',
+      "O servidor reúne administradores, moderadores e desenvolvedores de grandes servidores brasileiros, juntos, formamos uma comunidade onde compartilhamos experiências de administração, ferramentas, metodologias, serviços e muito mais.",
     url: "https://discord.gg/epf",
   },
 ];
@@ -96,7 +96,14 @@ export const PROJECTS = [
     description:
       "Copa NLW é um projeto desenvolvido no evento da Rocketseat, onde usamos Next.js, React Native e Typescript. O projeto consiste em uma aplicação de Bolão, onde podemos dar palpites sobre os placares dos jogos da Copa de 2022 no Qatar.",
     repoUrl: "https://github.com/vitoUwu/copa-nlw",
-    technologies: ["nodejs", "react", "typescript", "nextjs", "prisma", "tailwind"],
+    technologies: [
+      "nodejs",
+      "react",
+      "typescript",
+      "nextjs",
+      "prisma",
+      "tailwind",
+    ],
   },
   {
     name: "E-Sports NLW",
@@ -120,7 +127,7 @@ export const PROJECTS = [
       "Projeto feito para acompanhar as apurações das eleições brasileiras de 2022.",
     repoUrl: "https://github.com/vitoUwu/copa-nlw",
     technologies: ["nodejs"],
-  }
+  },
 ];
 
 export const CONTRIBUITIONS = [
@@ -128,8 +135,8 @@ export const CONTRIBUITIONS = [
     name: "Agent",
     detail: "Discord Bot",
     description:
-      "Agent é um bot privado, desenvolvido com Nodejs e Discord.js, com o propósito de automatizar tarefas dentro de um servidor de Discord chamado \"Elite Penguin Force\".",
+      'Agent é um bot privado, desenvolvido com Nodejs e Discord.js, com o propósito de automatizar tarefas dentro de um servidor de Discord chamado "Elite Penguin Force".',
     repoUrl: "https://github.com/ElitePenguinForce/agent",
     technologies: ["nodejs", "discord"],
-  }
-]
+  },
+];
