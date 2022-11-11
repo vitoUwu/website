@@ -1,7 +1,7 @@
 import Title from "../components/Title";
 import Card from "../components/Card";
 import CustomIcon, { IconNames } from "../components/CustomIcon";
-import { COMMUNITIES, PROJECTS } from "../assets/constants";
+import { COMMUNITIES, CONTRIBUITIONS, PROJECTS } from "../assets/constants";
 import Button from "../components/Button";
 import { Icon } from "@mdi/react";
 import { mdiWeatherNight, mdiWeatherSunny } from "@mdi/js";
@@ -19,7 +19,7 @@ interface Project {
 	detail: string;
 	description: string;
 	url?: string;
-	repositoryUrl?: string;
+	repoUrl?: string;
 	technologies?: string[];
 }
 
@@ -51,7 +51,7 @@ export default function Home() {
 					</Button>
 				</div>
 			</header>
-			<div className="transition-colors bg-zinc-100 dark:border-2 dark:border-zinc-800 dark:bg-zinc-900 rounded text-zinc-600 dark:text-zinc-400 p-4 md:p-10 shadow-2xl text-base">
+			<div className="transition-colors bg-zinc-100 border-2 border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900 rounded text-zinc-600 dark:text-zinc-400 p-4 md:p-10 shadow-2xl text-base">
 				<h1>
 					Um jovem que quer aprender e explorar esse novo mundo tecnológico. Gosto de Front-End e tenho um lado artístico, porém também sinto vontade
 					de aprender a desenvolver Back-Ends e APIs. Gerencio algumas comunidades pelo Discord e também desenvolvo aplicações para facilitar a
@@ -113,8 +113,26 @@ export default function Home() {
 									description={project.description}
 									detail={project.detail}
 									url={project.url}
-									repositoryUrl={project.repositoryUrl}
+									repoUrl={project.repoUrl}
 									technologies={project.technologies}
+								/>
+							);
+						})}
+					</div>
+				</section>
+				<section id="contribuitions">
+				<Title>Contribuições</Title>
+					<div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
+						{CONTRIBUITIONS.map((contribuition: Project) => {
+							return (
+								<Card
+									key={`${contribuition.name}-${contribuition.detail}`}
+									title={contribuition.name}
+									description={contribuition.description}
+									detail={contribuition.detail}
+									url={contribuition.url}
+									repoUrl={contribuition.repoUrl}
+									technologies={contribuition.technologies}
 								/>
 							);
 						})}
@@ -153,7 +171,7 @@ export default function Home() {
 								</a>
 							</li>
 							<li className="cursor-pointer w-fit">
-								<a href="https://twitter.com/eovitoo_" target={'_blank'} className="flex gap-1">
+								<a href="https://twitter.com/vitoodev" target={'_blank'} className="flex gap-1">
 									<CustomIcon name="twitter" />
 									<p>Twitter</p>
 								</a>

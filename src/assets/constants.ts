@@ -32,6 +32,20 @@ export const COMMUNITIES = [
       '"Venha conhecer o Driscord, uma comunidade brasileira focada em games, bate-papo e em diversos outros sistemas únicos."',
     url: "https://discord.gg/driscord",
   },
+  {
+    name: "Detetive Youtuber",
+    detail: "Dev",
+    description:
+      '"O Discord do canal: Detetive Youtuber! Nosso objetivo é deixar você mais feliz com nossos eventos, zoeiras e muito mais!"',
+    url: "https://discord.gg/Rwx2tfVW",
+  },
+  {
+    name: "Elite Penguin Force",
+    detail: "Admin & Dev",
+    description:
+      'O servidor reúne administradores, moderadores e desenvolvedores de grandes servidores brasileiros, juntos, formamos uma comunidade onde compartilhamos experiências de administração, ferramentas, metodologias, serviços e muito mais.',
+    url: "https://discord.gg/epf",
+  },
 ];
 
 export const PROJECTS = [
@@ -40,7 +54,7 @@ export const PROJECTS = [
     detail: "Discord bot",
     description:
       "UnoSlash é um bot desenvolvido para as comunidades do Discord. Feito com Discord.js e Node.js, o UnoSlash serve para jogar o jogo de cartas Uno dentro do próprio Discord.",
-    repositoryUrl: "https://github.com/vitoUwu/UnoSlash",
+    repoUrl: "https://github.com/vitoUwu/UnoSlash",
     technologies: ["nodejs", "discord"],
   },
   {
@@ -48,7 +62,7 @@ export const PROJECTS = [
     detail: "Website",
     description: "Site feito especialmente para o meu bot UnoSlash",
     url: "https://unoslash.vercel.app",
-    repositoryUrl: "https://github.com/vitoUwu/uno-slash-website",
+    repoUrl: "https://github.com/vitoUwu/uno-slash-website",
     technologies: ["nodejs", "vuejs", "tailwind"],
   },
   {
@@ -64,7 +78,7 @@ export const PROJECTS = [
     description:
       "Um site simples feito para ajudar as comunidades do Discord formatando os logs gerados por bots, facilitando a identificação e punição por IDs",
     url: "https://vitouwu.github.io/discord-id-formatter/",
-    repositoryUrl: "https://github.com/vitoUwu/discord-id-formatter",
+    repoUrl: "https://github.com/vitoUwu/discord-id-formatter",
     technologies: ["nodejs", "vuejs", "tailwind"],
   },
   {
@@ -73,6 +87,18 @@ export const PROJECTS = [
     description:
       "What to Watch é um site onde você (pessoa indecisa) pode encontrar sugestões de filmes para assistir.",
     url: "https://whatowatch.vercel.app",
+    repoUrl: "https://github.com/vitoUwu/what-to-watch",
     technologies: ["nodejs", "react", "tailwind"],
   }
 ];
+
+export const CONTRIBUITIONS = [
+  {
+    name: "Agent",
+    detail: "Discord Bot",
+    description:
+      "Agent é um bot privado, desenvolvido com Nodejs e Discord.js, com o propósito de automatizar tarefas dentro de um servidor de Discord chamado \"Elite Penguin Force\".",
+    repoUrl: "https://github.com/ElitePenguinForce/agent",
+    technologies: ["nodejs", "discord"],
+  }
+]

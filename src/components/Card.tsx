@@ -6,12 +6,12 @@ interface CardProps {
 	detail?: string,
 	description: string,
 	url?: string,
-	repositoryUrl?: string,
+	repoUrl?: string,
 	className?: string,
 	technologies?: string[]
 }
 
-export default function Card({ title, detail, description, url, repositoryUrl, className, technologies }: CardProps) {
+export default function Card({ title, detail, description, url, repoUrl, className, technologies }: CardProps) {
 	return (
 		<div className={`transition-colors dark:bg-zinc-900 bg-zinc-100 w-full shadow-xl border-[1px] dark:border-zinc-800 border-zinc-300 flex flex-col justify-between rounded py-4 px-6 ${className}`}>
 			<div>
@@ -21,7 +21,7 @@ export default function Card({ title, detail, description, url, repositoryUrl, c
 				</div>
 				<p>{description}</p>
 			</div>
-			<div className="flex items-end gap-2">
+			<div className="flex items-end gap-2 mt-4">
 				{ url && 
 					<Button asChild>
 						<a target={"_blank"} href={url}>
@@ -29,9 +29,9 @@ export default function Card({ title, detail, description, url, repositoryUrl, c
 						</a>
 					</Button>
 				}
-				{ repositoryUrl &&
+				{ repoUrl &&
 					<Button asChild>
-						<a target={"_blank"} href={repositoryUrl}>
+						<a target={"_blank"} href={repoUrl}>
 							Repositório
 						</a>
 					</Button>
