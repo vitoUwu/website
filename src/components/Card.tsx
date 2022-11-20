@@ -1,6 +1,6 @@
 import Button from "./Button"
 import CardTechnologies from "./CardTechnologies"
-
+import { motion } from 'framer-motion'
 interface CardProps {
 	title: string,
 	detail?: string,
