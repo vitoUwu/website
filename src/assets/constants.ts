@@ -43,8 +43,21 @@ export const COMMUNITIES = [
     name: "Elite Penguin Force",
     detail: "Admin & Dev",
     description:
-      'O servidor reúne administradores, moderadores e desenvolvedores de grandes servidores brasileiros, juntos, formamos uma comunidade onde compartilhamos experiências de administração, ferramentas, metodologias, serviços e muito mais.',
+      "O servidor reúne administradores, moderadores e desenvolvedores de grandes servidores brasileiros, juntos, formamos uma comunidade onde compartilhamos experiências de administração, ferramentas, metodologias, serviços e muito mais.",
     url: "https://discord.gg/epf",
+  },
+  {
+    name: "XP+",
+    detail: "Dev",
+    description:
+      "Servidor focado em ajuda de farm de xp do battle royale do Fortnite, com dicas, truques, e servidor de interação.",
+    url: "https://discord.gg/grind",
+  },
+  {
+    name: "Lala du Discord",
+    detail: "Dev",
+    description: "Servidor oficial do Youtuber & Streamer LalaDuLol.",
+    url: "https://discord.gg/x6MY7KCK2d",
   },
 ];
 
@@ -96,7 +109,14 @@ export const PROJECTS = [
     description:
       "Copa NLW é um projeto desenvolvido no evento da Rocketseat, onde usamos Next.js, React Native e Typescript. O projeto consiste em uma aplicação de Bolão, onde podemos dar palpites sobre os placares dos jogos da Copa de 2022 no Qatar.",
     repoUrl: "https://github.com/vitoUwu/copa-nlw",
-    technologies: ["nodejs", "react", "typescript", "nextjs", "prisma", "tailwind"],
+    technologies: [
+      "nodejs",
+      "react",
+      "typescript",
+      "nextjs",
+      "prisma",
+      "tailwind",
+    ],
   },
   {
     name: "E-Sports NLW",
@@ -120,7 +140,7 @@ export const PROJECTS = [
       "Projeto feito para acompanhar as apurações das eleições brasileiras de 2022.",
     repoUrl: "https://github.com/vitoUwu/copa-nlw",
     technologies: ["nodejs"],
-  }
+  },
 ];
 
 export const CONTRIBUITIONS = [
@@ -128,8 +148,15 @@ export const CONTRIBUITIONS = [
     name: "Agent",
     detail: "Discord Bot",
     description:
-      "Agent é um bot privado, desenvolvido com Nodejs e Discord.js, com o propósito de automatizar tarefas dentro de um servidor de Discord chamado \"Elite Penguin Force\".",
+      'Agent é um bot privado, desenvolvido com Nodejs e Discord.js, com o propósito de automatizar tarefas dentro de um servidor de Discord chamado "Elite Penguin Force".',
     repoUrl: "https://github.com/ElitePenguinForce/agent",
     technologies: ["nodejs", "discord"],
-  }
-]
+  },
+  {
+    name: "XP+ Insígnias",
+    detail: "Discord Bot",
+    description:
+      'XP+ Insígnias é um bot privado, desenvolvido com Nodejs e Discord.js, com o propósito de gerenciar insígnias dentro do servidor "XP+."',
+    technologies: ["nodejs", "discord"],
+  },
+];
