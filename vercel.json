@@ -2,6 +2,6 @@
   "redirects": [
     { "source": "/projects", "destination": "/projects" },
     { "source": "/communities", "destination": "/communities" },
-    { "source": "/*", "destination": "/" }
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
