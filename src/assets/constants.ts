@@ -1,7 +1,7 @@
 export const COMMUNITIES = [
   {
     name: "Maicord Küster",
-    detail: "Mod",
+    detail: "Admin & Dev",
     description: "Servidor oficial do Youtuber & Streamer Maicon Küster",
     url: "https://discord.gg/maiconkuster",
   },
@@ -10,13 +10,6 @@ export const COMMUNITIES = [
     detail: "Mod",
     description: "Servidor oficial do Youtuber Richard Abelha",
     url: "https://discord.gg/ykq6NmWHaB",
-  },
-  {
-    name: "Blossom",
-    detail: "Admin",
-    description:
-      '"Somos uma comunidade de entretenimento feita para quem curte interação, jogos ou usar bots divertidos como a Loritta."',
-    url: "https://discord.gg/bls",
   },
   {
     name: "Anime's Night",
@@ -59,6 +52,12 @@ export const COMMUNITIES = [
     description: "Servidor oficial do Youtuber & Streamer LalaDuLol.",
     url: "https://discord.gg/x6MY7KCK2d",
   },
+  {
+    name: "IT'S A TRAP",
+    detail: "Dev",
+    description: "A IT's a Trap é um dos maiores servidores focados em ROBLOX do Brasil.",
+    url: "https://discord.gg/itsatrap"
+  }
 ];
 
 export const PROJECTS = [
@@ -140,6 +139,14 @@ export const PROJECTS = [
       "Projeto feito para acompanhar as apurações das eleições brasileiras de 2022.",
     repoUrl: "https://github.com/vitoUwu/copa-nlw",
     technologies: ["nodejs"],
+  },
+  {
+    name: "Vitter",
+    detail: "Front End",
+    description:
+      "Vitter é uma releitura autoral feita do twitter.",
+    repoUrl: "https://github.com/vitoUwu/Vitter",
+    technologies: ["nodejs", "nextjs", "typescript", "tailwind"],
   },
 ];
 
