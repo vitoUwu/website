@@ -130,14 +130,14 @@ export const PROJECTS = [
     detail: "Front End & Storybook",
     description:
       "Um projeto desenvolvido no evento da Rocketseat, onde o objetivo era aprender Design System, funcionalidades do Figma e do Storybook.",
-    repoUrl: "https://github.com/vitoUwu/copa-nlw",
+    repoUrl: "https://github.com/vitoUwu/ignite-lab-design-system",
     technologies: ["nodejs", "react", "typescript", "tailwind"],
   },
   {
     name: "Apurações 2022",
     description:
       "Projeto feito para acompanhar as apurações das eleições brasileiras de 2022.",
-    repoUrl: "https://github.com/vitoUwu/copa-nlw",
+    repoUrl: "https://github.com/vitoUwu/apuracoes-2022",
     technologies: ["nodejs"],
   },
   {
@@ -147,6 +147,14 @@ export const PROJECTS = [
       "Vitter é uma releitura autoral feita do twitter.",
     repoUrl: "https://github.com/vitoUwu/Vitter",
     technologies: ["nodejs", "nextjs", "typescript", "tailwind"],
+  },
+  {
+    name: "Tiny Tales",
+    detail: "Full Stack",
+    description:
+      "Tiny Tales é um projeto onde pessoas podem criar pequenos posts sobre qualquer coisa.",
+    url: "https://tiny-tales.vercel.app",
+    technologies: ["nodejs", "nextjs", "typescript", "tailwind", "prisma"],
   },
 ];
 
