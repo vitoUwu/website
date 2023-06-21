@@ -23,7 +23,7 @@ export function Connections() {
   return (
     <section id="conexões" className="text-center">
       <Title>Conexões</Title>
-      <ul className="flex gap-3">
+      <ul className="flex flex-wrap justify-center gap-3">
         <li>
           <Connection url="https://anilist.co/user/viitoo">
             <CustomIcon name="anilist" />

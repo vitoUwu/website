@@ -23,7 +23,7 @@ export function Contacts() {
   return (
     <section id="contato" className="text-center">
       <Title>Contato</Title>
-      <ul className="flex gap-3">
+      <ul className="flex flex-wrap justify-center gap-3">
         <li>
           <Contact url="mailto:victorhugomeurerdelgrandi@gmail.com">
             <CustomIcon name="email" />

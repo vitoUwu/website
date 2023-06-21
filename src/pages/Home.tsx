@@ -74,7 +74,7 @@ export function Home() {
           </Cell>
         </div>
       </section>
-      <div className="flex justify-center gap-10">
+      <div className="flex justify-center flex-col lg:flex-row lg:gap-10">
         <Connections />
         <Contacts />
       </div>
