@@ -1,63 +1,69 @@
 export const COMMUNITIES = [
   {
     name: "Maicord Küster",
-    detail: "Admin & Dev",
+    role: "Admin & Dev",
     description: "Servidor oficial do Youtuber & Streamer Maicon Küster",
     url: "https://discord.gg/maiconkuster",
   },
   {
     name: "Colmeia do Abelha",
-    detail: "Mod",
+    role: "Mod",
     description: "Servidor oficial do Youtuber Richard Abelha",
     url: "https://discord.gg/ykq6NmWHaB",
   },
   {
     name: "Anime's Night",
-    detail: "Dev",
+    role: "Dev",
     description:
       '"Conectando a cultura japonesa e os fãs de anime para inspirar a paixão pela criatividade e aventura."',
     url: "https://discord.gg/ve7JEtEKvg",
   },
   {
     name: "Driscord",
-    detail: "Dev",
+    role: "Dev",
     description:
       '"Venha conhecer o Driscord, uma comunidade brasileira focada em games, bate-papo e em diversos outros sistemas únicos."',
     url: "https://discord.gg/driscord",
   },
   {
     name: "Detetive Youtuber",
-    detail: "Dev",
+    role: "Ex Dev",
     description:
-      '"O Discord do canal: Detetive Youtuber! Nosso objetivo é deixar você mais feliz com nossos eventos, zoeiras e muito mais!"',
-    url: "https://discord.gg/Rwx2tfVW",
+      "Antigo servidor do canal Detetive Youtuber. Atualmente deletado",
   },
   {
     name: "Elite Penguin Force",
-    detail: "Admin & Dev",
+    role: "Admin & Dev",
     description:
       "O servidor reúne administradores, moderadores e desenvolvedores de grandes servidores brasileiros, juntos, formamos uma comunidade onde compartilhamos experiências de administração, ferramentas, metodologias, serviços e muito mais.",
     url: "https://discord.gg/epf",
   },
   {
     name: "XP+",
-    detail: "Dev",
+    role: "Dev",
     description:
       "Servidor focado em ajuda de farm de xp do battle royale do Fortnite, com dicas, truques, e servidor de interação.",
     url: "https://discord.gg/grind",
   },
   {
     name: "Lala du Discord",
-    detail: "Dev",
+    role: "Ex Dev",
     description: "Servidor oficial do Youtuber & Streamer LalaDuLol.",
     url: "https://discord.gg/x6MY7KCK2d",
   },
   {
     name: "IT'S A TRAP",
-    detail: "Dev",
-    description: "A IT's a Trap é um dos maiores servidores focados em ROBLOX do Brasil.",
-    url: "https://discord.gg/itsatrap"
-  }
+    role: "Dev",
+    description:
+      "A IT's a Trap é um dos maiores servidores focados em ROBLOX do Brasil.",
+    url: "https://discord.gg/itsatrap",
+  },
+  {
+    name: "Subsolo",
+    role: "Dev",
+    description: "Servidor de games do streamer e youtuber Goularte",
+    url: "https://discord.gg/subsolo",
+  },
 ];
 
 export const PROJECTS = [
@@ -75,13 +81,6 @@ export const PROJECTS = [
     description: "Site feito especialmente para o meu bot UnoSlash",
     url: "https://unoslash.vercel.app",
     repoUrl: "https://github.com/vitoUwu/uno-slash-website",
-    technologies: ["nodejs", "vuejs", "tailwind"],
-  },
-  {
-    name: "YottaBot",
-    detail: "Website",
-    description: "Site desenvolvido para um bot de Discord",
-    url: "https://yottabot.vercel.app",
     technologies: ["nodejs", "vuejs", "tailwind"],
   },
   {
@@ -143,8 +142,7 @@ export const PROJECTS = [
   {
     name: "Vitter",
     detail: "Front End",
-    description:
-      "Vitter é uma releitura autoral feita do twitter.",
+    description: "Vitter é uma releitura autoral feita do twitter.",
     repoUrl: "https://github.com/vitoUwu/Vitter",
     technologies: ["nodejs", "nextjs", "typescript", "tailwind"],
   },
@@ -155,6 +153,21 @@ export const PROJECTS = [
       "Tiny Tales é um projeto onde pessoas podem criar pequenos posts sobre qualquer coisa.",
     url: "https://tiny-tales.vercel.app",
     technologies: ["nodejs", "nextjs", "typescript", "tailwind", "prisma"],
+  },
+  {
+    name: "NamedVillagers",
+    detail: "Minecraft Plugin",
+    description:
+      "NamedVillagers é um plugin para minecraft onde os aldeões do jogo ganham nomes",
+    url: "https://github.com/vitouwu/namedvillagers",
+    technologies: ["java"],
+  },
+  {
+    name: "go-api",
+    detail: "Back End",
+    description: "go-api é um back-end REST simples, apenas para estudo",
+    url: "https://github.com/vitouwu/go-api",
+    technologies: ["golang"],
   },
 ];
 
@@ -173,5 +186,12 @@ export const CONTRIBUITIONS = [
     description:
       'XP+ Insígnias é um bot privado, desenvolvido com Nodejs e Discord.js, com o propósito de gerenciar insígnias dentro do servidor "XP+."',
     technologies: ["nodejs", "discord"],
+  },
+  {
+    name: "FSMP",
+    detail: "Discord Bot",
+    description:
+      "FSMP é um bot que mostra dados como, quantidade de jogadores online, versão e ip, sobre um servidor de Minecraft entre amigos em um canal do discord.",
+    technologies: ["typescript", "discord"],
   },
 ];
