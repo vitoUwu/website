@@ -24,7 +24,7 @@ export function App() {
 
   return (
     <>
-      <nav className="z-10 sticky overflow-x-scroll backdrop-blur-xl flex gap-2 w-full left-0 top-0 right-0 px-2 md:px-8 py-2">
+      <nav className="z-10 sticky overflow-x-auto backdrop-blur-xl flex gap-2 w-full left-0 top-0 right-0 px-2 md:px-8 py-2">
         <NavLink
           to="/"
           className={({ isActive }) =>
