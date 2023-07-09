@@ -25,6 +25,7 @@ import { Golang } from "./Golang";
 import { MongoDB } from "./MongoDB";
 import { NextJs } from "./Nextjs";
 import { Prisma } from "./Prisma";
+import { Svelte } from "./Svelte";
 
 export type IconNames =
   | "youtube"
@@ -48,7 +49,8 @@ export type IconNames =
   | "music"
   | "flutter"
   | "golang"
-  | "java";
+  | "java"
+  | "svelte";
 
 interface Props {
   name: IconNames;
@@ -88,23 +90,20 @@ export default function CustomIcon({ name }: Props) {
       return <NextJs />;
     case "anilist":
       return <Anilist />;
-    case "spotify": {
+    case "spotify":
       return <Icon path={mdiSpotify} size={1} />;
-    }
-    case "youtube": {
+    case "youtube":
       return <Icon path={mdiYoutube} size={1} />;
-    }
-    case "music": {
+    case "music":
       return <Icon path={mdiMusic} size={1} />;
-    }
-    case "flutter": {
+    case "flutter":
       return <Flutter />;
-    }
-    case "golang": {
+    case "golang":
       return <Golang />;
-    }
     case "java":
       return <Icon path={mdiLanguageJava} size={1} />;
+    case "svelte":
+      return <Svelte />;
     default:
       return <Icon path={mdiAlert} />;
   }
