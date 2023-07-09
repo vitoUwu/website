@@ -159,14 +159,14 @@ export const PROJECTS = [
     detail: "Minecraft Plugin",
     description:
       "NamedVillagers é um plugin para minecraft onde os aldeões do jogo ganham nomes",
-    url: "https://github.com/vitouwu/namedvillagers",
+    repoUrl: "https://github.com/vitouwu/namedvillagers",
     technologies: ["java"],
   },
   {
     name: "go-api",
     detail: "Back End",
     description: "go-api é um back-end REST simples, apenas para estudo",
-    url: "https://github.com/vitouwu/go-api",
+    repoUrl: "https://github.com/vitouwu/go-api",
     technologies: ["golang"],
   },
 ];
