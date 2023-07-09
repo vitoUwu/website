@@ -169,6 +169,14 @@ export const PROJECTS = [
     repoUrl: "https://github.com/vitouwu/go-api",
     technologies: ["golang"],
   },
+  {
+    name: "Memonote",
+    detail: "Full Stack",
+    description: "Memonote is an app designed for people who are brilliant. Write down your ideas, stories, checklists and have everything syncedo",
+    repoUrl: "https://github.com/vitouwu/memonote",
+    url: "https://memonote.vitoo.dev/",
+    technologies: ["golang", "svelte", "tailwind"],
+  },
 ];
 
 export const CONTRIBUITIONS = [
