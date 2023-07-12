@@ -13,14 +13,14 @@ export const COMMUNITIES = [
   },
   {
     name: "Anime's Night",
-    role: "Dev",
+    role: "Ex Dev",
     description:
       '"Conectando a cultura japonesa e os fãs de anime para inspirar a paixão pela criatividade e aventura."',
     url: "https://discord.gg/ve7JEtEKvg",
   },
   {
     name: "Driscord",
-    role: "Dev",
+    role: "Ex Dev",
     description:
       '"Venha conhecer o Driscord, uma comunidade brasileira focada em games, bate-papo e em diversos outros sistemas únicos."',
     url: "https://discord.gg/driscord",
@@ -172,7 +172,7 @@ export const PROJECTS = [
   {
     name: "Memonote",
     detail: "Full Stack",
-    description: "Memonote is an app designed for people who are brilliant. Write down your ideas, stories, checklists and have everything syncedo",
+    description: "Memonote is an app designed for people who are brilliant. Write down your ideas, stories, checklists and have everything synced",
     repoUrl: "https://github.com/vitouwu/memonote",
     url: "https://memonote.vitoo.dev/",
     technologies: ["golang", "svelte", "tailwind"],
