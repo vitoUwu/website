@@ -1,48 +1,34 @@
 {
   "name": "portfolio",
-  "description": "My portfolio created with react and tailwind",
-  "author": "vitoUwu",
-  "keywords": [
-    "react",
-    "tailwind",
-    "portfolio",
-    "typescript"
-  ],
-  "version": "1.0.0",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/vitoUwu/portfolio/issues"
-  },
-  "homepage": "https://github.com/vitoUwu/portfolio#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vitoUwu/portfolio.git"
-  },
-  "type": "module",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@mdi/js": "^7.2.96",
-    "@mdi/react": "^1.6.1",
+    "@radix-ui/react-popover": "^1.0.6",
     "@radix-ui/react-slot": "^1.0.2",
-    "@radix-ui/react-tooltip": "^1.0.6",
-    "framer-motion": "^10.12.18",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.14.1"
-  },
-  "devDependencies": {
-    "@types/react": "^18.2.14",
-    "@types/react-dom": "^18.2.6",
-    "@vitejs/plugin-react": "^4.0.2",
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.25",
-    "tailwind": "^4.0.0",
-    "tailwindcss": "^3.3.2",
-    "typescript": "^5.1.6",
-    "vite": "^4.4.2"
+    "@radix-ui/react-tabs": "^1.0.4",
+    "@radix-ui/react-toggle": "^1.0.3",
+    "@types/node": "20.4.1",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "18.2.6",
+    "autoprefixer": "10.4.14",
+    "class-variance-authority": "^0.6.1",
+    "clsx": "^1.2.1",
+    "eslint": "8.44.0",
+    "eslint-config-next": "13.4.9",
+    "lucide-react": "^0.259.0",
+    "next": "13.4.9",
+    "postcss": "8.4.25",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwind-merge": "^1.13.2",
+    "tailwindcss": "3.3.2",
+    "tailwindcss-animate": "^1.0.6",
+    "typescript": "5.1.6"
   }
 }
