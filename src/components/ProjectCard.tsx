@@ -25,7 +25,6 @@ export function ProjectCard({ project }: Props) {
   return (
     <Card
       ref={ref}
-      id={project.title}
       className={cn(
         "flex flex-col h-full",
         isOnScreen ? "animate-fade-in" : ""
@@ -39,7 +38,7 @@ export function ProjectCard({ project }: Props) {
         {project.badges ? (
           <div className="flex gap-3 flex-wrap">
             {project.badges.map((badge) => (
-              <Badge id={badge + project.title}>{badge}</Badge>
+              <Badge key={badge + project.title}>{badge}</Badge>
             ))}
           </div>
         ) : null}

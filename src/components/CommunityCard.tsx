@@ -25,7 +25,6 @@ export function CommunityCard({ community }: Props) {
   return (
     <Card
       ref={ref}
-      id={community.name}
       className={cn(
         "flex flex-col h-full",
         isOnScreen ? "animate-fade-in" : ""
