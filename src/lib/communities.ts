@@ -29,7 +29,7 @@ export default [
     name: "IT'S A TRAP",
     role: "Dev",
     description:
-      "A IT's a Trap é um dos maiores servidores focados em ROBLOX do Brasil.",
+      "Servidor oficial do criador de conteúdo Kodak. O maior servidor focado em ROBLOX do Brasil.",
     invite: "https://discord.gg/itsatrap",
   },
   {
