@@ -41,6 +41,7 @@ type ContactProps = {
 function Contact({ href, children }: ContactProps) {
   return (
     <Link
+      target="_blank"
       href={href}
       className="flex gap-2 items-center text-muted-foreground text-sm w-min"
     >
