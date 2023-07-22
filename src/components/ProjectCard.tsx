@@ -1,3 +1,5 @@
+"use client";
+
 import { useOnScreen } from "@/hooks/useOnScreen";
 import projects from "@/lib/projects";
 import { cn } from "@/lib/utils";

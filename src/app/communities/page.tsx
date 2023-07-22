@@ -1,5 +1,3 @@
-"use client";
-
 import { CommunityCard } from "@/components/CommunityCard";
 import communities from "@/lib/communities";
 

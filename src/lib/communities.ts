@@ -1,4 +1,4 @@
-export default [
+const communities = [
   {
     name: "Maicord Küster",
     role: "Admin & Dev",
@@ -59,3 +59,5 @@ export default [
     invite: "https://discord.gg/ve7JEtEKvg",
   },
 ];
+
+export default communities;

@@ -1,4 +1,4 @@
-export default [
+const projects = [
   {
     title: "UnoSlash",
     badges: ["Discord Bot"],
@@ -111,3 +111,5 @@ export default [
     technologies: ["golang", "svelte", "tailwind"],
   },
 ];
+
+export default projects;

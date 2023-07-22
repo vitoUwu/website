@@ -5,7 +5,7 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from "@radix-ui/react-navigation-menu";
+} from "@/components/ui/navigation-menu";
 import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
 

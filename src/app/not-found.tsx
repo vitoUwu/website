@@ -1,5 +1,3 @@
-"use client";
-
 import { Description } from "@/components/Description";
 import { Title } from "@/components/Title";
 
