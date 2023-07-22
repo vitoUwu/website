@@ -6,10 +6,9 @@ export function Time() {
   const [timestamp, setTimestamp] = useState(Date.now());
 
   useEffect(() => {
-    const timeout = setInterval(
-      () => setTimestamp((state) => state + 1000),
-      1000
-    );
+    setTimestamp(Date.now());
+
+    const timeout = setInterval(() => setTimestamp(Date.now()), 1000);
 
     return () => {
       clearTimeout(timeout);
