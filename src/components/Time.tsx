@@ -3,12 +3,12 @@
 import { useEffect, useState } from "react";
 
 export function Time() {
-  const [timestamp, setTimestamp] = useState(Date.now());
+  const [date, setDate] = useState(new Date());
 
   useEffect(() => {
-    setTimestamp(Date.now());
+    setDate(new Date());
 
-    const timeout = setInterval(() => setTimestamp(Date.now()), 1000);
+    const timeout = setInterval(() => setDate(new Date()), 1000);
 
     return () => {
       clearTimeout(timeout);
@@ -20,11 +20,11 @@ export function Time() {
       suppressHydrationWarning
       className="flex items-center gap-3 text-gray-400 font-mono text-sm animate-fade-in-200"
     >
-      {new Date(timestamp).toLocaleDateString("pt-BR", {
+      {date.toLocaleDateString("pt-BR", {
         timeZone: "America/Cuiaba",
       })}
       <div className="inline-block h-1 w-1 bg-gray-400 rounded-full" />
-      {new Date(timestamp).toLocaleTimeString("pt-BR", {
+      {date.toLocaleTimeString("pt-BR", {
         timeZone: "America/Cuiaba",
       })}
       <div className="inline-block h-1 w-1 bg-gray-400 rounded-full" />
