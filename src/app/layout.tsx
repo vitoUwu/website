@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/Navbar";
+import { WebVitals } from "@/components/WebVitals";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={inter.className}>
+        <WebVitals />
         <div className="z-10 fixed flex justify-center items-center top-3 left-0 right-0">
           <Navbar />
         </div>
