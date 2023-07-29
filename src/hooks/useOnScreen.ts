@@ -1,12 +1,31 @@
-import { RefObject, useEffect, useRef, useState } from "react";
+import { RefObject, useEffect, useReducer, useRef } from "react";
+
+type Data = {
+  onScreen: boolean;
+  from: "top" | "bottom";
+};
+
+function reducer(oldData: Data, newData: Partial<Data>) {
+  return {
+    ...oldData,
+    ...newData,
+  };
+}
 
 export function useOnScreen(ref: RefObject<Element>) {
-  const [isOnScreen, setOnScreen] = useState(true);
+  const [data, dispatch] = useReducer(reducer, {
+    onScreen: false,
+    from: "top",
+  });
+
   const observerRef = useRef<null | IntersectionObserver>(null);
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(([entry]) => {
-      setOnScreen(entry.isIntersecting);
+      dispatch({
+        onScreen: entry.isIntersecting,
+        from: entry.boundingClientRect.top >= 0 ? "bottom" : "top",
+      });
     });
   }, []);
 
@@ -20,5 +39,5 @@ export function useOnScreen(ref: RefObject<Element>) {
     };
   }, [ref]);
 
-  return isOnScreen;
+  return data;
 }

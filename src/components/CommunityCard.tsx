@@ -21,22 +21,29 @@ type Props = {
   index?: number;
 };
 
-const animations = [
-  "animate-slide-in-50",
-  "animate-slide-in-100",
-  "animate-slide-in-200",
-];
+const animations = {
+  bottom: [
+    "animate-slide-in-50",
+    "animate-slide-in-100",
+    "animate-slide-in-200",
+  ],
+  top: [
+    "-animate-slide-in-50",
+    "-animate-slide-in-100",
+    "-animate-slide-in-200",
+  ],
+};
 
 export function CommunityCard({ community, index = 0 }: Props) {
   const ref = useRef<null | HTMLDivElement>(null);
-  const isOnScreen = useOnScreen(ref);
+  const { onScreen, from } = useOnScreen(ref);
 
   return (
     <Card
       ref={ref}
       className={cn(
         "flex flex-col h-full",
-        isOnScreen ? animations[index % 3] : ""
+        onScreen ? animations[from][index % 3] : "opacity-0"
       )}
     >
       <CardHeader>
