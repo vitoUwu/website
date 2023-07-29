@@ -18,9 +18,16 @@ import {
 
 type Props = {
   community: (typeof communities)[number];
+  index?: number;
 };
 
-export function CommunityCard({ community }: Props) {
+const animations = [
+  "animate-slide-in-50",
+  "animate-slide-in-100",
+  "animate-slide-in-200",
+];
+
+export function CommunityCard({ community, index = 0 }: Props) {
   const ref = useRef<null | HTMLDivElement>(null);
   const isOnScreen = useOnScreen(ref);
 
@@ -29,7 +36,7 @@ export function CommunityCard({ community }: Props) {
       ref={ref}
       className={cn(
         "flex flex-col h-full",
-        isOnScreen ? "animate-fade-in" : ""
+        isOnScreen ? animations[index % 3] : ""
       )}
     >
       <CardHeader>

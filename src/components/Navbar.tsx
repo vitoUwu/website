@@ -32,7 +32,7 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <NavigationMenu className="z-10 shadow-lg animate-fade-in inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground">
+    <NavigationMenu className="shadow-lg animate-slide-in-50 inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground">
       <NavigationMenuList>
         <LinkItem href="/" active={pathname === "/"}>
           Início

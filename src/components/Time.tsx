@@ -22,7 +22,7 @@ export function Time(props: Props) {
   return (
     <div
       suppressHydrationWarning
-      className="flex items-center gap-3 text-gray-400 font-mono text-sm animate-fade-in-200"
+      className="flex items-center gap-3 text-gray-400 font-mono text-sm animate-slide-in-100"
     >
       {date.toLocaleDateString("pt-BR", {
         timeZone: "America/Cuiaba",
