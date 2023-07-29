@@ -2,8 +2,12 @@
 
 import { useEffect, useState } from "react";
 
-export function Time() {
-  const [date, setDate] = useState(new Date());
+type Props = {
+  date: Date;
+};
+
+export function Time(props: Props) {
+  const [date, setDate] = useState(props.date);
 
   useEffect(() => {
     setDate(new Date());

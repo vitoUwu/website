@@ -18,7 +18,7 @@ export default function Home() {
             ferramentas para facilitar a administração dessas comunidades.
           </p>
         </div>
-        <Time />
+        <Time date={new Date()} />
         <Card className="p-3 flex flex-wrap items-center gap-6 justify-center">
           <Contact href="https://github.com/vitoUwu">Github</Contact>
           <Contact href="https://linkedin.com/in/vitoo">LinkedIn</Contact>
