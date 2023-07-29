@@ -1,5 +1,3 @@
-"use client";
-
 import { Time } from "@/components/Time";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
