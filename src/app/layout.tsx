@@ -6,10 +6,21 @@ import Script from "next/script";
 import "./global.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const title = "vitoo";
+const description = "Hello World";
 
 export const metadata: Metadata = {
-  title: "vitoo",
-  description: "Hello World",
+  metadataBase: new URL("https://vitoo.dev"),
+  title,
+  description,
+  twitter: {
+    title,
+    description,
+  },
+  openGraph: {
+    title,
+    description,
+  },
 };
 
 export default function RootLayout({

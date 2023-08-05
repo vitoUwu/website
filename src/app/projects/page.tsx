@@ -1,5 +1,22 @@
 import { ProjectCard } from "@/components/ProjectCard";
 import projects from "@/lib/projects";
+import { Metadata } from "next";
+
+const title = "vitoo | Projects";
+const description = `A summary with ${projects.length} created projects`;
+
+export const metadata: Metadata = {
+  title,
+  description,
+  twitter: {
+    title,
+    description,
+  },
+  openGraph: {
+    title,
+    description,
+  },
+};
 
 export default function Projects() {
   return (

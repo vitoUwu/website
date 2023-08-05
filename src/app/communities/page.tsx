@@ -1,5 +1,22 @@
 import { CommunityCard } from "@/components/CommunityCard";
 import communities from "@/lib/communities";
+import { Metadata } from "next";
+
+const title = "vitoo | Communities";
+const description = `${communities.length} communities I collaborated with or managed`;
+
+export const metadata: Metadata = {
+  title,
+  description,
+  twitter: {
+    title,
+    description,
+  },
+  openGraph: {
+    title,
+    description,
+  },
+};
 
 export default function Communities() {
   return (
