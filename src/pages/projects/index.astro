@@ -1,0 +1,43 @@
+---
+import Card from "../../components/Card/Card.astro";
+import CardButton from "../../components/Card/CardButton.astro";
+import Layout from "../../layouts/Layout.astro";
+import projects from "../../lib/constants/projects";
+---
+
+<Layout title="vitoo | Projetos" description={`${projects.length} Projetos criados :D`}>
+  <main class="py-16 flex justify-center px-3">
+    <div class="max-w-7xl grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 justify-center">
+      {
+        projects.map((project) => (
+          <Card>
+            <div>
+              <p class="text-2xl font-bold text-zinc-300">{project.title}</p>
+              <p>{project.description}</p>
+            </div>
+            {project.repository_url || project.url ? (
+              <div class="flex gap-3 justify-end items-center mt-auto">
+                {project.repository_url ? (
+                  <CardButton href={project.repository_url}>
+                    Repositório
+                  </CardButton>
+                ) : null}
+                {project.url ? (
+                  <CardButton href={project.url}>Visitar</CardButton>
+                ) : null}
+              </div>
+            ) : null}
+          </Card>
+        ))
+      }
+    </div>
+  </main>
+</Layout>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => entry.target.classList.toggle('opacity-0', !entry.isIntersecting))
+  })
+  const cards = document.querySelectorAll('#card');
+  cards.forEach((card) => observer.observe(card))
+</script>

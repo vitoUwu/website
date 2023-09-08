@@ -1,0 +1,28 @@
+---
+import "../base.css";
+import NavBar from '../components/NavBar/NavBar.astro';
+interface Props {
+	title: string;
+	description?: string
+}
+
+const { title, description = "Hello World" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name={description} content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-zinc-950 text-zinc-100">
+		<div class="z-10 fixed flex justify-center items-center top-3 left-0 right-0">
+			<NavBar />
+		</div>
+		<slot />
+	</body>
+</html>

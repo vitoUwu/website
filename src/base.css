@@ -1,0 +1,26 @@
+@tailwind base;
+
+@layer base {
+  h1 {
+    @apply text-2xl font-bold
+  }
+
+  * {
+    @apply antialiased
+  }
+
+}
+
+@tailwind components;
+
+@layer components {
+  .container {
+    @apply text-zinc-400 border border-zinc-800/60 bg-gradient-to-t from-zinc-900/20 to-zinc-900/30 rounded-lg
+  }
+
+  .container-hover {
+    @apply text-zinc-400 border border-zinc-800/60 bg-gradient-to-t from-zinc-900/20 to-zinc-900/30 rounded-lg hover:from-zinc-900/30 hover:to-zinc-900/60 hover:border-zinc-800/90 transition-colors
+  }
+}
+
+@tailwind utilities;

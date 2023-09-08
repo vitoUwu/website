@@ -1,0 +1,41 @@
+---
+import NavButton from "./NavButton.astro";
+
+const paths = {
+  "/": "Home",
+  "/projects": "Projetos",
+  "/experience": "Experiência",
+};
+---
+
+<nav
+  id="navbar"
+  data-hide="false"
+  class="text-zinc-100 z-10 peer text-sm duration-500 ease-in-out font-semibold flex bg-zinc-900 rounded-lg p-1 data-[hide='true']:-translate-y-[200%] transition-transform"
+>
+  {
+    Object.entries(paths).map(([path, name]) => (
+      <NavButton href={path} name={name} />
+    ))
+  }
+</nav>
+<span class="delay-100 peer-data-[hide='false']:peer-hover:opacity-50 bg-black transition-all opacity-0 fixed inset-0 pointer-events-none"></span>
+
+<script>
+  let lastScrollTop = 0;
+  let offset = 100;
+  const nav = document.getElementById("navbar");
+  window.addEventListener(
+    "scroll",
+    () => {
+      let st = window.scrollY || document.documentElement.scrollTop;
+      if (st > lastScrollTop && lastScrollTop > offset) {
+        nav?.setAttribute("data-hide", "true");
+      } else if (st < lastScrollTop) {
+        nav?.setAttribute("data-hide", "false");
+      }
+      lastScrollTop = st <= 0 ? 0 : st;
+    },
+    false,
+  );
+</script>

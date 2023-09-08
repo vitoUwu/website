@@ -1,0 +1,67 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Dot from '../../components/Dot.astro';
+import jobs from '../../lib/constants/jobs';
+
+const calcMonth = (timestamp: number) =>
+  Math.ceil(timestamp / 60000 / 60 / 24 / 30);
+const months = [
+  "jan",
+  "fev",
+  "mar",
+  "abr",
+  "mai",
+  "jun",
+  "jul",
+  "ago",
+  "set",
+  "out",
+  "nov",
+  "dez",
+];
+const word = (month: number) => (month !== 1 ? "meses" : "mês");
+---
+
+<Layout title="vitoo | Experiência" description={`Já passei por ${jobs.reduce((acc, job, index, arr) => acc + (arr.findIndex((j) => j.name === job.name) === index ? 1 : 0),0)} empresas`}>
+  <main class="py-16 flex justify-center px-3">
+    <div class="max-w-lg flex gap-10 flex-col justify-center">
+      {
+        jobs.map((job) => {
+          const monthCount = calcMonth((job.end?.getTime() ?? Date.now()) - job.start.getTime());
+          const startShortMonth = months[job.start.getMonth()];
+          const endShortMonth = job.end && months[job.end.getMonth()];
+          const startYear = job.start.getFullYear();
+          const endYear = job.end && job.end.getFullYear();
+          return (
+            <div class="w-full relative group/card">
+              <div class="top-4 left-[4.5px] -translate-y-[2px] absolute w-[1px] bg-gradient-to-b from-green-500 to-green-500 group-last/card:to-transparent group-last/card:h-full h-[calc(100%+50px)]"/>
+              <div class="flex gap-3 items-end text-zinc-100 pl-5 relative">
+                <Dot size={10} class="absolute bg-green-500 top-1/2 left-0 -translate-y-[2px]"/>
+                <h1>{job.name}</h1>
+                <div class="flex gap-3 items-center">
+                  <p class="text-sm text-zinc-500 font-semibold">{job.role}</p>
+                  {job.time ? (
+                  <Dot size={3}/>
+                  <p class="text-sm text-zinc-500 font-semibold">{job.time}</p>
+                  ) : null}
+                  </div>
+              </div>
+              <div class="pl-5 flex items-center gap-3 text-zinc-500">
+                <p>
+                  {startShortMonth} de {startYear} {job.end ? ` até ${endShortMonth} de ${endYear}` : ''}
+                </p>
+                <Dot class="bg-zinc-500"/>
+                <p>
+                  {`${job.end ? '' : 'há '}${monthCount} ${word(monthCount)}`}
+                </p>
+              </div>
+              {job.description ?<p class="pl-5 text-zinc-400 whitespace-break-spaces mt-3">
+                {job.description}
+              </p> : null}
+            </div>
+          );
+        })
+      }
+    </div>
+  </main>
+</Layout>

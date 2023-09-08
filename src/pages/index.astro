@@ -1,0 +1,71 @@
+---
+import Dot from "../components/Dot.astro";
+import Layout from "../layouts/Layout.astro";
+const date = new Date();
+const dateOptions = {
+	timeZone: "America/Campo_Grande",
+};
+---
+
+<Layout title="Vitoo">
+	<main class="flex min-h-screen w-full justify-center items-center p-10">
+		<div class="max-w-3xl">
+			<h1
+				class="text-transparent bg-clip-text bg-gradient-to-t from-zinc-300 to-zinc-100"
+			>
+				Oi, sou Victor
+			</h1>
+			<p class="text-zinc-400">
+				Estudante de Engenharia de Software com amor pela área de
+				desenvolvimento web e mobile. Tenho gosto por Front-End e interesse em
+				Back-Ends e APIs. Gerencio comunidades do Discord e desenvolvo
+				ferramentas para facilitar a administração dessas comunidades.
+			</p>
+			<div class="flex items-center gap-3 my-3 text-zinc-400">
+				<p id="date">{date.toLocaleDateString("pt-BR", dateOptions)}</p>
+				<Dot />
+				<p id="time">{date.toLocaleTimeString("pt-BR", dateOptions)}</p>
+				<Dot />
+				<p>Brazil</p>
+			</div>
+			<div class="container flex w-full justify-center gap-6 py-3">
+				<a
+					href="https://github.com/vitouwu"
+					target="_blank"
+					class="hover:text-zinc-200 hover:font-semibold transition-all"
+					>Github</a
+				>
+				<a
+					href="https://linkedin.com/in/vitoo"
+					target="_blank"
+					class="hover:text-zinc-200 hover:font-semibold transition-all"
+					>Linkedin</a
+				>
+				<a
+					href="mailto:victorhugomeurerdelgrandi@gmail.com"
+					class="hover:text-zinc-200 hover:font-semibold transition-all"
+					>Email</a
+				>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<script>
+	const dateOptions = {
+		timeZone: "America/Campo_Grande",
+	};
+	const timeElement = document.getElementById("time");
+	const dateElement = document.getElementById("date");
+	if (timeElement || dateElement) {
+		setInterval(() => {
+			const date = new Date();
+			if (timeElement) {
+				timeElement!.innerText = date.toLocaleDateString("pt-BR", dateOptions);
+			}
+			if (dateElement) {
+				timeElement!.innerText = date.toLocaleTimeString("pt-BR", dateOptions);
+			}
+		}, 1000);
+	}
+</script>
