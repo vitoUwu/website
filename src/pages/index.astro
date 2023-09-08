@@ -1,9 +1,12 @@
 ---
 import Dot from "../components/Dot.astro";
 import Layout from "../layouts/Layout.astro";
+
+const about =
+	"Estudante de Engenharia de Software com amor pela área de desenvolvimento web e mobile. Tenho gosto por Front-End e interesse em Back-Ends e APIs. Gerencio comunidades do Discord e desenvolvo ferramentas para facilitar a administração dessas comunidades.";
 ---
 
-<Layout title="Vitoo">
+<Layout title="vitoo" description={about}>
 	<main class="flex min-h-screen w-full justify-center items-center p-10">
 		<div class="max-w-3xl">
 			<h1
@@ -12,15 +15,16 @@ import Layout from "../layouts/Layout.astro";
 				Oi, sou Victor
 			</h1>
 			<p class="text-zinc-400">
-				Estudante de Engenharia de Software com amor pela área de
-				desenvolvimento web e mobile. Tenho gosto por Front-End e interesse em
-				Back-Ends e APIs. Gerencio comunidades do Discord e desenvolvo
-				ferramentas para facilitar a administração dessas comunidades.
+				{about}
 			</p>
 			<div class="flex items-center gap-3 my-3 text-zinc-400">
-				<p id="date">{new Date().toLocaleDateString("pt-BR")}</p>
+				<time datetime={new Date().toLocaleDateString()} id="date"
+					>{new Date().toLocaleDateString("pt-BR")}</time
+				>
 				<Dot />
-				<p id="time">{new Date().toLocaleTimeString("pt-BR")}</p>
+				<time datetime={new Date().toLocaleTimeString()} id="time"
+					>{new Date().toLocaleTimeString("pt-BR")}</time
+				>
 				<Dot />
 				<p>Brazil</p>
 			</div>
@@ -48,26 +52,36 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <script>
-	const dateOptions = {
-		timeZone: "America/Campo_Grande",
-	};
+	function setTime(element: HTMLElement, date: Date, type: "time" | "date") {
+		const f = type === "time" ? "toLocaleTimeString" : "toLocaleDateString";
+		element.innerText = date[f]("pt-BR", {
+			timeZone: "America/Campo_Grande",
+		});
+		element.setAttribute("datetime", date[f]());
+		element.parentElement?.setAttribute(
+			"title",
+			`${date.toLocaleDateString("en-US")} ${date
+				.toLocaleTimeString("en-US")
+				.slice(0, -6)} in Brazil, Mato Grosso do Sul`,
+		);
+	}
 	let date = new Date();
 	const timeElement = document.getElementById("time");
 	const dateElement = document.getElementById("date");
 	if (timeElement) {
-		timeElement!.innerText = date.toLocaleTimeString("pt-BR", dateOptions);
+		setTime(timeElement, date, "time");
 	}
 	if (dateElement) {
-		dateElement!.innerText = date.toLocaleDateString("pt-BR", dateOptions);
+		setTime(dateElement, date, "date");
 	}
 	if (timeElement || dateElement) {
 		setInterval(() => {
 			date = new Date();
 			if (timeElement) {
-				timeElement!.innerText = date.toLocaleTimeString("pt-BR", dateOptions);
+				setTime(timeElement, date, "time");
 			}
 			if (dateElement) {
-				dateElement!.innerText = date.toLocaleDateString("pt-BR", dateOptions);
+				setTime(dateElement, date, "date");
 			}
 		}, 1000);
 	}

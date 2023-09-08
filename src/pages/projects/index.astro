@@ -7,12 +7,13 @@ import projects from "../../lib/constants/projects";
 
 <Layout title="vitoo | Projetos" description={`${projects.length} Projetos criados :D`}>
   <main class="py-16 flex justify-center px-3">
+    <h1 class="hide">Projetos</h1>
     <div class="max-w-7xl grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 justify-center">
       {
         projects.map((project) => (
           <Card>
             <div>
-              <p class="text-2xl font-bold text-zinc-300">{project.title}</p>
+              <h2 class="text-2xl font-bold text-zinc-300">{project.title}</h2>
               <p>{project.description}</p>
             </div>
             {project.repository_url || project.url ? (

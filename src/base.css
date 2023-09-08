@@ -5,6 +5,10 @@
     @apply text-2xl font-bold
   }
 
+  h2 {
+    @apply text-xl font-bold
+  }
+
   * {
     @apply antialiased
   }
@@ -19,7 +23,11 @@
   }
 
   .container-hover {
-    @apply text-zinc-400 border border-zinc-800/60 bg-gradient-to-t from-zinc-900/20 to-zinc-900/30 rounded-lg hover:from-zinc-900/30 hover:to-zinc-900/60 hover:border-zinc-800/90 transition-colors
+    @apply text-zinc-400 border border-zinc-800/60 bg-gradient-to-t from-zinc-900/20 to-zinc-900/30 rounded-lg hover:from-zinc-900/30 hover:to-green-900/10 hover:border-green-800/40 transition-colors
+  }
+
+  .hide {
+    @apply text-white absolute -top-[10000000px]
   }
 }
 
