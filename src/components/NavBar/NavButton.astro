@@ -7,7 +7,7 @@ interface Props {
 const { href, name } = Astro.props;
 
 let pathname = new URL(Astro.request.url).pathname;
-if (pathname.endsWith("/")) {
+if (pathname !== "/" && pathname.endsWith("/")) {
   pathname = pathname.slice(0, -1);
 }
 // console.log(pathname);
