@@ -1,10 +1,6 @@
 ---
 import Dot from "../components/Dot.astro";
 import Layout from "../layouts/Layout.astro";
-const date = new Date();
-const dateOptions = {
-	timeZone: "America/Campo_Grande",
-};
 ---
 
 <Layout title="Vitoo">
@@ -22,9 +18,9 @@ const dateOptions = {
 				ferramentas para facilitar a administração dessas comunidades.
 			</p>
 			<div class="flex items-center gap-3 my-3 text-zinc-400">
-				<p id="date">{date.toLocaleDateString("pt-BR", dateOptions)}</p>
+				<p id="date">{new Date().toLocaleDateString("pt-BR")}</p>
 				<Dot />
-				<p id="time">{date.toLocaleTimeString("pt-BR", dateOptions)}</p>
+				<p id="time">{new Date().toLocaleTimeString("pt-BR")}</p>
 				<Dot />
 				<p>Brazil</p>
 			</div>
@@ -55,16 +51,23 @@ const dateOptions = {
 	const dateOptions = {
 		timeZone: "America/Campo_Grande",
 	};
+	let date = new Date();
 	const timeElement = document.getElementById("time");
 	const dateElement = document.getElementById("date");
+	if (timeElement) {
+		timeElement!.innerText = date.toLocaleTimeString("pt-BR", dateOptions);
+	}
+	if (dateElement) {
+		dateElement!.innerText = date.toLocaleDateString("pt-BR", dateOptions);
+	}
 	if (timeElement || dateElement) {
 		setInterval(() => {
-			const date = new Date();
+			date = new Date();
 			if (timeElement) {
-				timeElement!.innerText = date.toLocaleDateString("pt-BR", dateOptions);
+				timeElement!.innerText = date.toLocaleTimeString("pt-BR", dateOptions);
 			}
 			if (dateElement) {
-				timeElement!.innerText = date.toLocaleTimeString("pt-BR", dateOptions);
+				dateElement!.innerText = date.toLocaleDateString("pt-BR", dateOptions);
 			}
 		}, 1000);
 	}
