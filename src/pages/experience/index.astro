@@ -31,10 +31,13 @@ const jobsCount = jobs.reduce(
   title="vitoo | Experiência"
   description={`Já passei por ${jobsCount} empresas`}
 >
-  <main class="py-16 flex justify-center px-3">
+  <main
+    class="py-16 flex justify-center px-3 h-dscreen"
+    style="overflow:overlay"
+  >
     <h1 class="hide">Experiências</h1>
     <div
-      class="max-w-lg flex gap-10 flex-col justify-center motion-safe:animate-slide-in-50"
+      class="max-w-lg grid grid-cols-1 gap-10 justify-center motion-safe:animate-slide-in-50"
       animate-unload="animate-slide-out-50"
     >
       {
@@ -52,7 +55,7 @@ const jobsCount = jobs.reduce(
               <div class="flex gap-3 items-center text-zinc-100 pl-5 relative">
                 <Dot
                   size={10}
-                  class="absolute bg-green-500 top-1/2 left-0 -translate-y-[2px]"
+                  class="absolute bg-green-500 top-[calc(50%-1px)] left-0 -translate-y-[2px]"
                 />
                 <h2>{job.name}</h2>
                 <p class="text-sm text-zinc-500 font-semibold">{job.role}</p>
