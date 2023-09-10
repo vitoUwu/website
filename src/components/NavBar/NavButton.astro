@@ -15,6 +15,7 @@ if (pathname !== "/" && pathname.endsWith("/")) {
 
 <anchor-with-animation class="h-fit w-fit flex">
   <a
+    rel="prefetch-intent"
     href={href}
     class="transition-all text-zinc-400 py-2 px-3 data-[active]:bg-zinc-800 data-[active]:text-zinc-100 rounded-md hover:text-zinc-100"
     data-active={pathname === href}
