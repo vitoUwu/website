@@ -3,86 +3,98 @@ import Dot from "../components/Dot.astro";
 import Layout from "../layouts/Layout.astro";
 
 const about =
-	"Estudante de Engenharia de Software com amor pela área de desenvolvimento web e mobile. Tenho gosto por Front-End e interesse em Back-Ends e APIs. Gerencio comunidades do Discord e desenvolvo ferramentas para facilitar a administração dessas comunidades.";
+  "Estudante de Engenharia de Software com amor pela área de desenvolvimento web e mobile. Tenho gosto por Front-End e interesse em Back-Ends e APIs. Gerencio comunidades do Discord e desenvolvo ferramentas para facilitar a administração dessas comunidades.";
 ---
 
-<Layout title="vitoo" description={about}>
-	<main class="flex min-h-screen w-full justify-center items-center p-10">
-		<div class="max-w-3xl">
-			<h1
-				class="text-transparent bg-clip-text bg-gradient-to-t from-zinc-300 to-zinc-100"
-			>
-				Oi, sou Victor
-			</h1>
-			<p class="text-zinc-400">
-				{about}
-			</p>
-			<div class="flex items-center gap-3 my-3 text-zinc-400">
-				<time datetime={new Date().toLocaleDateString()} id="date"
-					>{new Date().toLocaleDateString("pt-BR")}</time
-				>
-				<Dot />
-				<time datetime={new Date().toLocaleTimeString()} id="time"
-					>{new Date().toLocaleTimeString("pt-BR")}</time
-				>
-				<Dot />
-				<p>Brazil</p>
-			</div>
-			<div class="container flex w-full justify-center gap-6 py-3">
-				<a
-					href="https://github.com/vitouwu"
-					target="_blank"
-					class="hover:text-zinc-200 hover:font-semibold transition-all"
-					>Github</a
-				>
-				<a
-					href="https://linkedin.com/in/vitoo"
-					target="_blank"
-					class="hover:text-zinc-200 hover:font-semibold transition-all"
-					>Linkedin</a
-				>
-				<a
-					href="mailto:victorhugomeurerdelgrandi@gmail.com"
-					class="hover:text-zinc-200 hover:font-semibold transition-all"
-					>Email</a
-				>
-			</div>
-		</div>
-	</main>
+<Layout
+  title="vitoo"
+  description={about}
+>
+  <main class="flex min-h-screen w-full justify-center items-center p-10">
+    <div class="max-w-3xl">
+      <h1
+        class="animate-slide-in-50 text-transparent bg-clip-text bg-gradient-to-t from-zinc-300 to-zinc-100"
+      >
+        Oi, sou Victor
+      </h1>
+      <p class="text-zinc-400 animate-slide-in-100">
+        {about}
+      </p>
+      <div
+        class="flex items-center gap-3 my-3 text-zinc-400 animate-slide-in-300"
+      >
+        <time
+          datetime={new Date().toLocaleDateString()}
+          id="date"
+          >{new Date().toLocaleDateString("pt-BR")}</time
+        >
+        <Dot />
+        <time
+          datetime={new Date().toLocaleTimeString()}
+          id="time"
+          >{new Date().toLocaleTimeString("pt-BR")}</time
+        >
+        <Dot />
+        <p>Brazil</p>
+      </div>
+      <div
+        class="container flex w-full justify-center gap-6 py-3 animate-fade-in-400"
+      >
+        <a
+          fade-out="animate-slide"
+          href="https://github.com/vitouwu"
+          target="_blank"
+          class="hover:text-zinc-200 hover:font-semibold transition-all animate-slide-in-300"
+          >Github</a
+        >
+        <a
+          href="https://linkedin.com/in/vitoo"
+          target="_blank"
+          class="hover:text-zinc-200 hover:font-semibold transition-all animate-slide-in-400"
+          >Linkedin</a
+        >
+        <a
+          href="mailto:victorhugomeurerdelgrandi@gmail.com"
+          class="hover:text-zinc-200 hover:font-semibold transition-all animate-slide-in-500"
+          >Email</a
+        >
+      </div>
+    </div>
+  </main>
 </Layout>
 
 <script>
-	function setTime(element: HTMLElement, date: Date, type: "time" | "date") {
-		const f = type === "time" ? "toLocaleTimeString" : "toLocaleDateString";
-		element.innerText = date[f]("pt-BR", {
-			timeZone: "America/Campo_Grande",
-		});
-		element.setAttribute("datetime", date[f]());
-		element.parentElement?.setAttribute(
-			"title",
-			`${date.toLocaleDateString("en-US")} ${date
-				.toLocaleTimeString("en-US")
-				.slice(0, -6)} in Brazil, Mato Grosso do Sul`,
-		);
-	}
-	let date = new Date();
-	const timeElement = document.getElementById("time");
-	const dateElement = document.getElementById("date");
-	if (timeElement) {
-		setTime(timeElement, date, "time");
-	}
-	if (dateElement) {
-		setTime(dateElement, date, "date");
-	}
-	if (timeElement || dateElement) {
-		setInterval(() => {
-			date = new Date();
-			if (timeElement) {
-				setTime(timeElement, date, "time");
-			}
-			if (dateElement) {
-				setTime(dateElement, date, "date");
-			}
-		}, 1000);
-	}
+  function setTime(element: HTMLElement, date: Date, type: "time" | "date") {
+    const f = type === "time" ? "toLocaleTimeString" : "toLocaleDateString";
+    element.innerText = date[f]("pt-BR", {
+      timeZone: "America/Campo_Grande",
+    });
+    element.setAttribute("datetime", date[f]());
+    element.parentElement?.setAttribute(
+      "title",
+      `${date.toLocaleDateString("en-US")} ${date
+        .toLocaleTimeString("en-US")
+        .slice(0, -6)} in Brazil, Mato Grosso do Sul`,
+    );
+  }
+  let date = new Date();
+  const timeElement = document.getElementById("time");
+  const dateElement = document.getElementById("date");
+  if (timeElement) {
+    setTime(timeElement, date, "time");
+  }
+  if (dateElement) {
+    setTime(dateElement, date, "date");
+  }
+  if (timeElement || dateElement) {
+    setInterval(() => {
+      date = new Date();
+      if (timeElement) {
+        setTime(timeElement, date, "time");
+      }
+      if (dateElement) {
+        setTime(dateElement, date, "date");
+      }
+    }, 1000);
+  }
 </script>

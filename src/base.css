@@ -1,34 +1,53 @@
 @tailwind base;
+@tailwind utilities;
+@tailwind components;
 
 @layer base {
   h1 {
-    @apply text-2xl font-bold
+    @apply text-2xl font-bold;
   }
 
   h2 {
-    @apply text-xl font-bold
+    @apply text-xl font-bold;
   }
 
   * {
-    @apply antialiased
+    @apply antialiased;
   }
 
+  :root {
+    --slide-x: 5px;
+  }
 }
-
-@tailwind components;
 
 @layer components {
   .container {
-    @apply text-zinc-400 border border-zinc-800/60 bg-gradient-to-t from-zinc-900/20 to-zinc-900/30 rounded-lg
+    @apply text-zinc-400 border border-zinc-800/60 bg-gradient-to-t from-zinc-900/20 to-zinc-900/30 rounded-lg;
   }
 
   .container-hover {
-    @apply text-zinc-400 border border-zinc-800/60 bg-gradient-to-t from-zinc-900/20 to-zinc-900/30 rounded-lg hover:from-zinc-900/30 hover:to-green-900/10 hover:border-green-800/40 transition-colors
+    @apply text-zinc-400 border border-zinc-800/60 bg-gradient-to-t from-zinc-900/20 to-zinc-900/30 rounded-lg hover:from-zinc-900/30 hover:to-green-900/10 hover:border-green-800/40 transition-colors;
   }
 
   .hide {
-    @apply text-white absolute -top-[10000000px]
+    @apply text-white absolute -top-[10000000px];
   }
 }
 
-@tailwind utilities;
+@layer utilities {
+  .slide-in-x-100 {
+    --slide-x: 5px;
+  }
+
+  .slide-in-x-200 {
+    --slide-x: 10px;
+  }
+
+  .slide-in-x-300 {
+    --slide-x: 15px;
+  }
+
+  .slide-in-x-500 {
+    --slide-x: 20px;
+  }
+}

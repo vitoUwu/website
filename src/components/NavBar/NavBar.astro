@@ -15,11 +15,16 @@ const paths = {
 >
   {
     Object.entries(paths).map(([path, name]) => (
-      <NavButton href={path} name={name} />
+      <NavButton
+        href={path}
+        name={name}
+      />
     ))
   }
 </nav>
-<span class="delay-100 peer-data-[hide='false']:peer-hover:opacity-50 bg-black transition-all opacity-0 fixed inset-0 pointer-events-none"></span>
+<span
+  class="delay-100 peer-data-[hide='false']:peer-hover:opacity-50 bg-black transition-all opacity-0 fixed inset-0 pointer-events-none"
+></span>
 
 <script>
   let lastScrollTop = 0;

@@ -1,11 +1,11 @@
 ---
 import "../base.css";
 import NavBar from "../components/NavBar/NavBar.astro";
-import { GoogleAnalytics } from '@astrolib/analytics'
+import { GoogleAnalytics } from "@astrolib/analytics";
 import { SEO } from "astro-seo";
 interface Props {
-	title: string;
-	description?: string;
+  title: string;
+  description?: string;
 }
 
 const { title, description = "Hello World" } = Astro.props;
@@ -13,41 +13,56 @@ const { title, description = "Hello World" } = Astro.props;
 
 <!doctype html>
 <html lang="pt-BR">
-	<head>
-		<SEO
-			title={title}
-			description={description}
-			openGraph={{
-				basic: {
-					title,
-					type: "website",
-					image: "https://avatars.githubusercontent.com/u/32278696?v=4",
-				},
-				optional: {
-					locale: "pt-BR",
-					siteName: "vitoo",
-					description,
-				},
-			}}
-			twitter={{
-				creator: "@vitoodev",
-				title,
-				description,
-			}}
-		/>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="sitemap" href="/sitemap-index.xml" />
-		<meta name="generator" content={Astro.generator} />
-		<GoogleAnalytics id="G-PB665S01LF"/>
-	</head>
-	<body class="from-zinc-950 to-zinc-900 bg-gradient-to-t text-zinc-100 min-h-screen">
-		<header
-			class="z-10 fixed flex justify-center items-center top-3 left-0 right-0"
-		>
-			<NavBar />
-		</header>
-		<slot />
-	</body>
+  <head>
+    <SEO
+      title={title}
+      description={description}
+      openGraph={{
+        basic: {
+          title,
+          type: "website",
+          image: "https://avatars.githubusercontent.com/u/32278696?v=4",
+        },
+        optional: {
+          locale: "pt-BR",
+          siteName: "vitoo",
+          description,
+        },
+      }}
+      twitter={{
+        creator: "@vitoodev",
+        title,
+        description,
+      }}
+    />
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
+    <link
+      rel="sitemap"
+      href="/sitemap-index.xml"
+    />
+    <meta
+      name="generator"
+      content={Astro.generator}
+    />
+    <GoogleAnalytics id="G-PB665S01LF" />
+  </head>
+  <body
+    class="from-zinc-950 to-zinc-900 bg-gradient-to-t text-zinc-100 min-h-screen"
+  >
+    <header
+      class="z-10 fixed flex justify-center items-center top-3 left-0 right-0"
+    >
+      <NavBar />
+    </header>
+    <slot />
+  </body>
 </html>

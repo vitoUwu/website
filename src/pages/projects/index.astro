@@ -5,10 +5,15 @@ import Layout from "../../layouts/Layout.astro";
 import projects from "../../lib/constants/projects";
 ---
 
-<Layout title="vitoo | Projetos" description={`${projects.length} Projetos criados :D`}>
+<Layout
+  title="vitoo | Projetos"
+  description={`${projects.length} Projetos criados :D`}
+>
   <main class="py-16 flex justify-center px-3">
     <h1 class="hide">Projetos</h1>
-    <div class="max-w-7xl grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 justify-center">
+    <div
+      class="max-w-7xl grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 justify-center"
+    >
       {
         projects.map((project) => (
           <Card>
@@ -37,8 +42,10 @@ import projects from "../../lib/constants/projects";
 
 <script>
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => entry.target.classList.toggle('opacity-0', !entry.isIntersecting))
-  })
-  const cards = document.querySelectorAll('#card');
-  cards.forEach((card) => observer.observe(card))
+    entries.forEach((entry) =>
+      entry.target.classList.toggle("opacity-0", !entry.isIntersecting),
+    );
+  });
+  const cards = document.querySelectorAll("#card");
+  cards.forEach((card) => observer.observe(card));
 </script>
