@@ -11,7 +11,7 @@ const paths = {
 <nav
   id="navbar"
   data-hide="false"
-  class="text-zinc-100 shadow-lg border border-zinc-800 z-10 peer text-sm duration-500 ease-in-out font-semibold flex bg-zinc-900 rounded-lg p-1 data-[hide='true']:-translate-y-[200%] transition-transform"
+  class="text-zinc-100 shadow-lg border border-zinc-800 z-10 text-sm duration-500 ease-in-out font-semibold flex bg-zinc-900 rounded-lg p-1 data-[hide='true']:-translate-y-[200%] transition-transform"
 >
   {
     Object.entries(paths).map(([path, name]) => (
@@ -22,9 +22,6 @@ const paths = {
     ))
   }
 </nav>
-<span
-  class="delay-100 peer-data-[hide='false']:peer-hover:opacity-50 bg-black transition-all opacity-0 fixed inset-0 pointer-events-none"
-></span>
 
 <script>
   let lastScrollTop = 0;
