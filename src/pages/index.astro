@@ -10,18 +10,23 @@ const about =
   title="vitoo"
   description={about}
 >
-  <main class="flex min-h-screen w-full justify-center items-center p-10">
+  <main class="flex min-h-dscreen w-full justify-center items-center p-10">
     <div class="max-w-3xl">
       <h1
-        class="animate-slide-in-50 text-transparent bg-clip-text bg-gradient-to-t from-zinc-300 to-zinc-100"
+        animate-unload="animate-slide-out-500"
+        class="motion-safe:animate-slide-in-50 text-transparent bg-clip-text bg-gradient-to-t from-zinc-300 to-zinc-100"
       >
         Oi, sou Victor
       </h1>
-      <p class="text-zinc-400 animate-slide-in-100">
+      <p
+        animate-unload="animate-slide-out-400"
+        class="text-zinc-400 motion-safe:animate-slide-in-100"
+      >
         {about}
       </p>
       <div
-        class="flex items-center gap-3 my-3 text-zinc-400 animate-slide-in-300"
+        animate-unload="animate-slide-out-300"
+        class="flex items-center gap-3 my-3 text-zinc-400 motion-safe:animate-slide-in-300"
       >
         <time
           datetime={new Date().toLocaleDateString()}
@@ -41,21 +46,23 @@ const about =
         class="container flex w-full justify-center gap-6 py-3 animate-fade-in-400"
       >
         <a
-          fade-out="animate-slide"
+          animate-unload="animate-slide-out-200"
           href="https://github.com/vitouwu"
           target="_blank"
-          class="hover:text-zinc-200 hover:font-semibold transition-all animate-slide-in-300"
+          class="hover:text-zinc-200 hover:font-semibold transition-all motion-safe:animate-slide-in-300"
           >Github</a
         >
         <a
+          animate-unload="animate-slide-out-100"
           href="https://linkedin.com/in/vitoo"
           target="_blank"
-          class="hover:text-zinc-200 hover:font-semibold transition-all animate-slide-in-400"
+          class="hover:text-zinc-200 hover:font-semibold transition-all motion-safe:animate-slide-in-400"
           >Linkedin</a
         >
         <a
+          animate-unload="animate-slide-out-50"
           href="mailto:victorhugomeurerdelgrandi@gmail.com"
-          class="hover:text-zinc-200 hover:font-semibold transition-all animate-slide-in-500"
+          class="hover:text-zinc-200 hover:font-semibold transition-all motion-safe:animate-slide-in-500"
           >Email</a
         >
       </div>

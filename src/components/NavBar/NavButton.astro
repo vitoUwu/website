@@ -13,9 +13,61 @@ if (pathname !== "/" && pathname.endsWith("/")) {
 // console.log(pathname);
 ---
 
-<a
-  href={href}
-  class="transition-all text-zinc-400 py-2 px-3 data-[active]:bg-zinc-800 data-[active]:text-zinc-100 rounded-md hover:text-zinc-100"
-  data-active={pathname === href}
-  >{name}
-</a>
+<anchor-with-animation class="h-fit w-fit flex">
+  <a
+    href={href}
+    class="transition-all text-zinc-400 py-2 px-3 data-[active]:bg-zinc-800 data-[active]:text-zinc-100 rounded-md hover:text-zinc-100"
+    data-active={pathname === href}
+    >{name}
+  </a>
+</anchor-with-animation>
+
+<script>
+  class AnchorWithAnimation extends HTMLElement {
+    constructor() {
+      super();
+
+      const anchor = this.querySelector("a");
+      const isReduced = window.matchMedia(
+        `(prefers-reduced-motion: reduce)`,
+      ).matches;
+
+      function replace(href: string) {
+        window.location.replace(href);
+      }
+
+      anchor?.addEventListener("click", (event) => {
+        if (isReduced) {
+          return;
+        }
+        event.preventDefault();
+
+        let finishedAnimations = 0;
+        const elements = [
+          ...document.querySelectorAll("[animate-unload]").values(),
+        ].map((el) => {
+          el.classList.forEach(
+            (c) => c.includes("animate") && el.classList.remove(c),
+          );
+          el.classList.add(`${el.getAttribute("animate-unload")!}`);
+          el.addEventListener("animationend", () => finishedAnimations++);
+          return el;
+        });
+
+        if (elements.length === 0) {
+          return replace(anchor.href);
+        }
+
+        setTimeout(() => replace(anchor.href), 1400);
+        setInterval(() => {
+          if (finishedAnimations === elements.length) {
+            finishedAnimations++;
+            replace(anchor.href);
+          }
+        }, 100);
+      });
+    }
+  }
+
+  customElements.define("anchor-with-animation", AnchorWithAnimation);
+</script>

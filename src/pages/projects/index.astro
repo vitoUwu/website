@@ -12,7 +12,8 @@ import projects from "../../lib/constants/projects";
   <main class="py-16 flex justify-center px-3">
     <h1 class="hide">Projetos</h1>
     <div
-      class="max-w-7xl grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 justify-center"
+      animate-unload="animate-slide-out-50"
+      class="motion-safe:animate-slide-in-50 max-w-7xl grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 justify-center"
     >
       {
         projects.map((project) => (

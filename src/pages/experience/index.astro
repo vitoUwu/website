@@ -33,7 +33,10 @@ const jobsCount = jobs.reduce(
 >
   <main class="py-16 flex justify-center px-3">
     <h1 class="hide">Experiências</h1>
-    <div class="max-w-lg flex gap-10 flex-col justify-center">
+    <div
+      class="max-w-lg flex gap-10 flex-col justify-center motion-safe:animate-slide-in-50"
+      animate-unload="animate-slide-out-50"
+    >
       {
         jobs.map((job) => {
           const monthCount = calcMonth(

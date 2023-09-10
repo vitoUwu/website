@@ -50,4 +50,12 @@
   .slide-in-x-500 {
     --slide-x: 20px;
   }
+
+  .min-h-dscreen {
+    min-height: 100dvh;
+  }
+
+  .h-dscreen {
+    height: 100dvh;
+  }
 }
