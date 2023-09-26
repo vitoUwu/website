@@ -3,8 +3,6 @@ import Layout from "../../layouts/Layout.astro";
 import Dot from "../../components/Dot.astro";
 import jobs from "../../lib/constants/jobs";
 
-const calcMonth = (timestamp: number) =>
-  Math.ceil(timestamp / 60000 / 60 / 24 / 30);
 const months = [
   "jan",
   "fev",
@@ -19,12 +17,34 @@ const months = [
   "nov",
   "dez",
 ];
-const word = (month: number) => (month !== 1 ? "meses" : "mês");
 const jobsCount = jobs.reduce(
   (acc, job, index, arr) =>
     acc + (arr.findIndex((j) => j.name === job.name) === index ? 1 : 0),
   0,
 );
+
+function timeSince(start: Date, end?: Date) {
+  const hasEnd = !!end;
+  end ??= new Date();
+
+  const seconds = Math.round((end.getTime() - start.getTime()) / 1000);
+  let interval = Math.round(seconds / 31536000);
+
+  if (interval >= 1) {
+    return `${hasEnd ? "" : "há "}${interval} ${
+      interval === 1 ? "ano" : "anos"
+    }`;
+  }
+
+  interval = Math.round(seconds / 2592000);
+  if (interval >= 1) {
+    return `${hasEnd ? "" : "há "}${interval} ${
+      interval === 1 ? "mês" : "meses"
+    }`;
+  }
+
+  return "menos de 1 mês";
+}
 ---
 
 <Layout
@@ -42,9 +62,6 @@ const jobsCount = jobs.reduce(
     >
       {
         jobs.map((job) => {
-          const monthCount = calcMonth(
-            (job.end?.getTime() ?? Date.now()) - job.start.getTime(),
-          );
           const startShortMonth = months[job.start.getMonth()];
           const endShortMonth = job.end && months[job.end.getMonth()];
           const startYear = job.start.getFullYear();
@@ -74,9 +91,7 @@ const jobsCount = jobs.reduce(
                   {job.end ? ` até ${endShortMonth} de ${endYear}` : ""}
                 </p>
                 <Dot class="bg-zinc-500" />
-                <p>
-                  {`${job.end ? "" : "há "}${monthCount} ${word(monthCount)}`}
-                </p>
+                <p>{timeSince(job.start, job.end)}</p>
               </div>
               {job.description ? (
                 <p class="pl-5 text-zinc-400 whitespace-break-spaces mt-3">

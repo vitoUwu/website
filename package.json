@@ -7,12 +7,14 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "pnpm exec prettier -w ./src/**/*.astro"
   },
   "dependencies": {
     "@astrojs/prefetch": "^0.4.0",
     "@astrojs/sitemap": "^3.0.0",
     "@astrojs/tailwind": "^5.0.0",
+    "@astrojs/vercel": "^5.0.1",
     "@astrolib/analytics": "^0.4.2",
     "astro": "^3.0.10",
     "astro-seo": "^0.8.0",
