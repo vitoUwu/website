@@ -62,6 +62,9 @@ if (pathname !== "/" && pathname.endsWith("/")) {
         setTimeout(() => replace(anchor.href), 1400);
         setInterval(() => {
           if (finishedAnimations === elements.length) {
+            // this line below is used to prevent this interval
+            // from continuing to call the replace function even
+            // if it has already called the function
             finishedAnimations++;
             replace(anchor.href);
           }
