@@ -8,6 +8,7 @@ interface Props {
   description?: string;
 }
 
+const prod = import.meta.env.PROD;
 const { title, description = "Hello World" } = Astro.props;
 ---
 
@@ -53,7 +54,7 @@ const { title, description = "Hello World" } = Astro.props;
       name="generator"
       content={Astro.generator}
     />
-    <GoogleAnalytics id="G-PB665S01LF" />
+    {prod && <GoogleAnalytics id="G-PB665S01LF" />}
   </head>
   <body
     class="from-zinc-950 to-zinc-900 bg-gradient-to-t text-zinc-100 min-h-dscreen"
