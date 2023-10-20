@@ -2,7 +2,7 @@ const jobs = [
   {
     name: "ITZA Tech",
     description:
-      "Desenvolvemos e-commerces utilizando a Deco.cx, uma platafrma que oferece uma stack de tecnologia simples e eficiente combinada com recursos poderosos para criar websites extremamente rápidos baseada em Deno, Twind e Fresh,  essas tecnologias proporcionam uma performance capaz de atingir entre 90 e 100 pontos no PageSpeed",
+      "Desenvolvemos e-commerces utilizando a Deco.cx, uma plataforma que oferece uma stack de tecnologia simples e eficiente combinada com recursos poderosos para criar websites extremamente rápidos baseada em Deno, Twind e Fresh,  essas tecnologias proporcionam uma performance capaz de atingir entre 90 e 100 pontos no PageSpeed",
     start: new Date("08/16/2023"),
     role: "Desenvolvedor Front-end",
   },
