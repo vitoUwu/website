@@ -1,10 +1,10 @@
 const jobs = [
   {
-    name: "Deco.cx",
+    name: "ITZA Tech",
     description:
-      "A deco.cx é uma plataforma moderna de desenvolvimento web que oferece uma stack de tecnologia simples e eficiente combinada com recursos poderosos para criar websites extremamente rápidos. A stack da deco.cx é baseada em Deno, Twind e Fresh. Com essa stack é possível atingir altos pontos de performance, tanto mobile quanto desktop, gerando entre 90 e 100 pontos no Lighthouse.",
+      "Desenvolvemos e-commerces utilizando a Deco.cx, uma platafrma que oferece uma stack de tecnologia simples e eficiente combinada com recursos poderosos para criar websites extremamente rápidos baseada em Deno, Twind e Fresh,  essas tecnologias proporcionam uma performance capaz de atingir entre 90 e 100 pontos no PageSpeed",
     start: new Date("08/16/2023"),
-    role: "Freelancer",
+    role: "Desenvolvedor Front-end",
   },
   {
     name: "Código Kid",
