@@ -13,4 +13,8 @@ export default defineConfig({
   site: "https://vitoo.dev/",
   output: "server",
   adapter: vercel(),
+  redirects: {
+    "/spotify": "https://open.spotify.com/user/victorhugomeurer",
+    "/github": "https://github.com/vitoUwu",
+  }
 });
