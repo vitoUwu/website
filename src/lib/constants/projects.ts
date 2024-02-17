@@ -117,6 +117,20 @@ const projects = [
     repository_url: "https://github.com/vitouwu/webapi",
     technologies: ["csharp"],
   },
+  {
+    title: "ExpendX",
+    badges: ["Front End", "Back End"],
+    description: "ExpendX é um gerenciador de gastos pessoais, o projeto ainda está em desenvolvimento.",
+    // repository_url: "https://github.com/vitouwu/expendx",
+    url: "https://expendx.vitoo.dev",
+    technologies: ["vuejs", "nuxtjs", "typescript", "supabase"],
+  },
+  {
+    title: "Saint Bot",
+    badges: ["Discord"],
+    description: "Saint Bot é uma aplicação feita para uma comunidade de Minecraft, com proprósitos de gerenciamento e postagem de eventos e anuncios.",
+    technologies: ["discord"],
+  }
 ];
 
 export default projects;
