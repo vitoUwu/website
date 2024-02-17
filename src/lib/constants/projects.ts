@@ -110,6 +110,13 @@ const projects = [
     url: "https://memonote.vitoo.dev/",
     technologies: ["golang", "svelte", "tailwind"],
   },
+  {
+    title: "WebApi",
+    badges: ["Back End"],
+    description: "An API made for studies on the C# and .NET 8. With unit tests and CI",
+    repository_url: "https://github.com/vitouwu/webapi",
+    technologies: ["csharp"],
+  },
 ];
 
 export default projects;
