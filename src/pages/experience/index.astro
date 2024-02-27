@@ -27,8 +27,8 @@ function timeSince(start: Date, end?: Date) {
   const hasEnd = !!end;
   end ??= new Date();
 
-  const seconds = Math.round((end.getTime() - start.getTime()) / 1000);
-  let interval = Math.round(seconds / 31536000);
+  const seconds = Math.floor((end.getTime() - start.getTime()) / 1000);
+  let interval = Math.floor(seconds / 31536000);
 
   if (interval >= 1) {
     return `${hasEnd ? "" : "há "}${interval} ${
@@ -36,7 +36,7 @@ function timeSince(start: Date, end?: Date) {
     }`;
   }
 
-  interval = Math.round(seconds / 2592000);
+  interval = Math.floor(seconds / 2592000);
   if (interval >= 1) {
     return `${hasEnd ? "" : "há "}${interval} ${
       interval === 1 ? "mês" : "meses"
