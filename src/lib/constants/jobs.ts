@@ -2,7 +2,7 @@ const jobs = [
   {
     name: "ITZA Tech",
     description:
-      "Desenvolvo e-commerce headless utilizando a deco.cx, Fresh, Tailwind, Typescript e Deno, atingindo uma alta performance e navegações mais fluidas. Otimizei sites, melhorei tempos de carregamento e fiz contribuições para a deco.cx. Fui reconhecido pela Deco como contribuidor da semana 7 vezes seguidas",
+      "Desenvolvo e-commerce headless utilizando a deco.cx, Fresh, Tailwind, Typescript e Deno, atingindo uma alta performance e navegações mais fluidas. Otimizei sites, melhorei tempos de carregamento e fiz contribuições para a deco.cx. Fui reconhecido pela Deco como contribuidor da semana 10 vezes seguidas",
     start: new Date("08/1/2023"),
     role: "Desenvolvedor Front-end",
   },
