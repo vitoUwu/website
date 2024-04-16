@@ -2,7 +2,7 @@
 export default {
   "website": {
     "name": "website",
-    "description": "My website made with Astro",
+    "description": "My website made with ❤️",
     "language": "TypeScript",
     "href": "https://github.com/vitoUwu/website"
   },
