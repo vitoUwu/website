@@ -47,6 +47,12 @@ const username = "vitoUwu";
     )
   );
 
+  const files = fs.readdirSync("content/projects");
+  for (const file of files) {
+    if (!file.endsWith(".md")) continue;
+    fs.unlinkSync(`content/projects/${file}`);
+  }
+
   readmes.forEach((readme, index) => {
     fs.writeFileSync(
       `content/projects/${repos[index].name}.md`,
