@@ -7,14 +7,7 @@ const username = "vitoUwu";
 (async () => {
   const repos = await fetchWithCredentials(endpoints.repos(username))
     .then((res) => res.json() as Promise<Repository[]>)
-    .then((repos) =>
-      repos
-        .filter((repo) => !repo.fork)
-        .sort(
-          (a, b) =>
-            new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime()
-        )
-    );
+    .then((repos) => repos.filter((repo) => !repo.fork));
 
   fs.writeFileSync(
     "utils/repos.ts",
