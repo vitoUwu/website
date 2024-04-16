@@ -44,6 +44,7 @@ const reposLength = Object.keys(repos).length;
           {{ repo.name }}
         </span>
         <span
+          v-if="repo.language"
           class="text-zinc-600 group-hover:text-emerald-600 text-xs transition-all shrink-0"
         >
           {{ repo.language }}
