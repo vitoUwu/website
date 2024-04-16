@@ -3,7 +3,7 @@ export default {
   "website": {
     "name": "website",
     "description": "My website made with Astro",
-    "language": "Astro",
+    "language": "TypeScript",
     "href": "https://github.com/vitoUwu/website"
   },
   "PassIn": {
