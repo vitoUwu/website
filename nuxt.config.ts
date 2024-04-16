@@ -14,7 +14,11 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "@zadigetvoltaire/nuxt-gtm",
     "@nuxt/content",
+    "@nuxtjs/robots",
   ],
+  site: {
+    url: "https://vitoo.dev",
+  },
   gtm: {
     id: "GTM-WBBDKPW7",
     debug: true,

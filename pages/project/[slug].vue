@@ -10,7 +10,7 @@ const { data: readme } = await useAsyncData(repositoryName, () =>
 );
 
 const title = repo ? repo.name : "404 :P";
-const description = repo?.description ?? "Projeto não encontrado";
+const description = repo?.description;
 
 useSeoMeta({
   title,
