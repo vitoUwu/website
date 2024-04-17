@@ -1,16 +1,16 @@
 // Auto generated file
 export default {
+  "PassIn": {
+    "name": "PassIn",
+    "description": "A backend for an event creation application",
+    "language": "C#",
+    "href": "https://github.com/vitoUwu/PassIn"
+  },
   "website": {
     "name": "website",
     "description": "My website made with ❤️",
     "language": "TypeScript",
     "href": "https://github.com/vitoUwu/website"
-  },
-  "PassIn": {
-    "name": "PassIn",
-    "description": null,
-    "language": "C#",
-    "href": "https://github.com/vitoUwu/PassIn"
   },
   "FileUploader": {
     "name": "FileUploader",
