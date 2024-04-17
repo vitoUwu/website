@@ -119,3 +119,9 @@ export interface Content {
     self: string;
   };
 }
+
+export enum HTTPStatusCodes {
+  MOVED_PERMANENTLY = 301,
+  TEMPORARY_REDIRECT = 307,
+  METHOD_NOT_ALLOWED = 405,
+}
