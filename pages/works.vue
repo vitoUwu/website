@@ -73,22 +73,33 @@ useSeoMeta({
     </header>
     <div class="space-y-10">
       <div v-for="work of works" :key="work.name" class="group">
-        <div class="flex items-center gap-3">
+        <p class="flex items-center gap-3">
           <span
             class="shrink-0 [@media_(hover:_hover)]:text-zinc-400 [@media_(hover:_hover)]:group-hover:text-zinc-200 text-zinc-200 transition-all"
           >
             {{ work.name }}
           </span>
-          <span
-            class="text-emerald-600 [@media_(hover:_hover)]:text-zinc-600 [@media_(hover:_hover)]:group-hover:text-emerald-600 text-xs transition-all shrink-0"
-          >
-            {{ work.role }}
+          <span class="flex flex-col shrink-0">
+            <span
+              class="text-emerald-600 [@media_(hover:_hover)]:text-zinc-600 [@media_(hover:_hover)]:group-hover:text-emerald-600 text-xs transition-all"
+            >
+              {{ work.role }}
+            </span>
+            <span
+              class="sm:hidden text-emerald-600 [@media_(hover:_hover)]:text-zinc-600 [@media_(hover:_hover)]:group-hover:text-emerald-600 text-xs transition-all"
+            >
+              {{
+                work.end
+                  ? `${formatDate(work.start)} - ${formatDate(work.end)}`
+                  : toRelativeDate(work.start)
+              }}
+            </span>
           </span>
           <span
             class="border-b border-dashed border-zinc-600 w-full [@media_(hover:_hover)]:group-hover:border-emerald-600 transition-all"
           />
           <span
-            class="text-emerald-600 [@media_(hover:_hover)]:text-zinc-600 [@media_(hover:_hover)]:group-hover:text-emerald-600 text-xs transition-all shrink-0"
+            class="hidden sm:inline text-emerald-600 [@media_(hover:_hover)]:text-zinc-600 [@media_(hover:_hover)]:group-hover:text-emerald-600 text-xs transition-all shrink-0"
           >
             {{
               work.end
@@ -96,7 +107,7 @@ useSeoMeta({
                 : toRelativeDate(work.start)
             }}
           </span>
-        </div>
+        </p>
         <p
           class="mt-3 [@media_(hover:_hover)]:text-zinc-400 text-zinc-200 transition-all [@media_(hover:_hover)]:group-hover:text-zinc-200"
         >
