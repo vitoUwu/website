@@ -1,5 +1,17 @@
 // Auto generated file
 export default {
+  "uno-slash-website": {
+    "name": "uno-slash-website",
+    "description": "website made especially for my bot UnoSlash",
+    "language": "Vue",
+    "href": "https://github.com/vitoUwu/uno-slash-website"
+  },
+  "website": {
+    "name": "website",
+    "description": "My website made with ❤️",
+    "language": "TypeScript",
+    "href": "https://github.com/vitoUwu/website"
+  },
   "snakegame": {
     "name": "snakegame",
     "description": "A classic snake game made with go",
@@ -41,12 +53,6 @@ export default {
     "description": "Some UI tests and animations done with vue.js and tailwind.",
     "language": "Vue",
     "href": "https://github.com/vitoUwu/vue-components"
-  },
-  "website": {
-    "name": "website",
-    "description": "My website made with ❤️",
-    "language": "TypeScript",
-    "href": "https://github.com/vitoUwu/website"
   },
   "PassIn": {
     "name": "PassIn",
@@ -107,12 +113,6 @@ export default {
     "description": "Study purpose repo",
     "language": "Go",
     "href": "https://github.com/vitoUwu/go-api"
-  },
-  "uno-slash-website": {
-    "name": "uno-slash-website",
-    "description": "website made especially for my bot UnoSlash",
-    "language": "Vue",
-    "href": "https://github.com/vitoUwu/uno-slash-website"
   },
   "tiny-tales": {
     "name": "tiny-tales",
