@@ -19,7 +19,7 @@ useSeoMeta({
 
 <template>
   <div class="mx-10">
-    <h1 class="text-xl font-bold">vitoo</h1>
+    <h1 class="text-xl font-bold">Victor "vitoo" Hugo M.</h1>
     <div class="">
       <h2 class="inline items-center justify-between w-full text-zinc-400">
         Desenvolvedor Full Stack
@@ -30,12 +30,16 @@ useSeoMeta({
       </h2>
     </div>
     <p class="my-10 text-pretty">
-      Tenho 20 anos, sou estudante de Engenharia de Software e programo desde os
-      meus 16 anos. Desenvolvo aplicações front-end, back-end, mobile, landing
-      pages, e-commerce, blogs e APIs. Minhas principais tecnologias são
-      Javascript, Typescript, React.js, Next.js, Fresh.js, Deno, PostgreSQL e
-      MongoDB. Estou me aperfeiçoando em C#, Java, Vue.js e Nuxt.js. Tenho
-      aproximadamente 1 ano de experiência profissional na área.
+      Sou estudante de Engenharia de Software, programo desde os meus 16 anos e
+      desde então sou apaixonado pela área de programação.<br /><br />Com as
+      minhas habilidades, foco e disciplina, busco sempre vencer qualquer
+      desafio. Estou sempre adquirindo conhecimento e aprimorando as minhas
+      habilidades para alcançar meus objetivos, além de sempre estar atualizado
+      sobre as tendências do mercado.<br /><br />
+      Hoje tenho um grande conhecimento em HTML, CSS, Javascript, Node.js,
+      Typescript, React.js, Next.js, Tailwind, MongoDB e MySQL, PostgreSQL.
+      Também estou procurando aprender sobre Vue.js, Nuxt.js e C#. Já tive
+      algumas experiências com Python e Java, porém nunca me aprofundei de fato.
     </p>
     <Anchor target="_self" href="/projects" class=""> Projetos </Anchor>
     <Anchor target="_self" href="/works"> Experiências </Anchor>
