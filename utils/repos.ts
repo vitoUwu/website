@@ -1,16 +1,16 @@
 // Auto generated file
 export default {
-  "uno-slash-website": {
-    "name": "uno-slash-website",
-    "description": "website made especially for my bot UnoSlash",
-    "language": "Vue",
-    "href": "https://github.com/vitoUwu/uno-slash-website"
-  },
   "website": {
     "name": "website",
     "description": "My website made with ❤️",
     "language": "TypeScript",
     "href": "https://github.com/vitoUwu/website"
+  },
+  "uno-slash-website": {
+    "name": "uno-slash-website",
+    "description": "website made especially for my bot UnoSlash",
+    "language": "Vue",
+    "href": "https://github.com/vitoUwu/uno-slash-website"
   },
   "snakegame": {
     "name": "snakegame",
