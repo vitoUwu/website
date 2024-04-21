@@ -2,9 +2,9 @@ export default [
   {
     name: "ITZA Tech",
     description:
-      "Desenvolvo e-commerce headless utilizando a deco.cx, Fresh, Tailwind, Typescript e Deno, atingindo uma alta performance e navegações mais fluidas. Otimizei sites, melhorei tempos de carregamento e fiz contribuições para a deco.cx.",
+      "Desenvolvemos e-commerce headless utilizando a deco.cx, Fresh, Tailwind, Typescript e Deno. Nosso foco é construir e implementar soluções da maneira mais fluida e performática possível, para que o usuário possa navegar de forma suave e sem travamentos ou lentidões. Construi, otimizei e refatorei sites e implementações como Zorba, PG Adesivos, Als, Velocita, True Source entre outras. Melhorei tempos de carregamento reduzindo em torno de 2 a 5 segundos de carregamento, reduzi tamanho de bundles, entregando menos Javascript para o browser. Fiz também contribuições open source para a deco.cx.",
     start: new Date("08/1/2023"),
-    role: "Desenvolvedor Front-end",
+    role: "Desenvolvedor Full Stack",
   },
   {
     name: "Código Kid",
