@@ -1,5 +1,11 @@
 // Auto generated file
 export default {
+  "QuestsBot": {
+    "name": "QuestsBot",
+    "description": "A discord bot that add quests to your guild [WIP]",
+    "language": "C#",
+    "href": "https://github.com/vitoUwu/QuestsBot"
+  },
   "website": {
     "name": "website",
     "description": "My website made with ❤️",
