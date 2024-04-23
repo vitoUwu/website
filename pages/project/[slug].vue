@@ -26,7 +26,7 @@ useSeoMeta({
 
 <template>
   <template v-if="repo">
-    <div class="my-10 mx-10 min-h-dvh">
+    <div class="my-10 mx-3 sm:mx-10 min-h-dvh">
       <header class="mb-10">
         <nav class="flex justify-between items-center gap-3 text-center">
           <Anchor href="/projects" target="_self">

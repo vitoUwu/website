@@ -21,12 +21,11 @@ const reposValues = Object.values(repos);
 const reposLength = reposValues.length;
 
 const languagesPercentage = [
-  ...new Set(reposValues.map((repo) => repo.language ?? "Unknown")),
+  ...new Set(reposValues.map((repo) => repo.language)),
 ]
   .map((language) => {
     const amount = reposValues.filter(
-      (repo) =>
-        (language === "Unknown" && !repo.language) || repo.language === language
+      (repo) => repo.language === language
     ).length;
     return {
       language,
@@ -34,11 +33,12 @@ const languagesPercentage = [
       percentage: (amount / reposLength) * 100,
     };
   })
+  .filter((repo) => repo.language)
   .sort((a, b) => b.amount - a.amount);
 </script>
 
 <template>
-  <div class="min-h-dvh py-10 mx-10">
+  <div class="min-h-dvh py-10 mx-3 sm:mx-10">
     <header class="mb-10">
       <nav class="flex justify-between items-center">
         <Anchor href="/" target="_self">
@@ -48,12 +48,12 @@ const languagesPercentage = [
         <h1>{{ reposLength }} Projetos</h1>
       </nav>
     </header>
-    <p class="mb-3">Linguagens mais usadas</p>
+    <p class="mb-3">Linguagens mais utilizadas</p>
     <ul class="mb-10 select-none space-y-3">
       <li
         class="relative"
         v-for="(language, index) of languagesPercentage.slice(0, 5)"
-        :key="language.language"
+        :key="language.language!"
       >
         <div class="flex items-center gap-3">
           <span
@@ -75,7 +75,7 @@ const languagesPercentage = [
         </div>
       </li>
     </ul>
-    <div class="space-y-3">
+    <div class="space-y-3 overflow-x-clip">
       <a
         v-for="repo of repos"
         :href="`/project/${repo.href.split('/').pop()}`"
@@ -83,8 +83,11 @@ const languagesPercentage = [
         class="flex items-center gap-3 group"
       >
         <span
-          class="shrink-0 text-zinc-400 group-hover:text-zinc-200 transition-all"
+          class="shrink-0 text-zinc-400 group-hover:text-zinc-200 transition-all flex items-center gap-3"
         >
+          <template v-if="repo.isFork">
+            <IconsForkFill :size="16" />
+          </template>
           {{ repo.name }}
         </span>
         <span

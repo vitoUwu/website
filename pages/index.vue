@@ -18,7 +18,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="mx-10">
+  <div class="mx-3 sm:mx-10 my-10">
     <h1 class="text-xl font-bold">Victor "vitoo" Hugo M.</h1>
     <div class="">
       <h2 class="inline items-center justify-between w-full text-zinc-400">

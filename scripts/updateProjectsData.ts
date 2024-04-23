@@ -5,9 +5,10 @@ import fetchWithCredentials from "~/utils/fetch";
 const username = "vitoUwu";
 
 (async () => {
-  const repos = await fetchWithCredentials(endpoints.repos(username))
-    .then((res) => res.json() as Promise<Repository[]>)
-    .then((repos) => repos.filter((repo) => !repo.fork));
+  const repos = await fetchWithCredentials(endpoints.repos(username)).then(
+    (res) => res.json() as Promise<Repository[]>
+  );
+  // .then((repos) => repos.filter((repo) => !repo.fork));
 
   fs.writeFileSync(
     "utils/repos.ts",
@@ -18,6 +19,7 @@ const username = "vitoUwu";
           description: repo.description,
           language: repo.language,
           href: repo.html_url,
+          isFork: repo.fork,
         }))
         .reduce(
           (acc, repo) => {
