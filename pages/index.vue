@@ -18,7 +18,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="mx-3 sm:mx-10 my-10">
+  <main class="mx-3 sm:mx-10 my-10">
     <h1 class="text-xl font-bold">Victor "vitoo" Hugo M.</h1>
     <div class="">
       <h2 class="inline items-center justify-between w-full text-zinc-400">
@@ -44,14 +44,17 @@ useSeoMeta({
     <Anchor target="_self" href="/projects" class=""> Projetos </Anchor>
     <Anchor target="_self" href="/works"> Experiências </Anchor>
     <hr class="w-full border-b-px border-zinc-700 my-3" />
-    <Anchor href="https://github.com/vitoUwu">
+    <Anchor rel="noopener noreferrer" href="https://github.com/vitoUwu">
       Github <IconsArrowSquareOut #left-icon :size="16" />
     </Anchor>
-    <Anchor href="https://linkedin.com/in/vitoo">
+    <Anchor rel="noopener noreferrer" href="https://linkedin.com/in/vitoo">
       LinkedIn <IconsArrowSquareOut #left-icon :size="16" />
     </Anchor>
-    <Anchor href="mailto:victorhugomeurerdelgrandi@gmail.com">
+    <Anchor
+      rel="noopener noreferrer"
+      href="mailto:victorhugomeurerdelgrandi@gmail.com"
+    >
       Email <IconsArrowSquareOut #left-icon :size="16" />
     </Anchor>
-  </div>
+  </main>
 </template>

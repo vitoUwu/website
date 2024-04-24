@@ -71,22 +71,36 @@ useSeoMeta({
         <h1>Works</h1>
       </nav>
     </header>
-    <div class="space-y-10">
-      <div v-for="work of works" :key="work.name" class="group">
-        <p class="flex items-center gap-3">
-          <span
-            class="shrink-0 [@media_(hover:_hover)]:text-zinc-400 [@media_(hover:_hover)]:group-hover:text-zinc-200 text-zinc-200 transition-all"
-          >
-            {{ work.name }}
-          </span>
-          <span class="flex flex-col shrink-0">
+    <main>
+      <ul class="space-y-10">
+        <li v-for="work of works" :key="work.name" class="group">
+          <h2 class="flex items-center gap-3">
             <span
-              class="text-emerald-600 [@media_(hover:_hover)]:text-zinc-600 [@media_(hover:_hover)]:group-hover:text-emerald-600 text-xs transition-all"
+              class="shrink-0 [@media_(hover:_hover)]:text-zinc-400 [@media_(hover:_hover)]:group-hover:text-zinc-200 text-zinc-200 transition-all"
             >
-              {{ work.role }}
+              {{ work.name }}
+            </span>
+            <span class="flex flex-col shrink-0">
+              <span
+                class="text-emerald-600 [@media_(hover:_hover)]:text-[#A2A2A9] [@media_(hover:_hover)]:group-hover:text-emerald-600 text-xs transition-all"
+              >
+                {{ work.role }}
+              </span>
+              <span
+                class="sm:hidden text-emerald-600 [@media_(hover:_hover)]:text-[#A2A2A9] [@media_(hover:_hover)]:group-hover:text-emerald-600 text-xs transition-all"
+              >
+                {{
+                  work.end
+                    ? `${formatDate(work.start)} - ${formatDate(work.end)}`
+                    : toRelativeDate(work.start)
+                }}
+              </span>
             </span>
             <span
-              class="sm:hidden text-emerald-600 [@media_(hover:_hover)]:text-zinc-600 [@media_(hover:_hover)]:group-hover:text-emerald-600 text-xs transition-all"
+              class="border-b border-dashed border-zinc-600 w-full [@media_(hover:_hover)]:group-hover:border-emerald-600 transition-all"
+            />
+            <span
+              class="hidden sm:inline text-emerald-600 [@media_(hover:_hover)]:text-[#A2A2A9] [@media_(hover:_hover)]:group-hover:text-emerald-600 text-xs transition-all shrink-0"
             >
               {{
                 work.end
@@ -94,26 +108,14 @@ useSeoMeta({
                   : toRelativeDate(work.start)
               }}
             </span>
-          </span>
-          <span
-            class="border-b border-dashed border-zinc-600 w-full [@media_(hover:_hover)]:group-hover:border-emerald-600 transition-all"
-          />
-          <span
-            class="hidden sm:inline text-emerald-600 [@media_(hover:_hover)]:text-zinc-600 [@media_(hover:_hover)]:group-hover:text-emerald-600 text-xs transition-all shrink-0"
+          </h2>
+          <p
+            class="mt-3 [@media_(hover:_hover)]:text-zinc-400 text-zinc-200 transition-all [@media_(hover:_hover)]:group-hover:text-zinc-200"
           >
-            {{
-              work.end
-                ? `${formatDate(work.start)} - ${formatDate(work.end)}`
-                : toRelativeDate(work.start)
-            }}
-          </span>
-        </p>
-        <p
-          class="mt-3 [@media_(hover:_hover)]:text-zinc-400 text-zinc-200 transition-all [@media_(hover:_hover)]:group-hover:text-zinc-200"
-        >
-          {{ work.description }}
-        </p>
-      </div>
-    </div>
+            {{ work.description }}
+          </p>
+        </li>
+      </ul>
+    </main>
   </div>
 </template>
