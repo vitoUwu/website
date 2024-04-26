@@ -1,10 +1,10 @@
 // Auto generated file
 export default {
-  "trilha-net-explorando-desafio": {
-    "name": "trilha-net-explorando-desafio",
+  "trilha-net-api-desafio": {
+    "name": "trilha-net-api-desafio",
     "description": null,
     "language": "C#",
-    "href": "https://github.com/vitoUwu/trilha-net-explorando-desafio",
+    "href": "https://github.com/vitoUwu/trilha-net-api-desafio",
     "isFork": true
   },
   "deco-cx-apps": {
@@ -14,12 +14,33 @@ export default {
     "href": "https://github.com/vitoUwu/deco-cx-apps",
     "isFork": true
   },
+  "trilha-net-banco-de-dados-desafio": {
+    "name": "trilha-net-banco-de-dados-desafio",
+    "description": null,
+    "language": "TSQL",
+    "href": "https://github.com/vitoUwu/trilha-net-banco-de-dados-desafio",
+    "isFork": true
+  },
   "website": {
     "name": "website",
     "description": "My website made with ❤️",
     "language": "TypeScript",
     "href": "https://github.com/vitoUwu/website",
     "isFork": false
+  },
+  "trilha-net-poo-desafio": {
+    "name": "trilha-net-poo-desafio",
+    "description": null,
+    "language": "C#",
+    "href": "https://github.com/vitoUwu/trilha-net-poo-desafio",
+    "isFork": true
+  },
+  "trilha-net-explorando-desafio": {
+    "name": "trilha-net-explorando-desafio",
+    "description": null,
+    "language": "C#",
+    "href": "https://github.com/vitoUwu/trilha-net-explorando-desafio",
+    "isFork": true
   },
   "QuestsBot": {
     "name": "QuestsBot",
