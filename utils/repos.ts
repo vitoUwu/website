@@ -1,11 +1,11 @@
 // Auto generated file
 export default {
-  "trilha-net-api-desafio": {
-    "name": "trilha-net-api-desafio",
-    "description": null,
-    "language": "C#",
-    "href": "https://github.com/vitoUwu/trilha-net-api-desafio",
-    "isFork": true
+  "website": {
+    "name": "website",
+    "description": "My website made with ❤️",
+    "language": "TypeScript",
+    "href": "https://github.com/vitoUwu/website",
+    "isFork": false
   },
   "deco-cx-apps": {
     "name": "deco-cx-apps",
@@ -14,19 +14,40 @@ export default {
     "href": "https://github.com/vitoUwu/deco-cx-apps",
     "isFork": true
   },
+  "QuestsBot": {
+    "name": "QuestsBot",
+    "description": "A discord bot that add quests to your guild [WIP]",
+    "language": "C#",
+    "href": "https://github.com/vitoUwu/QuestsBot",
+    "isFork": false
+  },
+  "NewTalents": {
+    "name": "NewTalents",
+    "description": null,
+    "language": "C#",
+    "href": "https://github.com/vitoUwu/NewTalents",
+    "isFork": false
+  },
+  "trilha-net-testes-unitarios-desafio": {
+    "name": "trilha-net-testes-unitarios-desafio",
+    "description": null,
+    "language": "C#",
+    "href": "https://github.com/vitoUwu/trilha-net-testes-unitarios-desafio",
+    "isFork": true
+  },
+  "trilha-net-api-desafio": {
+    "name": "trilha-net-api-desafio",
+    "description": null,
+    "language": "C#",
+    "href": "https://github.com/vitoUwu/trilha-net-api-desafio",
+    "isFork": true
+  },
   "trilha-net-banco-de-dados-desafio": {
     "name": "trilha-net-banco-de-dados-desafio",
     "description": null,
     "language": "TSQL",
     "href": "https://github.com/vitoUwu/trilha-net-banco-de-dados-desafio",
     "isFork": true
-  },
-  "website": {
-    "name": "website",
-    "description": "My website made with ❤️",
-    "language": "TypeScript",
-    "href": "https://github.com/vitoUwu/website",
-    "isFork": false
   },
   "trilha-net-poo-desafio": {
     "name": "trilha-net-poo-desafio",
@@ -41,13 +62,6 @@ export default {
     "language": "C#",
     "href": "https://github.com/vitoUwu/trilha-net-explorando-desafio",
     "isFork": true
-  },
-  "QuestsBot": {
-    "name": "QuestsBot",
-    "description": "A discord bot that add quests to your guild [WIP]",
-    "language": "C#",
-    "href": "https://github.com/vitoUwu/QuestsBot",
-    "isFork": false
   },
   "uno-slash-website": {
     "name": "uno-slash-website",
