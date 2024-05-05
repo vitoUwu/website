@@ -41,6 +41,7 @@ useSeoMeta({
         </nav>
       </header>
       <ContentRenderer
+        v-if="readme"
         class="prose prose-zinc prose-invert *:break-words h-full"
         :value="readme"
       />
