@@ -16,6 +16,26 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxtjs/robots",
   ],
+  robots: {
+    rules: [
+      {
+        UserAgent: "*",
+        Disallow: "/api*",
+      },
+      {
+        UserAgent: "*",
+        Disallow: "/_nuxt*",
+      },
+      {
+        UserAgent: "*",
+        Disallow: "/_content*",
+      },
+      {
+        UserAgent: "*",
+        Disallow: "/cdn-cgi*", // Cloudflare
+      },
+    ],
+  },
   site: {
     url: "https://vitoo.dev",
   },
