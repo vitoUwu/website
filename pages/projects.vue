@@ -17,6 +17,15 @@ useSeoMeta({
   twitterCard: "summary",
 });
 
+useHead({
+  link: [
+    {
+      rel: "canonical",
+      href: "https://vitoo.dev/projects",
+    },
+  ],
+});
+
 const reposValues = Object.values(repos);
 const reposLength = reposValues.length;
 
