@@ -59,6 +59,9 @@ export default defineNuxtConfig({
       },
       plugins: [prose],
       content: [],
+      future: {
+        hoverOnlyWhenSupported: true,
+      },
     },
   },
   googleFonts: {
