@@ -79,6 +79,7 @@ export default function useLanyard(userId: string) {
     if (heartbeatInterval.value) {
       clearInterval(heartbeatInterval.value);
     }
+    data.value = null;
     ws.value?.close();
   };
 
