@@ -71,14 +71,56 @@ function onClick(e: MouseEvent) {
         height="64"
       />
     </div>
-    <div class="flex flex-col shrink-0 pr-3" v-if="data?.spotify">
-      <p>
-        Listening to
-        <span class="text-emerald-500">{{ data?.spotify?.song }}</span>
+    <div class="flex flex-col shrink-0 pr-3 mask" v-if="data?.spotify">
+      <p class="text-marquee relative">
+        <span>
+          Listening to
+          <span class="text-emerald-500">{{ data?.spotify?.song }}</span>
+        </span>
+        <span class="absolute left-[calc(100%+12px)] shrink-0 w-full md:hidden">
+          Listening to
+          <span class="text-emerald-500">{{ data?.spotify?.song }}</span>
+        </span>
       </p>
-      <p class="text-xs">
-        by <span class="text-emerald-500">{{ data?.spotify?.artist }}</span>
+      <p class="text-xs text-marquee relative">
+        <span>
+          by <span class="text-emerald-500">{{ data?.spotify?.artist }}</span>
+        </span>
+        <span class="absolute left-[calc(100%+12px)] shrink-0 w-full md:hidden">
+          by
+          <span class="text-emerald-500">{{ data?.spotify?.artist }}</span>
+        </span>
       </p>
     </div>
   </a>
 </template>
+
+<style scoped>
+@media screen and (max-width: 640px) {
+  .mask {
+    mask-image: linear-gradient(
+      to right,
+      transparent 1%,
+      white 10%,
+      white 90%,
+      transparent
+    );
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .text-marquee {
+    animation: marquee 10s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* 12px = gap between the original text and the copy */
+    transform: translateX(calc(-100% - 12px));
+  }
+}
+</style>
