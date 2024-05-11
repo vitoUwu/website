@@ -1,9 +1,12 @@
 import { Operations, type Payload, type User } from "~/types";
 
+const MAX_RETRIES = 5;
+
 export default function useLanyard(userId: string) {
   const ws = ref<WebSocket | null>(null);
   const heartbeatInterval = ref<NodeJS.Timeout | null>(null);
   const data = ref<User | null>(null);
+  const retries = ref(0);
 
   const sendPayload = (payload: Payload) => {
     ws.value?.send(JSON.stringify(payload));
@@ -18,8 +21,21 @@ export default function useLanyard(userId: string) {
     ws.value = new WebSocket("wss://api.lanyard.rest/socket");
 
     ws.value.onclose = (event) => {
-      console.error("Connection closed with code", event.code);
+      console.error("Connection closed", {
+        code: event.code,
+        reason: event.reason,
+      });
       disconnect();
+
+      if (retries.value >= MAX_RETRIES) {
+        console.error(`Failed to reconnect after ${MAX_RETRIES} attempts.`);
+        return;
+      }
+      console.log("Reconnecting in 5 seconds...");
+      setTimeout(() => {
+        retries.value++;
+        connect();
+      }, 5000);
     };
 
     ws.value.onmessage = (event) => {
@@ -28,6 +44,8 @@ export default function useLanyard(userId: string) {
 
       switch (payload.op) {
         case Operations.Event:
+          retries.value = 0; // I don't know if this is the best place to reset the retries, but it should work.
+
           if (isInitStateEventPayload(payload)) {
             const user = Object.values(payload.d)[0];
             data.value = user;
@@ -42,7 +60,7 @@ export default function useLanyard(userId: string) {
           console.error("Received unknown event payload.", payload);
           break;
         case Operations.Hello:
-          setInterval(() => {
+          heartbeatInterval.value = setInterval(() => {
             sendPayload(createHeartbeatPayload());
           }, payload.d.heartbeat_interval);
 
