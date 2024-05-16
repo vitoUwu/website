@@ -1,18 +1,18 @@
 // Auto generated file
 export default {
-  "website": {
-    "name": "website",
-    "description": "My website made with ❤️",
-    "language": "TypeScript",
-    "href": "https://github.com/vitoUwu/website",
-    "isFork": false
-  },
   "deco-cx-apps": {
     "name": "deco-cx-apps",
     "description": "App definitions by deco.cx",
     "language": "TypeScript",
     "href": "https://github.com/vitoUwu/deco-cx-apps",
     "isFork": true
+  },
+  "website": {
+    "name": "website",
+    "description": "My website made with ❤️",
+    "language": "TypeScript",
+    "href": "https://github.com/vitoUwu/website",
+    "isFork": false
   },
   "QuestsBot": {
     "name": "QuestsBot",
