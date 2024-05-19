@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const localePath = useLocalePath();
+
 interface Props {
   href: string;
   isFork: boolean;
@@ -16,7 +18,7 @@ defineOptions({
   <li>
     <h3>
       <a
-        :href="`/project/${href.split('/').pop()}`"
+        :href="localePath(`/project/${href.split('/').pop()}`)"
         :key="href"
         class="flex items-center gap-3 group"
       >

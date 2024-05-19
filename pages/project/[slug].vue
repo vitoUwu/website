@@ -29,9 +29,7 @@ useSeoMeta({
     <div class="my-10 mx-3 sm:mx-10 min-h-dvh">
       <header class="mb-10">
         <nav class="flex justify-between items-center gap-3 text-center">
-          <Anchor href="/projects" target="_self">
-            <IconsArrowLeft :size="12" /> voltar</Anchor
-          >
+          <BackButton href="/projects" />
           <h1>
             {{ repo.name }}
           </h1>

@@ -22,9 +22,11 @@ defineOptions({
         {{ language }}
       </h3>
       <p
-        class="text-[#A2A2A9] group-hover:text-current text-xs transition-all shrink-0"
+        class="text-[#A2A2A9] group-hover:text-current text-xs transition-all shrink-0 lowercase"
       >
-        {{ amount }} projetos - ({{ percentage.toFixed(2) }}%)
+        {{ amount }} {{ $t("common.projects") }} - ({{
+          percentage.toFixed(2)
+        }}%)
       </p>
       <span
         class="border-b border-dashed border-zinc-500 w-full group-hover:border-emerald-600 transition-all"

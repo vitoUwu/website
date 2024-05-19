@@ -1,8 +1,10 @@
 <script lang="ts" setup>
+const { t } = useI18n();
+
 import repos from "~/utils/repos";
 
-const title = "Projetos";
-const description = "Aqui estão alguns dos meus projetos.";
+const title = t("pages.projects.head.title");
+const description = t("pages.projects.head.description");
 
 useSeoMeta({
   title,
@@ -56,15 +58,12 @@ const languagesPercentage = [
   <div class="min-h-dvh py-10 mx-3 sm:mx-10">
     <header class="mb-10">
       <nav class="flex justify-between items-center">
-        <Anchor href="/" target="_self">
-          <IconsArrowLeft #left-icon :size="12" />
-          voltar
-        </Anchor>
-        <h1>{{ reposLength }} Projetos</h1>
+        <BackButton />
+        <h1>{{ reposLength }} {{ $t("common.projects") }}</h1>
       </nav>
     </header>
     <main>
-      <h2 class="mb-3 text-lg">Linguagens mais utilizadas</h2>
+      <h2 class="mb-3 text-lg">{{ $t("pages.projects.titles.languages") }}</h2>
       <ol class="mb-10 select-none space-y-3">
         <Language
           v-for="[index, language] in languagesPercentage.slice(0, 5).entries()"
@@ -73,7 +72,9 @@ const languagesPercentage = [
           :index="index"
         />
       </ol>
-      <h2 class="mb-3 text-lg">Meus repositórios</h2>
+      <h2 class="mb-3 text-lg">
+        {{ $t("pages.projects.titles.repositories") }}
+      </h2>
       <ol class="space-y-3 overflow-x-clip">
         <Repository :key="repo.href" v-for="repo of repos" v-bind="repo" />
       </ol>

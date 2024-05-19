@@ -1,7 +1,9 @@
 <script setup lang="ts">
+const { t } = useI18n();
+
 useHead({
   htmlAttrs: {
-    lang: "pt-BR",
+    lang: t("head.lang"),
   },
   link: [
     {
@@ -14,7 +16,8 @@ useHead({
 </script>
 
 <template>
-  <div class="bg-coal-black text-fog-gray">
+  <Dock />
+  <div class="bg-coal-black text-fog-gray pb-20">
     <div
       class="min-h-dvh flex flex-col justify-center max-w-2xl mx-auto w-full"
     >

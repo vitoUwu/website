@@ -39,10 +39,9 @@ function onClick(e: MouseEvent) {
 <template>
   <a
     :class="{
-      'bottom-5': data?.spotify,
-      '-bottom-64': !data?.spotify,
+      'translate-y-24': !data?.spotify,
       'max-w-[74px] w-fit': expanded === false,
-      'max-w-full right-5 md:right-[unset]': expanded === true,
+      'max-w-full': expanded === true,
     }"
     :href="
       data?.spotify?.track_id
@@ -51,7 +50,7 @@ function onClick(e: MouseEvent) {
     "
     @click="onClick"
     rel="nofollow"
-    class="transition-all ease-in-out duration-500 fixed overflow-hidden hover:max-w-full left-5 bg-zinc-900 rounded border-zinc-700 border flex gap-3 items-center p-1 text-zinc-300 text-sm group shadow-lg shadow-black"
+    class="transition-all shrink-0 ease-in-out duration-500 overflow-hidden hover:max-w-full bg-zinc-900 rounded border-zinc-700 border flex gap-3 items-center p-1 text-zinc-300 text-sm group shadow-lg shadow-black"
   >
     <div class="relative size-16 shrink-0">
       <div
