@@ -73,20 +73,21 @@ function onClick(e: MouseEvent) {
     <div class="flex flex-col shrink-0 pr-3 mask" v-if="data?.spotify">
       <p class="text-marquee relative">
         <span>
-          Listening to
+          {{ $t("common.listeningTo") }}
           <span class="text-emerald-500">{{ data?.spotify?.song }}</span>
         </span>
         <span class="absolute left-[calc(100%+12px)] shrink-0 w-full md:hidden">
-          Listening to
+          {{ $t("common.listeningTo") }}
           <span class="text-emerald-500">{{ data?.spotify?.song }}</span>
         </span>
       </p>
       <p class="text-xs text-marquee relative">
         <span>
-          by <span class="text-emerald-500">{{ data?.spotify?.artist }}</span>
+          {{ $t("common.by") }}
+          <span class="text-emerald-500">{{ data?.spotify?.artist }}</span>
         </span>
         <span class="absolute left-[calc(100%+12px)] shrink-0 w-full md:hidden">
-          by
+          {{ $t("common.by") }}
           <span class="text-emerald-500">{{ data?.spotify?.artist }}</span>
         </span>
       </p>

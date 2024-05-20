@@ -36,6 +36,8 @@ export default defineI18nConfig(() => ({
         brazilian: "Brazilian",
         recently: "Recently",
         back: "back",
+        listeningTo: "Listening to",
+        by: "by",
       },
       locales: {
         en: "English",
@@ -87,6 +89,8 @@ export default defineI18nConfig(() => ({
         brazilian: "Brasileiro",
         recently: "Recentemente",
         back: "voltar",
+        listeningTo: "Ouvindo",
+        by: "de",
       },
       locales: {
         en: "English",
