@@ -44,9 +44,13 @@ export default defineI18nConfig(() => ({
         pt: "Português",
       },
       works: {
+        carcara: {
+          description:
+            "We are partners of Capivaras, Deco.cx specialists, we implement e-commerce and APIs with amazing efficiency. Our focus is to deliver high quality and performance solutions, using communication frameworks to improve our development speed, Deco as a headless platform, Fresh.js, Tailwind, Typescript, Deno and HTMX as the main stack. We have already implemented projects such as Farm Rio, Reserva, Granado, Als, among others, reaching up to 90 performance points on Page Speed Insights.",
+        },
         itza: {
           description:
-            "We developed a headless e-commerce using deco.cx, Fresh, Tailwind, Typescript and Deno. Our focus is to build and implement solutions in the smoothest and most performant way possible, so that the user can navigate smoothly and without crashes or slowness. I built, optimized and refactored sites and implementations such as Zorba, PG Adesivos, Als, Velocita, True Source among others. I improved loading times by reducing around 2 to 5 seconds of loading, reduced bundle sizes, delivering less Javascript to the browser. I also made open source contributions to deco.cx.",
+            "We developed a headless e-commerce using deco.cx, Fresh, Tailwind, Typescript and Deno. Our focus is to build and implement solutions in the smoothest and most performant way possible, so that the user can navigate smoothly and without crashes or slowness. I built, optimized and refactored sites and implementations such as Zorba, PG Adesivos, Velocita, True Source among others. I improved loading times by reducing around 2 to 5 seconds of loading, reduced bundle sizes, delivering less Javascript to the browser. I also made open source contributions to deco.cx.",
         },
         codigokid: {
           description:
@@ -97,9 +101,13 @@ export default defineI18nConfig(() => ({
         pt: "Português",
       },
       works: {
+        carcara: {
+          description:
+            "Somos parceiros das Capivaras, especialistas em Deco.cx, implementamos e-commerce e APIs com uma eficiência surpreendente. Nosso foco é entregar soluções de alta qualidade e performance, utilizando frameworks de comunicação para melhorarmos nossa velocidade de desenvolvimento, Deco como plataforma headless, Fresh.js, Tailwind, Typescript, Deno e HTMX como stack principal. Já implementamos projetos como Farm Rio, Reserva, Granado, Als, entre outros, alcançando até 90 pontos de performance no Page Speed Insights",
+        },
         itza: {
           description:
-            "Desenvolvemos e-commerce headless utilizando a deco.cx, Fresh, Tailwind, Typescript e Deno. Nosso foco é construir e implementar soluções da maneira mais fluida e performática possível, para que o usuário possa navegar de forma suave e sem travamentos ou lentidões. Construi, otimizei e refatorei sites e implementações como Zorba, PG Adesivos, Als, Velocita, True Source entre outras. Melhorei tempos de carregamento reduzindo em torno de 2 a 5 segundos de carregamento, reduzi tamanho de bundles, entregando menos Javascript para o browser. Fiz também contribuições open source para a deco.cx.",
+            "Desenvolvemos e-commerce headless utilizando a deco.cx, Fresh, Tailwind, Typescript e Deno. Nosso foco é construir e implementar soluções da maneira mais fluida e performática possível, para que o usuário possa navegar de forma suave e sem travamentos ou lentidões. Construi, otimizei e refatorei sites e implementações como Zorba, PG Adesivos, Velocita, True Source entre outras. Melhorei tempos de carregamento reduzindo em torno de 2 a 5 segundos de carregamento, reduzi tamanho de bundles, entregando menos Javascript para o browser. Fiz também contribuições open source para a deco.cx.",
         },
         codigokid: {
           description:
