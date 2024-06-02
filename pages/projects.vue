@@ -13,19 +13,11 @@ useSeoMeta({
   ogDescription: description,
   ogImage: "/cat.png",
   ogUrl: "https://vitoo.dev",
+  ogType: "website",
   twitterTitle: title,
   twitterDescription: description,
   twitterImage: "/cat.png",
   twitterCard: "summary",
-});
-
-useHead({
-  link: [
-    {
-      rel: "canonical",
-      href: "https://vitoo.dev/projects",
-    },
-  ],
 });
 
 const reposValues = Object.values(repos);

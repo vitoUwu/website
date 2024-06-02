@@ -12,6 +12,7 @@ useSeoMeta({
   ogDescription: description,
   ogImage: "/working_cat.png",
   ogUrl: "https://vitoo.dev",
+  ogType: "website",
   twitterTitle: title,
   twitterDescription: description,
   twitterImage: "/working_cat.png",

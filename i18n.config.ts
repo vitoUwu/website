@@ -7,6 +7,10 @@ export default defineI18nConfig(() => ({
       },
       pages: {
         home: {
+          head: {
+            description:
+              "A Full Stack Developer who has been working professionally in the field since 2023. Here you can see some of my repositories and the languages I use the most.",
+          },
           role: "Full Stack Developer",
           description:
             "I'm a Software Engineering student, I started programming at 16 and since then I'm passionate about programming. With my skills, focus and discipline, I always seek to overcome any challenge.<br/><br/>I'm always acquiring knowledge and improving my skills to achieve my goals, as well as always being updated on market trends.<br/><br/>Today I have a great knowledge in HTML, CSS, Javascript, Node.js, Typescript, React.js, Next.js, Tailwind, MongoDB, MySQL and PostgreSQL. I'm also looking to learn about Vue.js, Nuxt.js and C#. I've had some experiences with Python and Java, but I've never really delved into them.",
@@ -71,6 +75,10 @@ export default defineI18nConfig(() => ({
       },
       pages: {
         home: {
+          head: {
+            description:
+              "Um desenvolvedor Full Stack que trabalha profissionalmente na área desde 2023. Aqui você pode ver alguns dos meus repositórios e as linguagens que mais utilizo.",
+          },
           role: "Desenvolvedor Full Stack",
           description:
             "Sou estudante de Engenharia de Software, comecei a programar com 16 anos e desde então sou apaixonado pela área de programação. Com as minhas habilidades, foco e disciplina, busco sempre vencer qualquer desafio.<br/><br/>Estou sempre adquirindo conhecimento e aprimorando as minhas habilidades para alcançar meus objetivos, além de sempre estar atualizado sobre as tendências do mercado.<br/><br/>Hoje tenho um grande conhecimento em HTML, CSS, Javascript, Node.js, Typescript, React.js, Next.js, Tailwind, MongoDB, MySQL e PostgreSQL. Também estou procurando aprender sobre Vue.js, Nuxt.js e C#. Já tive algumas experiências com Python e Java, porém nunca me aprofundei de fato.",

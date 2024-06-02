@@ -1,7 +1,10 @@
 <script setup lang="ts">
-const { t } = useI18n();
+import { removeTrailingSlash } from "~/utils/url";
 
-useHead({
+const { t } = useI18n();
+const route = useRoute();
+
+useHead(() => ({
   htmlAttrs: {
     lang: t("head.lang"),
   },
@@ -11,8 +14,12 @@ useHead({
       type: "image/png",
       href: "/cat.png",
     },
+    {
+      rel: "canonical",
+      href: removeTrailingSlash(`https://vitoo.dev${route.path}`),
+    },
   ],
-});
+}));
 </script>
 
 <template>

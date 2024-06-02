@@ -1,9 +1,8 @@
 <script setup lang="ts">
 const { t } = useI18n();
-const localePath = useLocalePath();
 
 const title = "vitoo";
-const description = t("pages.home.description");
+const description = t("pages.home.head.description");
 
 useSeoMeta({
   title,
@@ -12,6 +11,7 @@ useSeoMeta({
   ogDescription: description,
   ogImage: "/cat.png",
   ogUrl: "https://vitoo.dev",
+  ogType: "website",
   twitterTitle: title,
   twitterDescription: description,
   twitterImage: "/cat.png",
@@ -21,7 +21,7 @@ useSeoMeta({
 
 <template>
   <main class="mx-3 sm:mx-10 my-10">
-    <h1 class="text-xl font-bold">Victor "vitoo" Hugo M.</h1>
+    <h1 class="text-xl font-bold">Victor "vitoo" Hugo M. Del Grandi</h1>
     <div class="">
       <h2 class="inline items-center justify-between w-full text-zinc-400">
         {{ $t("roles.fullstack") }}
@@ -31,7 +31,7 @@ useSeoMeta({
         {{ $t("common.brazilian") }}
       </h2>
     </div>
-    <p class="my-10 text-pretty" v-html="description"></p>
+    <p class="my-10 text-pretty" v-html="$t('pages.home.description')"></p>
     <Anchor target="_self" href="/projects">
       {{ $t("common.projects") }}
     </Anchor>
