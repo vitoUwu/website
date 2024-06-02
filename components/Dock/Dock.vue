@@ -1,11 +1,11 @@
 <script setup lang="ts">
 const route = useRoute();
 
-function removeTraillingSlash(path: string) {
-  return path.replace(/\/$/, "");
+function removeTrailingSlash(path: string) {
+  return path === "/" ? path : path.replace(/\/$/, "");
 }
 
-const path = removeTraillingSlash(route.path);
+const path = removeTrailingSlash(route.path);
 const pathsToShowSpotify = ["/", "/en"];
 const showSpotify = pathsToShowSpotify.includes(path);
 </script>
