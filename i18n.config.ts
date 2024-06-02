@@ -25,6 +25,13 @@ export default defineI18nConfig(() => ({
         works: {
           title: "Works",
         },
+        404: {
+          head: {
+            title: "Page not found",
+            description:
+              "The page you are looking for does not exist or has been moved.",
+          },
+        },
       },
       roles: {
         fullstack: "Full Stack Developer",
@@ -81,6 +88,13 @@ export default defineI18nConfig(() => ({
         },
         works: {
           title: "Experiência",
+        },
+        404: {
+          head: {
+            title: "Página não encontrada",
+            description:
+              "A página que você está procurando não existe ou foi movida.",
+          },
         },
       },
       roles: {
