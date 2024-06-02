@@ -19,9 +19,12 @@ const switchLocale = useSwitchLocalePath();
         }"
       >
         <img
-          loading="lazy"
           :src="flags[locale as keyof typeof flags]"
+          :alt="$t(`locales.${locale}`)"
+          loading="lazy"
           class="size-6"
+          height="24"
+          width="24"
         />
         {{ $t(`locales.${locale}`) }}
       </NuxtLink>
