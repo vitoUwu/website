@@ -1,11 +1,11 @@
 // Auto generated file
 export default {
-  "deco-cx-apps": {
-    "name": "deco-cx-apps",
-    "description": "App definitions by deco.cx",
-    "language": "TypeScript",
-    "href": "https://github.com/vitoUwu/deco-cx-apps",
-    "isFork": true
+  "ban-remover": {
+    "name": "ban-remover",
+    "description": null,
+    "language": "JavaScript",
+    "href": "https://github.com/vitoUwu/ban-remover",
+    "isFork": false
   },
   "website": {
     "name": "website",
@@ -13,6 +13,13 @@ export default {
     "language": "TypeScript",
     "href": "https://github.com/vitoUwu/website",
     "isFork": false
+  },
+  "deco-cx-apps": {
+    "name": "deco-cx-apps",
+    "description": "App definitions by deco.cx",
+    "language": "TypeScript",
+    "href": "https://github.com/vitoUwu/deco-cx-apps",
+    "isFork": true
   },
   "QuestsBot": {
     "name": "QuestsBot",
@@ -75,13 +82,6 @@ export default {
     "description": "A classic snake game made with go",
     "language": "Go",
     "href": "https://github.com/vitoUwu/snakegame",
-    "isFork": false
-  },
-  "ban-remover": {
-    "name": "ban-remover",
-    "description": null,
-    "language": "JavaScript",
-    "href": "https://github.com/vitoUwu/ban-remover",
     "isFork": false
   },
   "uno-slash": {
