@@ -10,19 +10,3 @@ Software Engineering student interested in web and mobile development. Great wil
 - `📪` How to reach me: [Email](mailto:victorhugomeurerdelgrandi@gmail.com) | [Twitter](https://twitter.com/vitoodev) | [LinkedIn](https://www.linkedin.com/in/vitoo/)
 
 <hr></hr>
-
-<p align="center">
-  <picture>
-    <source
-      srcset="https://github-readme-status-vitouwu.vercel.app/api?username=vitoUwu&show_icons=true&theme=dark"
-      media="(prefers-color-scheme: dark)"
-    />
-    <source
-      srcset="https://github-readme-status-vitouwu.vercel.app/api?username=vitoUwu&show_icons=true"
-      media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
-    />
-    <img src="https://github-readme-status-vitouwu.vercel.app/api?username=vitoUwu&show_icons=true&theme=dark" />
-  </picture>
-</p>
-
-<hr></hr>

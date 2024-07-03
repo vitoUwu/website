@@ -1,10 +1,24 @@
 // Auto generated file
 export default {
-  "ban-remover": {
-    "name": "ban-remover",
+  "deco-cx-apps": {
+    "name": "deco-cx-apps",
+    "description": "App definitions by deco.cx",
+    "language": "TypeScript",
+    "href": "https://github.com/vitoUwu/deco-cx-apps",
+    "isFork": true
+  },
+  "pilhas-em-c": {
+    "name": "pilhas-em-c",
     "description": null,
-    "language": "JavaScript",
-    "href": "https://github.com/vitoUwu/ban-remover",
+    "language": "C",
+    "href": "https://github.com/vitoUwu/pilhas-em-c",
+    "isFork": false
+  },
+  "vitoUwu": {
+    "name": "vitoUwu",
+    "description": null,
+    "language": null,
+    "href": "https://github.com/vitoUwu/vitoUwu",
     "isFork": false
   },
   "website": {
@@ -14,12 +28,12 @@ export default {
     "href": "https://github.com/vitoUwu/website",
     "isFork": false
   },
-  "deco-cx-apps": {
-    "name": "deco-cx-apps",
-    "description": "App definitions by deco.cx",
-    "language": "TypeScript",
-    "href": "https://github.com/vitoUwu/deco-cx-apps",
-    "isFork": true
+  "ban-remover": {
+    "name": "ban-remover",
+    "description": null,
+    "language": "JavaScript",
+    "href": "https://github.com/vitoUwu/ban-remover",
+    "isFork": false
   },
   "QuestsBot": {
     "name": "QuestsBot",
@@ -167,13 +181,6 @@ export default {
     "language": null,
     "href": "https://github.com/vitoUwu/storefront",
     "isFork": true
-  },
-  "vitoUwu": {
-    "name": "vitoUwu",
-    "description": null,
-    "language": null,
-    "href": "https://github.com/vitoUwu/vitoUwu",
-    "isFork": false
   },
   "vscode-timer": {
     "name": "vscode-timer",
