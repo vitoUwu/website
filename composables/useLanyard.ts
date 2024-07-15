@@ -37,11 +37,25 @@ export default function useLanyard(userId: string) {
         code: event.code,
         reason: event.reason,
       });
+
+      globalThis.window.dataLayer?.push({
+        event: "lanyard_disconnected",
+        lanyard: {
+          code: event.code,
+          reason: event.reason,
+        },
+      });
+
       disconnect();
 
       if (retries.value >= MAX_RETRIES) {
         logger.error(`Failed to reconnect after ${MAX_RETRIES} attempts.`);
-        console.error(`Failed to reconnect after ${MAX_RETRIES} attempts.`);
+        globalThis.window.dataLayer?.push({
+          event: "lanyard_failed_to_reconnect",
+          lanyard: {
+            retries: MAX_RETRIES,
+          },
+        });
         return;
       }
       logger.log("Reconnecting in 5 seconds...");
@@ -67,12 +81,29 @@ export default function useLanyard(userId: string) {
           if (isInitStateEventPayload(payload)) {
             logger.log("Connected to the server.");
             const user = Object.values(payload.d)[0];
+
+            globalThis.window.dataLayer?.push({
+              event: "lanyard_connected",
+              lanyard: {
+                spotify: user.spotify,
+              },
+            });
+
             data.value = user;
             return;
           }
 
           if (isPresenceUpdateEventPayload(payload)) {
-            data.value = payload.d;
+            const user = payload.d;
+
+            globalThis.window.dataLayer?.push({
+              event: "lanyard_presence_update",
+              lanyard: {
+                spotify: user.spotify,
+              },
+            });
+
+            data.value = user;
             return;
           }
 
