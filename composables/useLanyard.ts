@@ -2,6 +2,18 @@ import { Operations, type Payload, type User } from "~/types";
 
 const MAX_RETRIES = 5;
 
+const logger = {
+  log: (...args: any[]) => {
+    console.log("[Lanyard]", ...args);
+  },
+  error: (...args: any[]) => {
+    console.error("[Lanyard]", ...args);
+  },
+  warn: (...args: any[]) => {
+    console.warn("[Lanyard]", ...args);
+  },
+};
+
 export default function useLanyard(userId: string) {
   const ws = ref<WebSocket | null>(null);
   const heartbeatInterval = ref<NodeJS.Timeout | null>(null);
@@ -14,28 +26,34 @@ export default function useLanyard(userId: string) {
 
   const connect = () => {
     if (ws.value && ws.value.readyState === WebSocket.OPEN) {
-      console.warn("Already connected to Lanyard.");
+      logger.warn("Already connected to Lanyard.");
       return;
     }
 
     ws.value = new WebSocket("wss://api.lanyard.rest/socket");
 
     ws.value.onclose = (event) => {
-      console.error("Connection closed", {
+      logger.error("Connection closed", {
         code: event.code,
         reason: event.reason,
       });
       disconnect();
 
       if (retries.value >= MAX_RETRIES) {
+        logger.error(`Failed to reconnect after ${MAX_RETRIES} attempts.`);
         console.error(`Failed to reconnect after ${MAX_RETRIES} attempts.`);
         return;
       }
-      console.log("Reconnecting in 5 seconds...");
+      logger.log("Reconnecting in 5 seconds...");
       setTimeout(() => {
         retries.value++;
         connect();
       }, 5000);
+    };
+
+    ws.value.onerror = (event) => {
+      logger.error("Connection error.", event);
+      disconnect();
     };
 
     ws.value.onmessage = (event) => {
@@ -47,6 +65,7 @@ export default function useLanyard(userId: string) {
           retries.value = 0; // I don't know if this is the best place to reset the retries, but it should work.
 
           if (isInitStateEventPayload(payload)) {
+            logger.log("Connected to the server.");
             const user = Object.values(payload.d)[0];
             data.value = user;
             return;
@@ -57,7 +76,7 @@ export default function useLanyard(userId: string) {
             return;
           }
 
-          console.error("Received unknown event payload.", payload);
+          logger.error("Received unknown event payload.", payload);
           break;
         case Operations.Hello:
           heartbeatInterval.value = setInterval(() => {
@@ -70,7 +89,7 @@ export default function useLanyard(userId: string) {
         case Operations.Heartbeat:
           break;
         default:
-          console.error("Received unknown payload.", payload);
+          logger.error("Received unknown payload.", payload);
       }
     };
   };
