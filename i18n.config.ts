@@ -13,7 +13,7 @@ export default defineI18nConfig(() => ({
           },
           role: "Full Stack Developer",
           description:
-            "I'm a Software Engineering student, I started programming at 16 and since then I'm passionate about programming. With my skills, focus and discipline, I always seek to overcome any challenge.<br/><br/>I'm always acquiring knowledge and improving my skills to achieve my goals, as well as always being updated on market trends.<br/><br/>Today I have a great knowledge in HTML, CSS, Javascript, Node.js, Typescript, React.js, Next.js, Tailwind, MongoDB, MySQL and PostgreSQL. I'm also looking to learn about Vue.js, Nuxt.js and C#. I've had some experiences with Python and Java, but I've never really delved into them.",
+            "I'm a Software Engineering student, I started programming at 16 and since then I'm passionate about programming. With my skills, focus and discipline, I always seek to overcome any challenge.<br/><br/>Today I have a great knowledge in HTML, CSS, Javascript, Node.js, Typescript, React.js, Next.js, Tailwind, MongoDB, MySQL and PostgreSQL. I'm also looking to learn about Vue.js, Nuxt.js and C#. I've had some experiences with Python and Java, but I've never really delved into them.",
         },
         projects: {
           head: {
@@ -61,7 +61,7 @@ export default defineI18nConfig(() => ({
         },
         itza: {
           description:
-            "We developed a headless e-commerce using deco.cx, Fresh, Tailwind, Typescript and Deno. Our focus is to build and implement solutions in the smoothest and most performant way possible, so that the user can navigate smoothly and without crashes or slowness. I built, optimized and refactored sites and implementations such as Zorba, PG Adesivos, Velocita, True Source among others. I improved loading times by reducing around 2 to 5 seconds of loading, reduced bundle sizes, delivering less Javascript to the browser. I also made open source contributions to deco.cx.",
+            "I developed headless e-commerce using deco.cx, Fresh, Tailwind, Typescript and Deno. My focus was to build and implement solutions in the smoothest and most performant way possible, so that the user can navigate smoothly and without crashes or slowness. I built, optimized and refactored sites and implementations such as Zorba, PG Adesivos, Velocita, True Source among others. I improved loading times by reducing around 2 to 5 seconds of loading, reduced bundle sizes, delivering less Javascript to the browser. I also made open source contributions to deco.cx.",
         },
         codigokid: {
           description:
@@ -81,7 +81,7 @@ export default defineI18nConfig(() => ({
           },
           role: "Desenvolvedor Full Stack",
           description:
-            "Sou estudante de Engenharia de Software, comecei a programar com 16 anos e desde então sou apaixonado pela área de programação. Com as minhas habilidades, foco e disciplina, busco sempre vencer qualquer desafio.<br/><br/>Estou sempre adquirindo conhecimento e aprimorando as minhas habilidades para alcançar meus objetivos, além de sempre estar atualizado sobre as tendências do mercado.<br/><br/>Hoje tenho um grande conhecimento em HTML, CSS, Javascript, Node.js, Typescript, React.js, Next.js, Tailwind, MongoDB, MySQL e PostgreSQL. Também estou procurando aprender sobre Vue.js, Nuxt.js e C#. Já tive algumas experiências com Python e Java, porém nunca me aprofundei de fato.",
+            "Sou estudante de Engenharia de Software, comecei a programar com 16 anos e desde então sou apaixonado pela área de programação. Com as minhas habilidades, foco e disciplina, busco sempre vencer qualquer desafio.<br/><br/>Hoje tenho um grande conhecimento em HTML, CSS, Javascript, Node.js, Typescript, React.js, Next.js, Tailwind, MongoDB, MySQL e PostgreSQL. Também estou procurando aprender sobre Vue.js, Nuxt.js e C#. Já tive algumas experiências com Python e Java, porém nunca me aprofundei de fato.",
         },
         projects: {
           head: {
@@ -129,7 +129,7 @@ export default defineI18nConfig(() => ({
         },
         itza: {
           description:
-            "Desenvolvemos e-commerce headless utilizando a deco.cx, Fresh, Tailwind, Typescript e Deno. Nosso foco é construir e implementar soluções da maneira mais fluida e performática possível, para que o usuário possa navegar de forma suave e sem travamentos ou lentidões. Construi, otimizei e refatorei sites e implementações como Zorba, PG Adesivos, Velocita, True Source entre outras. Melhorei tempos de carregamento reduzindo em torno de 2 a 5 segundos de carregamento, reduzi tamanho de bundles, entregando menos Javascript para o browser. Fiz também contribuições open source para a deco.cx.",
+            "Desenvolvi e-commerce headless utilizando a deco.cx, Fresh, Tailwind, Typescript e Deno. Meu foco era construir e implementar soluções da maneira mais fluida e performática possível, para que o usuário possa navegar de forma suave e sem travamentos ou lentidões. Construi, otimizei e refatorei sites e implementações como Zorba, PG Adesivos, Velocita, True Source entre outras. Melhorei tempos de carregamento reduzindo em torno de 2 a 5 segundos de carregamento, reduzi tamanho de bundles, entregando menos Javascript para o browser. Fiz também contribuições open source para a deco.cx.",
         },
         codigokid: {
           description:
