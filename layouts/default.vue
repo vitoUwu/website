@@ -24,7 +24,7 @@ useHead(() => ({
 
 <template>
   <Dock />
-  <div class="bg-coal-black text-fog-gray pb-20">
+  <div class="bg-stone-900 text-orange-100 pb-20">
     <div
       class="min-h-dvh flex flex-col justify-center max-w-2xl mx-auto w-full"
     >
@@ -39,7 +39,7 @@ body {
 }
 
 ::selection {
-  background-color: theme("colors.emerald.500");
-  color: #000;
+  background-color: theme("colors.orange.100");
+  color: theme("colors.stone.900");
 }
 </style>

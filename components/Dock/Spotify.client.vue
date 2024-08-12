@@ -1,14 +1,14 @@
 <script setup lang="ts">
 const { connect, disconnect, data } = useLanyard("504717946124369937"); // TODO: Save discord id in somewhere else
-const expanded = ref(false);
+const expanded = ref(true);
 
 function setExpanded(value: boolean) {
   expanded.value = value;
-  if (value) {
-    setTimeout(() => {
-      expanded.value = false;
-    }, 5000);
-  }
+  // if (value) {
+  //   setTimeout(() => {
+  //     expanded.value = false;
+  //   }, 5000);
+  // }
 }
 
 onMounted(() => {
@@ -50,7 +50,7 @@ function onClick(e: MouseEvent) {
     "
     @click="onClick"
     rel="nofollow"
-    class="transition-all shrink-0 ease-in-out duration-500 overflow-hidden hover:max-w-full bg-zinc-900 rounded border-zinc-700 border flex gap-3 items-center p-1 text-zinc-300 text-sm group shadow-lg shadow-black"
+    class="transition-all shrink-0 ease-in-out duration-500 overflow-hidden hover:max-w-full bg-stone-950 rounded border-stone-800 border flex gap-3 items-center p-1 text-zinc-300 text-sm group shadow-lg shadow-coal-black"
   >
     <div class="relative size-16 shrink-0">
       <div
@@ -74,21 +74,21 @@ function onClick(e: MouseEvent) {
       <p class="text-marquee relative">
         <span>
           {{ $t("common.listeningTo") }}
-          <span class="text-emerald-500">{{ data?.spotify?.song }}</span>
+          <span class="text-orange-300">{{ data?.spotify?.song }}</span>
         </span>
         <span class="absolute left-[calc(100%+12px)] shrink-0 w-full md:hidden">
           {{ $t("common.listeningTo") }}
-          <span class="text-emerald-500">{{ data?.spotify?.song }}</span>
+          <span class="text-orange-300">{{ data?.spotify?.song }}</span>
         </span>
       </p>
       <p class="text-xs text-marquee relative">
         <span>
           {{ $t("common.by") }}
-          <span class="text-emerald-500">{{ data?.spotify?.artist }}</span>
+          <span class="text-orange-300">{{ data?.spotify?.artist }}</span>
         </span>
         <span class="absolute left-[calc(100%+12px)] shrink-0 w-full md:hidden">
           {{ $t("common.by") }}
-          <span class="text-emerald-500">{{ data?.spotify?.artist }}</span>
+          <span class="text-orange-300">{{ data?.spotify?.artist }}</span>
         </span>
       </p>
     </div>

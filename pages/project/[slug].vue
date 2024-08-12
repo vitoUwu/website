@@ -40,7 +40,7 @@ useSeoMeta({
       </header>
       <ContentRenderer
         v-if="readme"
-        class="prose prose-zinc prose-invert *:break-words h-full"
+        class="prose prose-stone prose-invert *:break-words h-full"
         :value="readme"
       />
     </div>

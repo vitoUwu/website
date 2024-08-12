@@ -31,18 +31,18 @@ function formatDate(date: Date) {
   <li class="group">
     <h2 class="flex items-center gap-3">
       <span
-        class="shrink-0 [@media_(hover:_hover)]:text-zinc-400 [@media_(hover:_hover)]:group-hover:text-zinc-200 text-zinc-200 transition-all"
+        class="shrink-0 [@media_(hover:_hover)]:text-orange-100 [@media_(hover:_hover)]:group-hover:text-orange-50 text-orange-100 transition-all"
       >
         {{ name }}
       </span>
       <span class="flex flex-col shrink-0">
         <span
-          class="text-emerald-600 [@media_(hover:_hover)]:text-[#A2A2A9] [@media_(hover:_hover)]:group-hover:text-emerald-600 text-xs transition-all"
+          class="text-orange-100 [@media_(hover:_hover)]:text-stone-400 [@media_(hover:_hover)]:group-hover:text-orange-200 text-xs transition-all"
         >
           {{ $t(`roles.${role}`) }}
         </span>
         <span
-          class="lowercase sm:hidden text-emerald-600 [@media_(hover:_hover)]:text-[#A2A2A9] [@media_(hover:_hover)]:group-hover:text-emerald-600 text-xs transition-all"
+          class="lowercase sm:hidden text-orange-200 [@media_(hover:_hover)]:text-stone-400 [@media_(hover:_hover)]:group-hover:text-orange-200 text-xs transition-all"
         >
           {{
             end
@@ -52,10 +52,10 @@ function formatDate(date: Date) {
         </span>
       </span>
       <span
-        class="border-b border-dashed border-zinc-600 w-full [@media_(hover:_hover)]:group-hover:border-emerald-600 transition-all"
+        class="border-b border-dashed border-stone-400 w-full [@media_(hover:_hover)]:group-hover:border-orange-300 transition-all"
       />
       <span
-        class="lowercase hidden sm:inline text-emerald-600 [@media_(hover:_hover)]:text-[#A2A2A9] [@media_(hover:_hover)]:group-hover:text-emerald-600 text-xs transition-all shrink-0"
+        class="lowercase hidden sm:inline text-orange-200 [@media_(hover:_hover)]:text-stone-400 [@media_(hover:_hover)]:group-hover:text-orange-200 text-xs transition-all shrink-0"
       >
         {{
           end
@@ -65,7 +65,7 @@ function formatDate(date: Date) {
       </span>
     </h2>
     <p
-      class="mt-3 [@media_(hover:_hover)]:text-zinc-400 text-zinc-200 transition-all [@media_(hover:_hover)]:group-hover:text-zinc-200"
+      class="mt-3 [@media_(hover:_hover)]:text-stone-400 text-stone-200 transition-all [@media_(hover:_hover)]:group-hover:text-stone-200"
     >
       {{ $t(description) }}
     </p>

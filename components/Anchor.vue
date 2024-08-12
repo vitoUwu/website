@@ -19,7 +19,7 @@ defineOptions({
     target="_blank"
     v-bind="$attrs"
     :href="localePath(href)"
-    class="flex items-center gap-3 w-fit text-zinc-300 hover:text-emerald-500 transition-colors px-1 -mx-1 hover:bg-zinc-950 rounded"
+    class="flex items-center gap-3 w-fit text-orange-100 hover:text-orange-50 transition-colors px-1 -mx-1 rounded"
     rel="noopener noreferrer"
   >
     <slot name="left-icon" />
