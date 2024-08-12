@@ -16,4 +16,7 @@ export default <Partial<Config>>{
   },
   plugins: [prose()],
   content: [],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
 };

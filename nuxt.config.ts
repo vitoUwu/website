@@ -1,4 +1,3 @@
-import prose from "@tailwindcss/typography";
 import repos from "./utils/repos";
 
 const autoI18n = {
@@ -40,22 +39,22 @@ export default defineNuxtConfig({
     vueI18n: "./i18n.config.ts",
   },
   robots: {
-    rules: [
+    groups: [
       {
-        UserAgent: "*",
-        Disallow: "/api*",
+        userAgent: "*",
+        disallow: "/api*",
       },
       {
-        UserAgent: "*",
-        Disallow: "/_nuxt*",
+        userAgent: "*",
+        disallow: "/_nuxt*",
       },
       {
-        UserAgent: "*",
-        Disallow: "/_content*",
+        userAgent: "*",
+        disallow: "/_content*",
       },
       {
-        UserAgent: "*",
-        Disallow: "/cdn-cgi*", // Cloudflare
+        userAgent: "*",
+        disallow: "/cdn-cgi*", // Cloudflare
       },
     ],
   },
@@ -85,32 +84,14 @@ export default defineNuxtConfig({
   },
   gtm: {
     id: "GTM-WBBDKPW7",
-    debug: true,
+    debug: false,
   },
   tailwindcss: {
     configPath: "./tailwind.config.ts",
-    config: {
-      theme: {
-        extend: {
-          colors: {
-            "coal-black": "#141517",
-            "fog-gray": "#f2f4f7",
-          },
-          fontFamily: {
-            jetbrains: ['"Jetbrains Mono"', "monospace"],
-          },
-        },
-      },
-      plugins: [prose],
-      content: [],
-      future: {
-        hoverOnlyWhenSupported: true,
-      },
-    },
   },
   googleFonts: {
     families: {
-      "JetBrains Mono": true,
+      Lora: true,
     },
   },
 });
