@@ -10,7 +10,7 @@ export default <Partial<Config>>{
         "fog-gray": "#f2f4f7",
       },
       fontFamily: {
-        jetbrains: ['"Jetbrains Mono"', "monospace"],
+        lora: ['"Lora"', "monospace"],
       },
     },
   },

@@ -35,7 +35,7 @@ useHead(() => ({
 
 <style>
 body {
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Lora", monospace;
 }
 
 ::selection {
