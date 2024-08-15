@@ -4,11 +4,11 @@ const expanded = ref(true);
 
 function setExpanded(value: boolean) {
   expanded.value = value;
-  // if (value) {
-  //   setTimeout(() => {
-  //     expanded.value = false;
-  //   }, 5000);
-  // }
+  if (value) {
+    setTimeout(() => {
+      expanded.value = false;
+    }, 5000);
+  }
 }
 
 onMounted(() => {
