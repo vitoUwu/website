@@ -113,14 +113,16 @@ const projects = [
   {
     title: "WebApi",
     badges: ["Back End"],
-    description: "An API made for studies on the C# and .NET 8. With unit tests and CI",
+    description:
+      "An API made for studies on the C# and .NET 8. With unit tests and CI",
     repository_url: "https://github.com/vitouwu/webapi",
     technologies: ["csharp"],
   },
   {
     title: "ExpendX",
     badges: ["Front End", "Back End"],
-    description: "ExpendX é um gerenciador de gastos pessoais, o projeto ainda está em desenvolvimento.",
+    description:
+      "ExpendX é um gerenciador de gastos pessoais, o projeto ainda está em desenvolvimento.",
     // repository_url: "https://github.com/vitouwu/expendx",
     url: "https://expendx.vitoo.dev",
     technologies: ["vuejs", "nuxtjs", "typescript", "supabase"],
@@ -128,9 +130,10 @@ const projects = [
   {
     title: "Saint Bot",
     badges: ["Discord"],
-    description: "Saint Bot é uma aplicação feita para uma comunidade de Minecraft, com proprósitos de gerenciamento e postagem de eventos e anuncios.",
+    description:
+      "Saint Bot é uma aplicação feita para uma comunidade de Minecraft, com proprósitos de gerenciamento e postagem de eventos e anuncios.",
     technologies: ["discord"],
-  }
+  },
 ];
 
 export default projects;
