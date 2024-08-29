@@ -4,7 +4,7 @@ const { text, href } = withDefaults(
   {
     text: "Page not found",
     href: "/projects",
-  }
+  },
 );
 </script>
 

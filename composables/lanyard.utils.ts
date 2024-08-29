@@ -30,7 +30,7 @@ export function parseData(data: string): null | Payload {
 }
 
 export function createInitializePayload(
-  userId: string | string[]
+  userId: string | string[],
 ): InitializePayload {
   return {
     op: Operations.Initialize,
@@ -45,13 +45,13 @@ export function createHeartbeatPayload(): HeartBeatPayload {
 }
 
 export function isInitStateEventPayload(
-  payload: Payload
+  payload: Payload,
 ): payload is InitStateEventPayload {
   return payload.op === Operations.Event && payload.t === EventType.InitState;
 }
 
 export function isPresenceUpdateEventPayload(
-  payload: Payload
+  payload: Payload,
 ): payload is PresenceUpdateEventPayload {
   return (
     payload.op === Operations.Event && payload.t === EventType.PresenceUpdate

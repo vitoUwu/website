@@ -6,7 +6,7 @@ const username = "vitoUwu";
 
 (async () => {
   const repos = await fetchWithCredentials(endpoints.repos(username)).then(
-    (res) => res.json() as Promise<Repository[]>
+    (res) => res.json() as Promise<Repository[]>,
   );
   // .then((repos) => repos.filter((repo) => !repo.fork));
 
@@ -34,19 +34,19 @@ const username = "vitoUwu";
               language: string;
               href: string;
             }
-          >
+          >,
         ),
       null,
-      2
-    )};`
+      2,
+    )};`,
   );
 
   const readmes = await Promise.all(
     repos.map(async (repo) =>
       fetchWithCredentials(endpoints.readme(username, repo.name)).then(
-        (res) => res.json() as Promise<Content>
-      )
-    )
+        (res) => res.json() as Promise<Content>,
+      ),
+    ),
   );
 
   const files = fs.readdirSync("content/projects");
@@ -58,7 +58,8 @@ const username = "vitoUwu";
   readmes.forEach((readme, index) => {
     fs.writeFileSync(
       `content/projects/${repos[index].name}.md`,
-      Buffer.from(readme.content ?? "", "base64").toString() || "### No content"
+      Buffer.from(readme.content ?? "", "base64").toString() ||
+        "### No content",
     );
   });
 

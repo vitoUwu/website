@@ -21,7 +21,7 @@ function date(date: string | Date, locale: string): string {
 function useRelativeData(locale: string) {
   const toRelativeData = (
     amount: number,
-    relativeTo: Intl.RelativeTimeFormatUnit
+    relativeTo: Intl.RelativeTimeFormatUnit,
   ) => {
     const formatter = relativeDateFormatters.get(locale);
 
