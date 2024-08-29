@@ -34,7 +34,7 @@ const languagesPercentage = [
 ]
   .map((language) => {
     const amount = reposValues.filter(
-      (repo) => repo.language === language
+      (repo) => repo.language === language,
     ).length;
     return {
       language,

@@ -6,7 +6,7 @@ const repositoryName = route.params.slug as string;
 const repo = repos[repositoryName as keyof typeof repos];
 
 const { data: readme } = await useAsyncData(repositoryName, () =>
-  queryContent(`/projects/${repositoryName.toLowerCase()}`).findOne()
+  queryContent(`/projects/${repositoryName.toLowerCase()}`).findOne(),
 );
 
 const title = repo ? repo.name : "404 :P";

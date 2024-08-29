@@ -8,15 +8,18 @@ The live preview is available [here](https://vitter.vercel.app/)
 
 # Running locally
 
-You will clone this repository to your machine using 
+You will clone this repository to your machine using
+
 ```
 git clone https://github.com/vitoUwu/vitter.git
 ```
 
 After you have clonned the project, navigate to the destination folder and execute
+
 ```
 npm install
 ```
+
 `You will need npm and nodejs installed`
 
 And thats it, now you can run these commands bellow and enjoy coding
@@ -42,7 +45,7 @@ npm run start
 # TODO
 
 - [ ] Finish implementation of layout
-- [ ] Find a solution to "flash bang" issue *
+- [ ] Find a solution to "flash bang" issue \*
 - [ ] Maybe develop a back-end
 
-*The "flash bang" issue occurs when a dark theme user open the application and the screen flashes the light theme.
+\*The "flash bang" issue occurs when a dark theme user open the application and the screen flashes the light theme.

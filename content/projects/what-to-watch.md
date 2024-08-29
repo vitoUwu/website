@@ -28,13 +28,13 @@ npm run build && npm run preview # produção
 
 👤 **vitoUwu**
 
-* Website: <https://vitoo.vercel.app/>
-* Twitter: [@vitoodev](https://twitter.com/vitoodev)
-* Github: [@vitoUwu](https://github.com/vitoUwu)
-* LinkedIn: [@vitoo](https://linkedin.com/in/vitoo)
+- Website: <https://vitoo.vercel.app/>
+- Twitter: [@vitoodev](https://twitter.com/vitoodev)
+- Github: [@vitoUwu](https://github.com/vitoUwu)
+- LinkedIn: [@vitoo](https://linkedin.com/in/vitoo)
 
 ## 🤝 Contribuindo
 
-Contribuições, correção de erros e novas features são muito bem vindas!<br/>Sinta-se livre para contribuir com o  projeto. [Criar um Pull Request](https://github.com/vitoUwu/what-to-watch/pulls).
+Contribuições, correção de erros e novas features são muito bem vindas!<br/>Sinta-se livre para contribuir com o projeto. [Criar um Pull Request](https://github.com/vitoUwu/what-to-watch/pulls).
 
 Dê uma ⭐️ se curtiu o projeto!
