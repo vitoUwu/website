@@ -21,9 +21,11 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
+
   nitro: {
     preset: "vercel",
   },
+
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxtjs/sitemap",
@@ -33,11 +35,13 @@ export default defineNuxtConfig({
     "@nuxtjs/robots",
     "@nuxtjs/i18n",
   ],
+
   i18n: {
     locales: ["en", "pt"],
     defaultLocale: "pt",
     vueI18n: "./i18n.config.ts",
   },
+
   robots: {
     groups: [
       {
@@ -58,9 +62,11 @@ export default defineNuxtConfig({
       },
     ],
   },
+
   site: {
     url: "https://vitoo.dev",
   },
+
   sitemap: {
     autoI18n,
     urls: async function () {
@@ -82,16 +88,21 @@ export default defineNuxtConfig({
       return urls;
     },
   },
+
   gtm: {
     id: "GTM-WBBDKPW7",
     debug: false,
   },
+
   tailwindcss: {
     configPath: "./tailwind.config.ts",
   },
+
   googleFonts: {
     families: {
       Lora: true,
     },
   },
+
+  compatibilityDate: "2024-08-30",
 });

@@ -41,6 +41,9 @@ useSeoMeta({
     <hr
       class="w-full h-px bg-gradient-to-r border-none from-stone-800 via-stone-700 to-stone-800 my-3"
     />
+    <Anchor href="/curriculum.pdf">
+      Curriculum Vitae <IconsArrowSquareOut #left-icon :size="16" />
+    </Anchor>
     <Anchor rel="noopener noreferrer" href="https://github.com/vitoUwu">
       Github <IconsArrowSquareOut #left-icon :size="16" />
     </Anchor>
