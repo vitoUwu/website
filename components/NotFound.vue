@@ -13,7 +13,7 @@ const { text, href } = withDefaults(
     <div class="relative mb-10">
       <h1>{{ text }}</h1>
       <span
-        class="absolute text-emerald-600 left-1/2 -translate-y-1/2 top-1/2 -translate-x-1/2 text-7xl font-bold opacity-20 -z-[1]"
+        class="absolute text-orange-300 left-1/2 -translate-y-1/2 top-1/2 -translate-x-1/2 text-7xl font-bold opacity-20 -z-[1]"
       >
         404
       </span>
