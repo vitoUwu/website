@@ -9,7 +9,7 @@ const ignoredRepos = ["deco-bot", "deco-bot-2"];
   const repos = await fetchWithCredentials(endpoints.repos(username))
     .then((res) => res.json() as Promise<Repository[]>)
     .then((repos) =>
-      repos.filter((repo) => !ignoredRepos.includes(repo.name) && !repo.fork)
+      repos.filter((repo) => !ignoredRepos.includes(repo.name) && !repo.fork),
     );
 
   fs.writeFileSync(
@@ -36,19 +36,19 @@ const ignoredRepos = ["deco-bot", "deco-bot-2"];
               language: string;
               href: string;
             }
-          >
+          >,
         ),
       null,
-      2
-    ).replace(/(")(\w+)(")(:)/gm, "$2$4")}`
+      2,
+    ).replace(/(")(\w+)(")(:)/gm, "$2$4")}`,
   );
 
   const readmes = await Promise.all(
     repos.map(async (repo) =>
       fetchWithCredentials(endpoints.readme(username, repo.name)).then(
-        (res) => res.json() as Promise<Content>
-      )
-    )
+        (res) => res.json() as Promise<Content>,
+      ),
+    ),
   );
 
   const files = fs.readdirSync("content/projects");
@@ -60,7 +60,8 @@ const ignoredRepos = ["deco-bot", "deco-bot-2"];
   readmes.forEach((readme, index) => {
     fs.writeFileSync(
       `content/projects/${repos[index].name}.md`,
-      Buffer.from(readme.content ?? "", "base64").toString() || "### No content"
+      Buffer.from(readme.content ?? "", "base64").toString() ||
+        "### No content",
     );
   });
 
