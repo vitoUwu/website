@@ -3,12 +3,14 @@ import endpoints from "~/utils/endpoints";
 import fetchWithCredentials from "~/utils/fetch";
 
 const username = "vitoUwu";
+const ignoredRepos = ["deco-bot", "deco-bot-2"];
 
 (async () => {
-  const repos = await fetchWithCredentials(endpoints.repos(username)).then(
-    (res) => res.json() as Promise<Repository[]>
-  );
-  // .then((repos) => repos.filter((repo) => !repo.fork));
+  const repos = await fetchWithCredentials(endpoints.repos(username))
+    .then((res) => res.json() as Promise<Repository[]>)
+    .then((repos) =>
+      repos.filter((repo) => !ignoredRepos.includes(repo.name) && !repo.fork)
+    );
 
   fs.writeFileSync(
     "utils/repos.ts",
@@ -38,7 +40,7 @@ const username = "vitoUwu";
         ),
       null,
       2
-    )};`
+    ).replace(/(")(\w+)(")(:)/gm, "$2$4")}`
   );
 
   const readmes = await Promise.all(
