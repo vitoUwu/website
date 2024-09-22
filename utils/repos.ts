@@ -7,6 +7,20 @@ export default {
     href: "https://github.com/vitoUwu/nlw-pocket-server-golang",
     isFork: false
   },
+  "hw-collection-server": {
+    name: "hw-collection-server",
+    description: null,
+    language: "Go",
+    href: "https://github.com/vitoUwu/hw-collection-server",
+    isFork: false
+  },
+  website: {
+    name: "website",
+    description: "My website made with ❤️",
+    language: "TypeScript",
+    href: "https://github.com/vitoUwu/website",
+    isFork: false
+  },
   "nlw-pocket-server": {
     name: "nlw-pocket-server",
     description: null,
@@ -19,13 +33,6 @@ export default {
     description: null,
     language: "Vue",
     href: "https://github.com/vitoUwu/invest-tracker",
-    isFork: false
-  },
-  website: {
-    name: "website",
-    description: "My website made with ❤️",
-    language: "TypeScript",
-    href: "https://github.com/vitoUwu/website",
     isFork: false
   },
   "nlw-pocket-web": {
