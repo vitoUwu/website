@@ -1,10 +1,10 @@
 // Auto generated file
 export default {
-  "invest-tracker": {
-    name: "invest-tracker",
+  "nlw-pocket-server-golang": {
+    name: "nlw-pocket-server-golang",
     description: null,
-    language: "Vue",
-    href: "https://github.com/vitoUwu/invest-tracker",
+    language: "Go",
+    href: "https://github.com/vitoUwu/nlw-pocket-server-golang",
     isFork: false
   },
   "nlw-pocket-server": {
@@ -12,6 +12,20 @@ export default {
     description: null,
     language: "TypeScript",
     href: "https://github.com/vitoUwu/nlw-pocket-server",
+    isFork: false
+  },
+  "invest-tracker": {
+    name: "invest-tracker",
+    description: null,
+    language: "Vue",
+    href: "https://github.com/vitoUwu/invest-tracker",
+    isFork: false
+  },
+  website: {
+    name: "website",
+    description: "My website made with ❤️",
+    language: "TypeScript",
+    href: "https://github.com/vitoUwu/website",
     isFork: false
   },
   "nlw-pocket-web": {
@@ -26,13 +40,6 @@ export default {
     description: null,
     language: "JavaScript",
     href: "https://github.com/vitoUwu/deschamps-newsletter-discord",
-    isFork: false
-  },
-  website: {
-    name: "website",
-    description: "My website made with ❤️",
-    language: "TypeScript",
-    href: "https://github.com/vitoUwu/website",
     isFork: false
   },
   "carcara-bot": {
