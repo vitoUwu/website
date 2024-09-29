@@ -1,10 +1,10 @@
 // Auto generated file
 export default {
-  "nlw-pocket-server-golang": {
-    name: "nlw-pocket-server-golang",
+  "carcara-bot": {
+    name: "carcara-bot",
     description: null,
-    language: "Go",
-    href: "https://github.com/vitoUwu/nlw-pocket-server-golang",
+    language: "TypeScript",
+    href: "https://github.com/vitoUwu/carcara-bot",
     isFork: false
   },
   "hw-collection-server": {
@@ -19,6 +19,13 @@ export default {
     description: "My website made with ❤️",
     language: "TypeScript",
     href: "https://github.com/vitoUwu/website",
+    isFork: false
+  },
+  "nlw-pocket-server-golang": {
+    name: "nlw-pocket-server-golang",
+    description: null,
+    language: "Go",
+    href: "https://github.com/vitoUwu/nlw-pocket-server-golang",
     isFork: false
   },
   "nlw-pocket-server": {
@@ -47,13 +54,6 @@ export default {
     description: null,
     language: "JavaScript",
     href: "https://github.com/vitoUwu/deschamps-newsletter-discord",
-    isFork: false
-  },
-  "carcara-bot": {
-    name: "carcara-bot",
-    description: null,
-    language: "TypeScript",
-    href: "https://github.com/vitoUwu/carcara-bot",
     isFork: false
   },
   "savethis-api": {
