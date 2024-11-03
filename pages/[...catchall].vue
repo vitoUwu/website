@@ -19,6 +19,4 @@ useSeoMeta({
 });
 </script>
 
-<template>
-  <NotFound :text="description" href="/" />
-</template>
+<template></template>

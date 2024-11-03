@@ -43,7 +43,4 @@ function useRelativeData(locale: string) {
   };
 }
 
-export default {
-  date,
-  useRelativeData,
-};
+export { date, useRelativeData };

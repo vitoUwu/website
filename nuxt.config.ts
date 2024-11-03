@@ -1,18 +1,3 @@
-import repos from "./utils/repos";
-
-const autoI18n = {
-  locales: [
-    {
-      code: "en",
-    },
-    {
-      code: "pt",
-    },
-  ],
-  defaultLocale: "pt",
-  strategy: "prefix_except_default" as const,
-};
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: {
@@ -21,27 +6,25 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
-
   nitro: {
-    preset: "vercel",
+    preset: "cloudflare-pages",
+    prerender: {
+      autoSubfolderIndex: false,
+    },
   },
-
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxtjs/sitemap",
-    "@nuxtjs/google-fonts",
     "@zadigetvoltaire/nuxt-gtm",
     "@nuxt/content",
     "@nuxtjs/robots",
     "@nuxtjs/i18n",
   ],
-
   i18n: {
     locales: ["en", "pt"],
     defaultLocale: "pt",
     vueI18n: "./i18n.config.ts",
   },
-
   robots: {
     groups: [
       {
@@ -62,47 +45,33 @@ export default defineNuxtConfig({
       },
     ],
   },
-
   site: {
     url: "https://vitoo.dev",
   },
-
   sitemap: {
-    autoI18n,
-    urls: async function () {
-      const urls = [];
-      for (const { href } of Object.values(repos)) {
-        for (const { code } of autoI18n.locales) {
-          if (code === autoI18n.defaultLocale) {
-            urls.push({
-              loc: `/project/${href.split("/").pop()}`,
-            });
-          } else {
-            urls.push({
-              loc: `/${code}/project/${href.split("/").pop()}`,
-            });
-          }
-        }
-      }
-
-      return urls;
+    autoI18n: {
+      locales: [
+        {
+          code: "en",
+          _hreflang: "en-US",
+          _sitemap: "./en/sitemap.xml",
+        },
+        {
+          code: "pt",
+          _hreflang: "pt-BR",
+          _sitemap: "./pt/sitemap.xml",
+        },
+      ],
+      defaultLocale: "pt",
+      strategy: "prefix_except_default" as const,
     },
   },
-
   gtm: {
     id: "GTM-WBBDKPW7",
-    debug: false,
+    debug: true,
   },
-
   tailwindcss: {
     configPath: "./tailwind.config.ts",
   },
-
-  googleFonts: {
-    families: {
-      Lora: true,
-    },
-  },
-
   compatibilityDate: "2024-08-30",
 });

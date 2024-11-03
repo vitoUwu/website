@@ -18,18 +18,31 @@ useHead(() => ({
       rel: "canonical",
       href: removeTrailingSlash(`https://vitoo.dev${route.path}`),
     },
+    {
+      rel: "preconnect",
+      href: "https://fonts.googleapis.com",
+    },
+    {
+      rel: "preconnect",
+      href: "https://fonts.gstatic.com",
+      crossorigin: "anonymous",
+    },
+    {
+      href: "https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Newsreader:opsz@6..72&display=swap",
+      rel: "stylesheet",
+    },
   ],
+  bodyAttrs: {
+    class: "bg-neutral-900 text-neutral-200 font-inter",
+  },
 }));
 </script>
 
 <template>
-  <Dock />
-  <div class="bg-stone-900 text-orange-100 pb-20">
-    <div
-      class="min-h-dvh flex flex-col justify-center max-w-2xl mx-auto w-full"
-    >
+  <div class="m-3 flex flex-col py-10 px-3 text-sm lowercase">
+    <main class="max-w-2xl mx-auto w-full">
       <slot />
-    </div>
+    </main>
   </div>
 </template>
 
@@ -39,7 +52,7 @@ body {
 }
 
 ::selection {
-  background-color: theme("colors.orange.100");
-  color: theme("colors.stone.900");
+  background-color: theme("colors.neutral.100");
+  color: theme("colors.neutral.900");
 }
 </style>

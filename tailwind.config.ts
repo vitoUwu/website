@@ -10,7 +10,8 @@ export default <Partial<Config>>{
         "fog-gray": "#f2f4f7",
       },
       fontFamily: {
-        lora: ['"Lora"', "monospace"],
+        inter: ["Inter"],
+        newsreader: ["Newsreader"],
       },
     },
   },

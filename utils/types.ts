@@ -1,127 +1,114 @@
-export interface Repository {
-  id: number;
-  node_id: string;
-  name: string;
-  full_name: string;
-  private: boolean;
-  owner: Owner;
-  html_url: string;
-  description: string;
-  fork: boolean;
-  url: string;
-  forks_url: string;
-  keys_url: string;
-  collaborators_url: string;
-  teams_url: string;
-  hooks_url: string;
-  issue_events_url: string;
-  events_url: string;
-  assignees_url: string;
-  branches_url: string;
-  tags_url: string;
-  blobs_url: string;
-  git_tags_url: string;
-  git_refs_url: string;
-  trees_url: string;
-  statuses_url: string;
-  languages_url: string;
-  stargazers_url: string;
-  contributors_url: string;
-  subscribers_url: string;
-  subscription_url: string;
-  commits_url: string;
-  git_commits_url: string;
-  comments_url: string;
-  issue_comment_url: string;
-  contents_url: string;
-  compare_url: string;
-  merges_url: string;
-  archive_url: string;
-  downloads_url: string;
-  issues_url: string;
-  pulls_url: string;
-  milestones_url: string;
-  notifications_url: string;
-  labels_url: string;
-  releases_url: string;
-  deployments_url: string;
-  created_at: string;
-  updated_at: string;
-  pushed_at: string;
-  git_url: string;
-  ssh_url: string;
-  clone_url: string;
-  svn_url: string;
-  homepage: string;
-  size: number;
-  stargazers_count: number;
-  watchers_count: number;
-  language: string;
-  has_issues: boolean;
-  has_projects: boolean;
-  has_downloads: boolean;
-  has_wiki: boolean;
-  has_pages: boolean;
-  has_discussions: boolean;
-  forks_count: number;
-  mirror_url: any;
-  archived: boolean;
-  disabled: boolean;
-  open_issues_count: number;
-  license: any;
-  allow_forking: boolean;
-  is_template: boolean;
-  web_commit_signoff_required: boolean;
-  topics: string[];
-  visibility: string;
-  forks: number;
-  open_issues: number;
-  watchers: number;
-  default_branch: string;
-}
-
-export interface Owner {
-  login: string;
-  id: number;
-  node_id: string;
-  avatar_url: string;
-  gravatar_id: string;
-  url: string;
-  html_url: string;
-  followers_url: string;
-  following_url: string;
-  gists_url: string;
-  starred_url: string;
-  subscriptions_url: string;
-  organizations_url: string;
-  repos_url: string;
-  events_url: string;
-  received_events_url: string;
-  type: string;
-  site_admin: boolean;
-}
-
-export interface Content {
-  type: string;
-  size: number;
-  name: string;
-  path: string;
-  sha: string;
-  url: string;
-  git_url: string | null;
-  html_url: string | null;
-  download_url: string | null;
-  content: string | null;
-  entries: Content[];
-  _links: {
-    git: string | null;
-    html: string | null;
-    self: string;
-  };
-}
-
 export enum HTTPStatusCodes {
   MOVED_PERMANENTLY = 301,
   TEMPORARY_REDIRECT = 307,
   METHOD_NOT_ALLOWED = 405,
 }
+
+export enum Operations {
+  Event = 0,
+  Hello = 1,
+  Initialize = 2,
+  Heartbeat = 3,
+}
+
+export enum EventType {
+  InitState = "INIT_STATE",
+  PresenceUpdate = "PRESENCE_UPDATE",
+}
+
+interface ActivityData {
+  flags: number;
+  id: string;
+  name: string;
+  type: number;
+  state: string;
+  session_id: string;
+  details: string;
+  timestamps: {
+    start: number;
+    end: number;
+  };
+  assets: {
+    large_image: string;
+    large_text: string;
+  };
+  sync_id: string;
+  created_at: number;
+}
+
+export interface SpotifyData {
+  track_id: string;
+  timestamps: {
+    start: number;
+    end: number;
+  };
+  album: string;
+  album_art_url: string;
+  artist: string;
+  song: string;
+}
+
+interface DiscordUser {
+  id: string;
+  username: string;
+  avatar: string;
+  discriminator: string;
+  bot: boolean;
+  clan: string | null;
+  global_name: string | null;
+  avatar_decoration_data: string | null;
+  display_name: string | null;
+  public_flags: number;
+}
+
+export interface User {
+  kv: Record<string, string>;
+  spotify: SpotifyData | null;
+  discord_user: DiscordUser;
+  activities: ActivityData[];
+  discord_status: string;
+  active_on_discord_web: boolean;
+  active_on_discord_desktop: boolean;
+  active_on_discord_mobile: boolean;
+  listening_to_spotify: boolean;
+}
+
+export interface EventPayload {
+  op: Operations.Event;
+  t: string;
+  d: Record<string, unknown>;
+}
+
+export interface HelloPayload {
+  op: Operations.Hello;
+  d: {
+    heartbeat_interval: number;
+  };
+}
+
+export interface InitializePayload {
+  op: Operations.Initialize;
+  d: {
+    subscribe_to_ids: string[];
+  };
+}
+
+export interface HeartBeatPayload {
+  op: Operations.Heartbeat;
+}
+
+export interface InitStateEventPayload extends Omit<EventPayload, "d"> {
+  d: Record<string, User>;
+}
+
+export interface PresenceUpdateEventPayload extends Omit<EventPayload, "d"> {
+  d: User;
+}
+
+export type Payload =
+  | HelloPayload
+  | HeartBeatPayload
+  | InitializePayload
+  | EventPayload
+  | InitStateEventPayload
+  | PresenceUpdateEventPayload;

@@ -6,7 +6,7 @@ import {
   type InitializePayload,
   type Payload,
   type PresenceUpdateEventPayload,
-} from "~/types";
+} from "~/utils/types";
 
 export function parseData(data: string): null | Payload {
   try {
