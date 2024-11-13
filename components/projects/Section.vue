@@ -5,7 +5,7 @@ import Project from "./Project.vue";
 </script>
 
 <template>
-  <Section :title="$t('projects.title')">
+  <Section id="projects" :title="$t('projects.title')">
     <ul class="space-y-5">
       <Project
         v-for="project in projects"

@@ -44,7 +44,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <Section title="listening to">
+  <Section id="spotify" title="listening to">
     <Transition name="bottom-to-top" mode="out-in">
       <template v-if="state === 'disconnected'">
         <p>disconnected</p>
