@@ -1,8 +1,11 @@
 import type { Config } from "tailwindcss";
-import prose from "@tailwindcss/typography";
 
-// Default are on https://tailwindcss.nuxtjs.org/tailwind/config#default-configuration
-export default <Partial<Config>>{
+export default <Config>{
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     extend: {
       colors: {
@@ -10,13 +13,12 @@ export default <Partial<Config>>{
         "fog-gray": "#f2f4f7",
       },
       fontFamily: {
-        inter: ["Inter"],
-        newsreader: ["Newsreader"],
+        inter: ["var(--font-inter)"],
+        newsreader: ["var(--font-newsreader)"],
       },
     },
   },
-  plugins: [prose()],
-  content: [],
+  plugins: [],
   future: {
     hoverOnlyWhenSupported: true,
   },
