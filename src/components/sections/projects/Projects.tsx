@@ -1,35 +1,43 @@
+import { Language } from "@/lib/languages";
+import { getDictionary } from "@/lib/languages/dictionary";
 import Section from "../Section";
-import Item, { Project } from "./Item";
+import Item from "./Item";
 
-const projects: Project[] = [
+const projects = [
   {
     name: "Deco bot",
-    description:
-      "Um bot para o Discord que cria notificações de pull requests do Github da deco.cx, define um revisor automaticamente e cria resumos de revisões no final do dia.",
+    id: "decobot",
     repository: "https://github.com/deco-cx/deco-bot",
   },
   {
     name: "Invest Tracker",
-    description:
-      "Um aplicativo para rastrear suas investimentos. Atualmente este projeto está fechado para o público mas é open source.",
+    id: "invest",
     url: "https://invest.vitoo.dev",
     repository: "https://github.com/vitoUwu/invest-tracker",
   },
   {
     name: "In.orbit",
-    description:
-      "Um aplicativo sobre rastrear suas habilidades e metas semanais. Feito em um mini bootcamp chamado NLW da Rocketseat.",
+    id: "inorbit",
     url: "http://nlw-pocket-web-production.up.railway.app/",
     repository: "https://github.com/vitoUwu/nlw-pocket-web",
   },
-];
+] as const;
 
-export default function Projects() {
+export default function Projects({ locale }: { locale: Language }) {
+  const { projects: projectsDict } = getDictionary(locale);
   return (
-    <Section id="projects" title="Projetos">
+    <Section id="projects" title={projectsDict.title}>
       <ul className="space-y-5">
         {projects.map((project) => (
-          <Item key={project.name} project={project} />
+          <Item
+            key={project.name}
+            project={{
+              ...project,
+              description: projectsDict.projects[project.id].description,
+            }}
+            view={projectsDict.view}
+            repository={projectsDict.repository}
+          />
         ))}
       </ul>
     </Section>

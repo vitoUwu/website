@@ -1,11 +1,7 @@
-import { Metadata } from "next";
-import "./globals.css";
+import { DEFAULT_LOCALE, SUPPORTED_LANGUAGES } from "@/lib/languages";
 import { Inter, Newsreader } from "next/font/google";
-
-const TITLE = "vitoo";
-const DESCRIPTION =
-  "Atualmente estou tentando construir e transformar algumas ideias em peças de arte. Na Deco.cx eu desenvolvo o futuro da tecnologia no Brasil";
-const ROOT_URL = "https://vitoo.dev";
+import "./globals.css";
+import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const newsreader = Newsreader({
@@ -13,40 +9,29 @@ const newsreader = Newsreader({
   variable: "--font-newsreader",
 });
 
-export const metadata: Metadata = {
-  title: TITLE,
-  description: DESCRIPTION,
-  openGraph: {
-    title: TITLE,
-    description: DESCRIPTION,
-    url: ROOT_URL,
-  },
-  twitter: {
-    card: "summary",
-    creator: "@vitoodev",
-    title: TITLE,
-    description: DESCRIPTION,
-  },
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
-  alternates: {
-    canonical: ROOT_URL,
-    languages: {
-      "pt-BR": ROOT_URL,
-      "en-US": `${ROOT_URL}/en`,
-    },
-  },
+export const generateStaticParams = async () => {
+  return SUPPORTED_LANGUAGES.filter((language) => language.enabled).map(
+    (language) => ({
+      locale: language.inPath,
+    })
+  );
 };
 
-export default function RootLayout({
+export const metadata: Metadata = {
+  title: "vitoo",
+  description: "My coolest website ever",
+};
+
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale = DEFAULT_LOCALE.value } = await params;
   return (
-    <html lang="pt-BR">
+    <html lang={locale}>
       <body
         className={`bg-neutral-900 text-neutral-200 font-inter antialiased ${inter.variable} ${newsreader.variable}`}
       >

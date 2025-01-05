@@ -1,31 +1,37 @@
+import { Language } from "@/lib/languages";
+import { getDictionary } from "@/lib/languages/dictionary";
 import Section from "../Section";
 import Item from "./Item";
 
 const works = [
   {
+    id: "deco",
     name: "Deco.cx",
-    description:
-      "Construindo o futuro da experiência digital nativa de ponta em deco.cx\n\n" +
-      "Atuando em serviços profissionais, principalmente na área de e-commerce, implementei e melhorei diversos sites utilizando Deno.js, HTMX e Typescript.",
     start: new Date("05/1/2024"),
     role: "fullstack",
   },
   {
+    id: "itza",
     name: "ITZA Tech",
-    description:
-      "Desenvolvi várias aplicações de e-commerce de alto desempenho, extremamente customizáveis e com uma stack simples.",
     start: new Date("08/1/2023"),
     end: new Date("04/1/2024"),
     role: "fullstack",
   },
-];
+] as const;
 
-export default function Work() {
+export default function Work({ locale }: { locale: Language }) {
+  const dictionary = getDictionary(locale);
   return (
     <Section title="work" id="work">
       <ul className="space-y-5">
         {works.map((work) => (
-          <Item work={work} key={work.name} />
+          <Item
+            work={{
+              ...work,
+              description: dictionary.work.works[work.id].description,
+            }}
+            key={work.name}
+          />
         ))}
       </ul>
     </Section>

@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 
 export interface Work {
   name: string;
-  description: string;
+  description: string[];
   start: Date;
   end?: Date;
   role: string;
@@ -36,7 +36,11 @@ export default function Item({ work }: { work: Work }) {
           <DynamicRelativeDate start={work.start} end={work.end} />)
         </p>
       </div>
-      <p>{work.description}</p>
+      <p className="flex flex-col gap-[1ch]">
+        {work.description.map((line, index) => (
+          <span key={index}>{line}</span>
+        ))}
+      </p>
     </li>
   );
 }

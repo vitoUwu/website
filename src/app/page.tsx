@@ -1,19 +1,8 @@
-import Header from "@/components/Header";
-import About from "@/components/sections/About";
-import Library from "@/components/sections/library/Library";
-import Projects from "@/components/sections/projects/Projects";
-import Spotify from "@/components/sections/spotify/Spotify";
-import Work from "@/components/sections/work/Work";
+import Page, { generateMetadata } from "@/app/[locale]/page";
 
-export default function Home() {
-  return (
-    <main className="max-w-2xl mx-auto w-full">
-      <Header />
-      <About />
-      <Work />
-      <Projects />
-      <Library />
-      <Spotify />
-    </main>
-  );
+export { generateMetadata };
+
+export default function Home(props: unknown) {
+  // @ts-ignore
+  return <Page {...props} />;
 }
