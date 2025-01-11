@@ -65,6 +65,18 @@ export async function middleware(req: NextRequest) {
       language.value.startsWith(userLanguage)
     ) ?? DEFAULT_LOCALE;
 
+  const pathnameNeedsRewrite =
+    pathname.startsWith(`/${language.value}/`) ||
+    pathname === `/${language.value}`;
+
+  if (pathnameNeedsRewrite) {
+    req.nextUrl.pathname = req.nextUrl.pathname.replace(
+      `/${language.value}`,
+      `/${language.inPath}`
+    );
+    return NextResponse.redirect(req.nextUrl);
+  }
+
   const pathnameHasLocale = SUPPORTED_LANGUAGES.some(
     (locale) =>
       pathname.startsWith(`/${locale.inPath}/`) ||
@@ -72,7 +84,7 @@ export async function middleware(req: NextRequest) {
   );
 
   if (!pathnameHasLocale && language.value !== DEFAULT_LOCALE.value) {
-    req.nextUrl.pathname = `/${language.value}${pathname}`;
+    req.nextUrl.pathname = `/${language.inPath}${pathname}`;
     return NextResponse.redirect(req.nextUrl);
   }
 
