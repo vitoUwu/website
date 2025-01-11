@@ -1,7 +1,8 @@
 import { DEFAULT_LOCALE, SUPPORTED_LANGUAGES } from "@/lib/languages";
+import { GoogleTagManager } from "@next/third-parties/google";
+import { Metadata } from "next";
 import { Inter, Newsreader } from "next/font/google";
 import "./globals.css";
-import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const newsreader = Newsreader({
@@ -32,6 +33,7 @@ export default async function RootLayout({
   const { locale = DEFAULT_LOCALE.value } = await params;
   return (
     <html lang={locale}>
+      <GoogleTagManager gtmId="GTM-WBBDKPW7" />
       <body
         className={`bg-neutral-900 text-neutral-200 font-inter antialiased ${inter.variable} ${newsreader.variable}`}
       >

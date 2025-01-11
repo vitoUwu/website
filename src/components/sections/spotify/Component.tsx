@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import Header from "./Header";
 import Thumbnail from "./Thumbnail";
 import Timeline from "./Timeline";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 function InOutDiv(
   props: React.HTMLAttributes<HTMLDivElement> & HTMLMotionProps<"div">
@@ -78,6 +79,15 @@ export default function Component() {
         (data.spotify.timestamps.end - data.spotify.timestamps.start) / 1000
       )
     );
+
+    sendGTMEvent({
+      event: "spotify_event",
+      data: {
+        song: data.spotify.song,
+        artist: data.spotify.artist,
+        trackId: data.spotify.track_id,
+      },
+    });
   }, [data]);
 
   return (
