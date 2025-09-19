@@ -10,18 +10,26 @@ export default function RelativeDate({
   end?: Date;
 }) {
   const diff = Math.floor((end.getTime() - start.getTime()) / 86400000);
-  const durationUnit = diff > 365 ? "anos" : diff > 30 ? "meses" : "dias";
-  const durationQuantity = Math.floor(
-    durationUnit === "anos"
-      ? diff / 365
-      : durationUnit === "meses"
-      ? diff / 30
-      : diff
-  );
+  const years = Math.floor(diff / 365);
+  const months = Math.floor((diff % 365) / 30);
+  const days = diff % 30;
+  const text = [
+    years > 0 && `${years} ${years > 1 ? "anos" : "ano"}`,
+    months > 0 && `${months} ${months > 1 ? "meses" : "mês"}`
+  ].filter(Boolean).map((item, index, arr) =>
+    arr.length === 2 && index === 0 ?
+      item + " e " :
+      arr.length > 2 ?
+        index === arr.length - 2 ?
+          item + " e " :
+          index === arr.length - 1 ?
+            item :
+            item + ", "
+        : item).join("");
 
   return (
     <span {...props}>
-      {durationQuantity} {durationUnit}
+      {text}
     </span>
   );
 }
