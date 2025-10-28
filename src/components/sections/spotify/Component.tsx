@@ -1,13 +1,12 @@
 "use client";
 
-import useLanyard from "@/hooks/useLanyard";
-import { AnimatePresence, motion } from "motion/react";
-import { HTMLMotionProps } from "motion/react";
+import useLanyard, { ActivityData } from "@/hooks/useLanyard";
+import { sendGTMEvent } from "@next/third-parties/google";
+import { AnimatePresence, HTMLMotionProps, motion } from "motion/react";
 import { useEffect, useState } from "react";
 import Header from "./Header";
 import Thumbnail from "./Thumbnail";
 import Timeline from "./Timeline";
-import { sendGTMEvent } from "@next/third-parties/google";
 
 function InOutDiv(
   props: React.HTMLAttributes<HTMLDivElement> & HTMLMotionProps<"div">
@@ -55,6 +54,7 @@ function Nothing() {
 
 export default function Component() {
   const { connect, disconnect, data, state } = useLanyard("504717946124369937");
+  const [activity, setActivity] = useState<ActivityData | null>(null);
   const [start, setStart] = useState(0);
   const [end, setEnd] = useState(0);
 
@@ -67,25 +67,33 @@ export default function Component() {
   }, []);
 
   useEffect(() => {
-    if (!data?.spotify) {
+    const newActivity =
+      data?.activities.find(
+        (activity) =>
+          activity.name === "YouTube Music" || activity.name === "Spotify"
+      ) || null;
+
+    if (!newActivity) {
       setStart(0);
       setEnd(0);
+      setActivity(null);
       return;
     }
 
-    setStart(Math.floor((Date.now() - data.spotify.timestamps.start) / 1000));
+    setStart(Math.floor((Date.now() - newActivity.timestamps.start) / 1000));
     setEnd(
       Math.floor(
-        (data.spotify.timestamps.end - data.spotify.timestamps.start) / 1000
+        (newActivity.timestamps.end - newActivity.timestamps.start) / 1000
       )
     );
+    setActivity(newActivity);
 
     sendGTMEvent({
       event: "spotify_event",
       data: {
-        song: data.spotify.song,
-        artist: data.spotify.artist,
-        trackId: data.spotify.track_id,
+        song: newActivity.details,
+        artist: newActivity.state,
+        trackId: newActivity.sync_id,
       },
     });
   }, [data]);
@@ -97,20 +105,23 @@ export default function Component() {
           <Disconnected />
         ) : state === "connecting" ? (
           <Loading />
-        ) : !data?.spotify ? (
+        ) : !activity ? (
           <Nothing />
         ) : (
           <InOutDiv
-            id={data.spotify.track_id}
-            key={data.spotify.track_id}
+            id={activity.sync_id}
+            key={activity.sync_id}
             className="flex items-center gap-3 w-full"
           >
-            <Thumbnail thumbnailURL={data.spotify.album_art_url} />
+            <Thumbnail
+              key={activity.sync_id}
+              thumbnailURL={activity.assets.large_image}
+            />
             <div className="w-full">
               <Header
-                songName={data.spotify.song}
-                songArtist={data.spotify.artist}
-                trackId={data.spotify.track_id}
+                songName={activity.details}
+                songArtist={activity.state}
+                trackId={activity.sync_id}
               />
               <Timeline start={start} end={end} />
             </div>

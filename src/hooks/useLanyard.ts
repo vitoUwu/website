@@ -24,7 +24,7 @@ interface SpotifyData {
   song: string;
 }
 
-interface ActivityData {
+export interface ActivityData {
   flags: number;
   id: string;
   name: string;
