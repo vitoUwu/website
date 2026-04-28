@@ -17,6 +17,24 @@ export default {
   work: {
     title: "Work",
     works: {
+      deco: {
+        description: [
+          "Building the future of digital native experiences at Deco.cx",
+          "Working on professional services, mainly in the e-commerce area, I implemented and improved several sites using Deno.js, HTMX and Typescript.",
+        ],
+      },
+      itza: {
+        description: [
+          "Developed several high-performance e-commerce applications, extremely customizable and with a simple stack.",
+        ],
+      },
+    },
+  },
+  projects: {
+    title: "Projects",
+    view: "View",
+    repository: "Repository",
+    projects: {
       als: {
         description: [
           "Development, maintenance and continuous evolution of the AL's Sporting Goods website, a large American sporting goods store",
@@ -41,24 +59,6 @@ export default {
       velocita: {
         description: ["Development of the Velocitá sports shoes e-commerce."],
       },
-      deco: {
-        description: [
-          "Building the future of digital native experiences at Deco.cx",
-          "Working on professional services, mainly in the e-commerce area, I implemented and improved several sites using Deno.js, HTMX and Typescript.",
-        ],
-      },
-      itza: {
-        description: [
-          "Developed several high-performance e-commerce applications, extremely customizable and with a simple stack.",
-        ],
-      },
-    },
-  },
-  projects: {
-    title: "Projects",
-    view: "View",
-    repository: "Repository",
-    projects: {
       decobot: {
         description: [
           "A Discord bot that creates pull request notifications from the Github of deco.cx, automatically defines a reviewer and creates review summaries at the end of the day.",
