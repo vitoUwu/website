@@ -17,6 +17,30 @@ export default {
   work: {
     title: "Work",
     works: {
+      als: {
+        description: [
+          "Development, maintenance and continuous evolution of the AL's Sporting Goods website, a large American sporting goods store",
+        ],
+      },
+      farmrio: {
+        description: [
+          "Development of the FarmRio website, a large Brazilian fashion store.",
+        ],
+      },
+      "farmrio-etc": {
+        description: [
+          "Development of the FarmRio ETC website, an extension of Farm Rio.",
+        ],
+      },
+      granado: {
+        description: ["Development of the Granado cosmetics e-commerce."],
+      },
+      fila: {
+        description: ["Development of the Fila Brazil e-commerce."],
+      },
+      velocita: {
+        description: ["Development of the Velocitá sports shoes e-commerce."],
+      },
       deco: {
         description: [
           "Building the future of digital native experiences at Deco.cx",
