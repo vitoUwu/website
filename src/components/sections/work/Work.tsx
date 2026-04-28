@@ -8,7 +8,6 @@ const works = [
     id: "deco",
     name: "Deco.cx",
     start: new Date("04/21/2024"),
-    end: new Date("09/15/2025"),
     role: "fullstack",
   },
   {
