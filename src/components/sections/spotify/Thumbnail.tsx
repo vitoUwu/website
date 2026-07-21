@@ -6,12 +6,7 @@ export default function Thumbnail({ thumbnailURL }: Props) {
   const url = thumbnailURL.startsWith("spotify:")
     ? thumbnailURL.replace("spotify:", "https://i.scdn.co/image/")
     : thumbnailURL.startsWith("mp:external/")
-    ? thumbnailURL
-        .split("https/")[1]
-        .replace(
-          "lh3.googleusercontent.com/",
-          "https://lh3.googleusercontent.com/"
-        )
+    ? `https://${thumbnailURL.split("https/")[1]}`
     : thumbnailURL;
 
   return (

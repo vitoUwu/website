@@ -70,7 +70,9 @@ export default function Component() {
     const newActivity =
       data?.activities.find(
         (activity) =>
-          activity.name === "YouTube Music" || activity.name === "Spotify"
+          activity.name === "YouTube Music" ||
+          activity.name === "Spotify" ||
+          activity.name === "Navidrome"
       ) || null;
 
     if (!newActivity) {
@@ -109,12 +111,12 @@ export default function Component() {
           <Nothing />
         ) : (
           <InOutDiv
-            id={activity.sync_id}
-            key={activity.sync_id}
+            id={activity.sync_id ?? activity.id}
+            key={activity.sync_id ?? activity.id}
             className="flex items-center gap-3 w-full"
           >
             <Thumbnail
-              key={activity.sync_id}
+              key={activity.sync_id ?? activity.id}
               thumbnailURL={activity.assets.large_image}
             />
             <div className="w-full">

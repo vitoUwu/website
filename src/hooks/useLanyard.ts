@@ -40,7 +40,7 @@ export interface ActivityData {
     large_image: string;
     large_text: string;
   };
-  sync_id: string;
+  sync_id?: string;
   created_at: number;
 }
 
