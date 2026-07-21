@@ -19,8 +19,10 @@ export const generateStaticParams = async () => {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://vitoo.dev"),
   title: "vitoo",
   description: "My coolest website ever",
+  manifest: "/site.webmanifest",
 };
 
 export default async function RootLayout({
@@ -28,7 +30,7 @@ export default async function RootLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale?: string }>;
 }>) {
   const { locale = DEFAULT_LOCALE.value } = await params;
   return (

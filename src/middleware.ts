@@ -11,6 +11,11 @@ const StatusCodes = {
 const redirects = [
   {
     redirectTo: "/",
+    pattern: new URLPattern({ pathname: "/pt" }),
+    code: StatusCodes.PERMANENT_REDIRECT,
+  },
+  {
+    redirectTo: "/",
     pattern: new URLPattern({ pathname: "/works" }),
     code: StatusCodes.PERMANENT_REDIRECT,
   },
