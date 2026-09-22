@@ -107,15 +107,15 @@ export function Hero({ copy, saoPauloTime }: HeroProps) {
         {copy.hero.intro}
       </p>
 
-      <div className="absolute inset-x-5 bottom-13 flex h-22 flex-col justify-center gap-3 border-y border-(--ink) font-mono text-[9px] tracking-[0.08em] md:inset-x-16 md:bottom-18 md:h-20.5 md:flex-row md:items-center md:justify-between md:text-xs md:tracking-[0.09em]">
-        <p className="flex items-center gap-3">
+      <div className="absolute inset-x-5 bottom-13 flex h-22 flex-col justify-center gap-3 border-y border-(--ink) font-mono text-[9px] tracking-[0.08em] md:inset-x-16 md:bottom-18 md:h-20.5 md:flex-row md:items-center md:justify-end md:text-xs md:tracking-[0.09em]">
+        {/* <p className="flex items-center gap-3">
           <span
             aria-hidden="true"
             className="size-1.75 rounded-full bg-(--ink) md:size-2.25"
           />
           <span className="md:hidden">{copy.hero.availableShort}</span>
           <span className="hidden md:inline">{copy.hero.available}</span>
-        </p>
+        </p> */}
         <p className="text-(--muted)">
           {copy.hero.current}
           <span className="hidden md:inline">
