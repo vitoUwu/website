@@ -10,43 +10,43 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as Char91localeChar93PageRouteImport } from './routes/[locale]/page'
+import { Route as LocaleRouteImport } from './routes/$locale'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const Char91localeChar93PageRoute = Char91localeChar93PageRouteImport.update({
-  id: '/locale/page',
-  path: '/locale/page',
+const LocaleRoute = LocaleRouteImport.update({
+  id: '/$locale',
+  path: '/$locale',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/locale/page': typeof Char91localeChar93PageRoute
+  '/$locale': typeof LocaleRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/locale/page': typeof Char91localeChar93PageRoute
+  '/$locale': typeof LocaleRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/locale/page': typeof Char91localeChar93PageRoute
+  '/$locale': typeof LocaleRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/locale/page'
+  fullPaths: '/' | '/$locale'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/locale/page'
-  id: '__root__' | '/' | '/locale/page'
+  to: '/' | '/$locale'
+  id: '__root__' | '/' | '/$locale'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  Char91localeChar93PageRoute: typeof Char91localeChar93PageRoute
+  LocaleRoute: typeof LocaleRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -58,11 +58,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/locale/page': {
-      id: '/locale/page'
-      path: '/locale/page'
-      fullPath: '/locale/page'
-      preLoaderRoute: typeof Char91localeChar93PageRouteImport
+    '/$locale': {
+      id: '/$locale'
+      path: '/$locale'
+      fullPath: '/$locale'
+      preLoaderRoute: typeof LocaleRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -70,18 +70,17 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  Char91localeChar93PageRoute: Char91localeChar93PageRoute,
+  LocaleRoute: LocaleRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
 
 import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
+import type { createStart } from '@tanstack/react-start'
 declare module '@tanstack/react-start' {
   interface Register {
     ssr: true
     router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
   }
 }

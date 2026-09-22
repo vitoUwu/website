@@ -16,14 +16,6 @@ export default defineConfig({
     tailwindcss(),
     tanstackStart({
       srcDirectory: "src",
-      prerender: {
-        enabled: true,
-        crawlLinks: true,
-      },
-      sitemap: {
-        enabled: true,
-        host: "https://vitoo.dev",
-      },
     }),
     viteReact(),
   ],

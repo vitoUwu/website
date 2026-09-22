@@ -1,3 +1,97 @@
-@import "tailwindcss" source('../');
+@import "@fontsource-variable/geist";
+@import "@fontsource-variable/geist-mono";
+@import "@fontsource-variable/newsreader";
+@import "tailwindcss" source("../");
 
 @plugin "easing-gradients";
+
+:root {
+  --surface: #ffffff;
+  --ink: #161616;
+  --muted: #686868;
+  --soft: #e9e9e5;
+  color: var(--ink);
+  background: var(--surface);
+  font-family: "Geist Variable", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: "Newsreader Variable", serif;
+}
+
+.font-mono {
+  font-family: "Geist Mono Variable", monospace;
+}
+
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+a,
+summary {
+  outline-offset: 4px;
+}
+
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid currentColor;
+}
+
+.project-link {
+  text-underline-offset: 6px;
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+  text-decoration-line: underline;
+}
+
+.mobile-menu > summary::-webkit-details-marker {
+  display: none;
+}
+
+::selection {
+  color: var(--surface);
+  background: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (forced-colors: active) {
+  a:focus-visible,
+  summary:focus-visible {
+    outline-color: Highlight;
+  }
+}

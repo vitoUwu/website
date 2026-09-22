@@ -1,13 +1,15 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, redirect } from "@tanstack/react-router";
+import { getLocalePath } from "@/lib/i18n";
+import { getVisitorContext } from "@/lib/visitor";
 
 export const Route = createFileRoute("/")({
-  component: Home,
-});
+  beforeLoad: async () => {
+    const { locale } = await getVisitorContext();
 
-function Home() {
-  return (
-    <main>
-      <h1>Hello World</h1>
-    </main>
-  );
-}
+    throw redirect({
+      to: "/$locale",
+      params: { locale: getLocalePath(locale) },
+      statusCode: 307,
+    });
+  },
+});
