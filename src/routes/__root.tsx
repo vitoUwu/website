@@ -11,6 +11,12 @@ import { getVisitorContext } from "@/lib/visitor";
 import globalCss from "@/styles/global.css?url";
 
 const ROOT_URL = "https://vitoo.dev";
+const GTM_ID = "GTM-WBBDKPW7";
+const GTM_SCRIPT = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');`;
 
 export const Route = createRootRoute({
   loader: () => getVisitorContext(),
@@ -57,6 +63,7 @@ export const Route = createRootRoute({
         { rel: "icon", href: "/favicon.ico" },
         { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
       ],
+      scripts: [{ id: "gtm", children: GTM_SCRIPT }],
     };
   },
   component: RootLayout,
@@ -71,6 +78,11 @@ function RootLayout() {
         <HeadContent />
       </head>
       <body>
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+          }}
+        />
         <Outlet />
         <Scripts />
       </body>
